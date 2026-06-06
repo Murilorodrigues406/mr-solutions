@@ -17,7 +17,8 @@
   <header class="header scrolled" id="header">
     <div class="container header__inner">
       <a href="index.html" class="logo" aria-label="MR Solutions">
-        <img src="assets/mr-solutions-logo.png" alt="MR Solutions" class="logo__img" />
+        <img src="assets/mr-solutions-logo.png" alt="MR Solutions" class="logo__img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';" />
+        <span class="logo__fallback"><span class="logo__mr">MR</span><span class="logo__bar">|</span><span class="logo__sol">Solutions</span></span>
       </a>
       <a href="index.html" class="btn btn--ghost header__back">← Voltar para Home</a>
     </div>
@@ -134,7 +135,7 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <a href="index.html" class="logo logo--light">
-          <img src="assets/mr-solutions-logo-light.png" alt="MR Solutions" class="logo__img logo__img--footer" />
+          <span class="logo__fallback"><span class="logo__mr">MR</span><span class="logo__bar">|</span><span class="logo__sol">Solutions</span></span>
         </a>
         <p class="footer__desc">Soluções digitais para vender mais, organizar processos e enxergar melhor seus resultados.</p>
       </div>

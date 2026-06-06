@@ -17,7 +17,8 @@
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#hero" class="logo" aria-label="MR Solutions">
-        <img src="assets/mr-solutions-logo.png" alt="MR Solutions" class="logo__img" />
+        <img src="assets/mr-solutions-logo.png" alt="MR Solutions" class="logo__img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';" />
+        <span class="logo__fallback"><span class="logo__mr">MR</span><span class="logo__bar">|</span><span class="logo__sol">Solutions</span></span>
       </a>
 
       <nav class="nav" id="nav">
@@ -57,9 +58,30 @@
         </div>
       </div>
 
-      <!-- IMAGEM HERO -->
-      <div class="hero__image reveal">
-        <img src="assets/mr-solutions-hero.jpg" alt="Ilustração das soluções digitais da MR Solutions: catálogo, automação, dados e segurança conectados" />
+      <!-- COMPOSIÇÃO DE SOLUÇÕES (HTML/CSS) -->
+      <div class="hero__stack reveal" aria-hidden="true">
+        <div class="sol-card sol-card--dash">
+          <div class="sol-card__head"><span class="sol-card__icon">📊</span><span class="sol-card__label">Dashboard</span></div>
+          <div class="sol-card__bars">
+            <i style="height:44%"></i><i style="height:70%"></i><i style="height:54%"></i><i style="height:88%"></i><i style="height:66%"></i>
+          </div>
+        </div>
+        <div class="sol-card sol-card--sheet">
+          <div class="sol-card__head"><span class="sol-card__icon">🧮</span><span class="sol-card__label">Planilha automatizada</span></div>
+          <div class="sol-card__rows"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="sol-card sol-card--page">
+          <div class="sol-card__head"><span class="sol-card__icon">🚀</span><span class="sol-card__label">Página de venda</span></div>
+          <div class="sol-card__page"><b></b><em></em><i></i></div>
+        </div>
+        <div class="sol-card sol-card--shop">
+          <div class="sol-card__head"><span class="sol-card__icon">🛍️</span><span class="sol-card__label">Catálogo digital</span></div>
+          <div class="sol-card__grid"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="sol-card sol-card--auto">
+          <div class="sol-card__head"><span class="sol-card__icon">⚙️</span><span class="sol-card__label">Automação</span></div>
+          <div class="sol-card__flow"><span></span><i>→</i><span></span><i>→</i><span></span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -238,7 +260,7 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <a href="#hero" class="logo logo--light">
-          <img src="assets/mr-solutions-logo-light.png" alt="MR Solutions" class="logo__img logo__img--footer" />
+          <span class="logo__fallback"><span class="logo__mr">MR</span><span class="logo__bar">|</span><span class="logo__sol">Solutions</span></span>
         </a>
         <p class="footer__desc">Soluções digitais para vender mais, organizar processos e enxergar melhor seus resultados.</p>
       </div>
