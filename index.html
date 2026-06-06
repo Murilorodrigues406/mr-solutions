@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,7 +17,7 @@
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#hero" class="logo" aria-label="MR Solutions">
-        <span class="logo__mr">MR</span><span class="logo__bar">|</span><span class="logo__sol">Solutions</span>
+        <img src="assets/logo.png" alt="MR Solutions" class="logo__img" />
       </a>
 
       <nav class="nav" id="nav">
@@ -114,7 +115,7 @@
   <section class="piv" id="piv">
     <div class="container piv__inner">
       <div class="piv__media reveal" aria-hidden="true">
-        <div class="piv__badge">Produto principal</div>
+        <div class="piv__badge">Produto em destaque</div>
         <div class="dash dash--sm">
           <div class="dash__top">
             <div class="dash__dots"><span></span><span></span><span></span></div>
@@ -136,9 +137,9 @@
       </div>
 
       <div class="piv__content reveal">
-        <span class="eyebrow eyebrow--green">PIV</span>
-        <h2 class="section__title">Conheça o PIV — Painel Inteligente, Gestão e Vendas</h2>
-        <p class="piv__text">O PIV é um dashboard de gestão comercial criado para lojistas e pequenos negócios acompanharem vendas, metas, equipe e resultados em um painel simples e visual.</p>
+        <span class="eyebrow eyebrow--green">Produto em destaque</span>
+        <h2 class="section__title">PIV — Painel Inteligente, Gestão e Vendas</h2>
+        <p class="piv__text">Entre as soluções da MR Solutions, o PIV é o dashboard de gestão comercial criado para lojistas e pequenos negócios acompanharem vendas, metas, equipe e resultados em um painel simples e visual.</p>
         <ul class="piv__list">
           <li>Acompanhe faturamento em tempo real</li>
           <li>Visualize metas e projeções</li>
@@ -146,7 +147,10 @@
           <li>Tenha indicadores claros para tomar melhores decisões</li>
           <li>Use uma planilha estruturada como base para alimentar o painel</li>
         </ul>
-        <a href="https://wa.me/5584999999999?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" class="btn btn--dark">Quero conhecer o PIV</a>
+        <div class="piv__actions">
+          <a href="piv.html" class="btn btn--dark">Saiba mais sobre o PIV</a>
+          <a href="https://murilorodrigues406.github.io/dashboard-vendas/" target="_blank" rel="noopener" class="btn btn--ghost">Ver demonstração</a>
+        </div>
       </div>
     </div>
   </section>
@@ -273,7 +277,7 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <a href="#hero" class="logo logo--light">
-          <span class="logo__mr">MR</span><span class="logo__bar">|</span><span class="logo__sol">Solutions</span>
+          <img src="assets/logo-light.png" alt="MR Solutions" class="logo__img logo__img--footer" />
         </a>
         <p class="footer__desc">Soluções digitais para vender mais, organizar processos e enxergar melhor seus resultados.</p>
       </div>
