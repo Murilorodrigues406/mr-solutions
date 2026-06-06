@@ -106,53 +106,12 @@ h1,h2,h3,h4{font-family:var(--font-title);line-height:1.18;font-weight:600}
 .hero__sub{font-size:1.08rem;color:var(--cinza-medio);max-width:520px;margin-bottom:34px}
 .hero__actions{display:flex;gap:14px;flex-wrap:wrap}
 
-/* ===== COMPOSIÇÃO DE SOLUÇÕES (HERO) ===== */
-.hero__stack{
-  justify-self:end;width:100%;max-width:520px;
-  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+/* ===== IMAGEM HERO ===== */
+.hero__image{justify-self:end;width:100%;max-width:560px}
+.hero__image img{
+  width:100%;height:auto;display:block;border-radius:22px;
+  box-shadow:var(--shadow-lg);
 }
-.sol-card{
-  background:var(--branco);border:1px solid var(--cinza-claro);border-radius:18px;
-  padding:18px;box-shadow:var(--shadow);min-height:128px;
-  display:flex;flex-direction:column;gap:14px;
-  transition:transform .35s ease;
-}
-.sol-card:hover{transform:translateY(-6px)}
-.sol-card--dash{grid-column:1 / 2}
-.sol-card--sheet{grid-column:2 / 3}
-.sol-card--page{grid-column:1 / 2}
-.sol-card--shop{grid-column:2 / 3}
-.sol-card--auto{grid-column:1 / -1}
-.sol-card__head{display:flex;align-items:center;gap:10px}
-.sol-card__icon{
-  width:34px;height:34px;border-radius:10px;background:var(--cinza-quente);
-  display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0;
-}
-.sol-card__label{font-family:var(--font-title);font-weight:500;font-size:.86rem;color:var(--grafite)}
-
-.sol-card__bars{display:flex;align-items:flex-end;gap:7px;height:48px;margin-top:auto}
-.sol-card__bars i{flex:1;background:linear-gradient(180deg,var(--salvia),var(--salvia-dark));border-radius:5px 5px 2px 2px;min-height:8px}
-
-.sol-card__rows{display:flex;flex-direction:column;gap:7px;margin-top:auto}
-.sol-card__rows span{height:9px;border-radius:4px;background:var(--cinza-claro)}
-.sol-card__rows span:nth-child(1){width:100%}
-.sol-card__rows span:nth-child(2){width:80%;background:rgba(124,132,107,.45)}
-.sol-card__rows span:nth-child(3){width:92%}
-.sol-card__rows span:nth-child(4){width:68%;background:rgba(124,132,107,.45)}
-
-.sol-card__page{display:flex;flex-direction:column;gap:7px;margin-top:auto}
-.sol-card__page b{height:26px;border-radius:8px;background:linear-gradient(120deg,var(--salvia),var(--salvia-dark))}
-.sol-card__page em{height:9px;width:70%;border-radius:4px;background:var(--cinza-claro)}
-.sol-card__page i{height:18px;width:46%;border-radius:20px;background:var(--grafite)}
-
-.sol-card__grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:auto}
-.sol-card__grid span{height:22px;border-radius:7px;background:var(--cinza-quente);border:1px solid var(--cinza-claro)}
-.sol-card__grid span:nth-child(odd){background:rgba(124,132,107,.18)}
-
-.sol-card__flow{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}
-.sol-card__flow span{flex:1;height:30px;border-radius:9px;background:var(--cinza-quente);border:1px solid var(--cinza-claro)}
-.sol-card__flow span:nth-child(3){background:rgba(124,132,107,.18)}
-.sol-card__flow i{color:var(--salvia);font-style:normal;font-weight:700;font-size:1rem}
 
 /* ===== DASHBOARD MOCKUP ===== */
 .hero__mockup{justify-self:end;width:100%;max-width:520px}
@@ -311,7 +270,7 @@ h1,h2,h3,h4{font-family:var(--font-title);line-height:1.18;font-weight:600}
 @media(max-width:980px){
   .hero__inner{grid-template-columns:1fr;gap:48px}
   .hero__mockup{justify-self:center;max-width:480px}
-  .hero__stack{justify-self:center;max-width:560px}
+  .hero__image{justify-self:center;max-width:560px}
   .piv__inner{grid-template-columns:1fr;gap:48px}
   .piv__media{justify-self:center}
   .cards{grid-template-columns:1fr 1fr}
@@ -336,8 +295,7 @@ h1,h2,h3,h4{font-family:var(--font-title);line-height:1.18;font-weight:600}
   .hero{padding:120px 0 70px}
   .hero__actions{width:100%}
   .hero__actions .btn{flex:1 1 100%;padding:16px 24px;font-size:1rem}
-  .hero__stack{grid-template-columns:1fr;max-width:420px}
-  .sol-card{grid-column:1 / -1 !important}
+  .hero__image{max-width:100%}
   .piv__actions{width:100%}
   .piv__actions .btn{flex:1 1 100%;padding:16px 24px;font-size:1rem}
   .btn--lg{width:100%;max-width:340px}
