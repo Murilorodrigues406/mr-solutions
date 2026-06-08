@@ -239,7 +239,7 @@ h1,h2,h3,h4{font-family:var(--font-title);line-height:1.18;font-weight:600}
   height:200px;position:relative;display:flex;align-items:flex-end;padding:16px;
   background-size:cover;background-position:center top;
 }
-.project__thumb--shoes{background-image:url('sapatos-de-polegar.jpg')}
+.project__thumb--shoes{background-image:url('thumb-shoes.jpg')}
 .project__thumb--refri{background-image:url('thumb-refri.jpg')}
 .project__thumb--dash{background-image:url('thumb-dash.jpg')}
 .project__thumb::after{
