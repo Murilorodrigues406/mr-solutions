@@ -21,26 +21,6 @@
 }
 
 /* ===== RESET ===== */
-/* ===== THUMBS DOS PROJETOS ===== */
-.projeto__thumb {
-  width: 100%;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  border-radius: var(--raio) var(--raio) 0 0;
-}
-
-.projeto__thumb--sapatos {
-  background-image: url('sapatos-de-polegar.jpg');
-}
-
-.projeto__thumb--refri {
-  background-image: url('thumb-refri.jpg');
-}
-
-.projeto__thumb--dash {
-  background-image: url('thumb-dash.jpg');
-}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:88px}
 body{
@@ -259,9 +239,9 @@ h1,h2,h3,h4{font-family:var(--font-title);line-height:1.18;font-weight:600}
   height:200px;position:relative;display:flex;align-items:flex-end;padding:16px;
   background-size:cover;background-position:center top;
 }
-.project__thumb--shoes{background-image:url('thumb-shoes.jpg.png')}
-.project__thumb--refri{background-image:url('thumb-refri.jpg.png')}
-.project__thumb--dash{background-image:url('thumb-dash.jpg.png')}
+.project__thumb--shoes{background-image:url('sapatos-de-polegar.jpg')}
+.project__thumb--refri{background-image:url('thumb-refri.jpg')}
+.project__thumb--dash{background-image:url('thumb-dash.jpg')}
 .project__thumb::after{
   content:"";position:absolute;inset:0;
   background:linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,.10) 60%, transparent 100%);
