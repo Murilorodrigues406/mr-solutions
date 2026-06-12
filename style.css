@@ -361,3 +361,8 @@ h1,h2,h3,h4{font-family:var(--font-title);line-height:1.18;font-weight:600}
   .dash__cards{grid-template-columns:1fr}
   .container{padding:0 18px}
 }
+
+/* ===== ÍCONES SVG (substituem emojis) ===== */
+.sol-card__icon svg{width:17px;height:17px;color:var(--salvia-dark)}
+.card__icon svg{width:26px;height:26px;color:var(--salvia-dark)}
+.show-item__icon svg{width:21px;height:21px;color:var(--salvia-dark)}

@@ -8,7 +8,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="assets/mr-solutions-icon.png" />
+  <link rel="icon" type="image/png" href="mr-solutions-logo.png" />
+
+  <!-- Open Graph / compartilhamento -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mr-solutions.netlify.app/piv" />
+  <meta property="og:title" content="PIV — Painel Inteligente, Gestão e Vendas" />
+  <meta property="og:description" content="Dashboard de gestão comercial para lojistas e pequenos negócios acompanharem vendas, metas e desempenho da equipe em uma visão clara." />
+  <meta property="og:image" content="https://mr-solutions.netlify.app/mr-solutions-logo.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,7 +27,7 @@
   <header class="header scrolled" id="header">
     <div class="container header__inner">
       <a href="index.html" class="logo" aria-label="MR Solutions">
-        <img src="assets/mr-solutions-logo.png" alt="MR Solutions" class="logo__img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';" />
+        <img src="mr-solutions-logo.png" alt="MR Solutions" class="logo__img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';" />
         <span class="logo__fallback"><span class="logo__mr">MR</span><span class="logo__bar">|</span><span class="logo__sol">Solutions</span></span>
       </a>
       <a href="index.html" class="btn btn--ghost header__back">← Voltar para Home</a>
@@ -32,7 +42,7 @@
       <h1 class="hero__title">PIV — <span class="accent">Painel Inteligente, Gestão e Vendas</span></h1>
       <p class="hero__sub piv-hero__sub">Transforme vendas, metas e desempenho da equipe em uma visão clara para tomar decisões melhores.</p>
       <div class="hero__actions piv-hero__actions">
-        <a href="https://wa.me/5584999999999?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" class="btn btn--wa">Solicitar apresentação</a>
+        <a href="https://wa.me/5584986329566?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20PIV" target="_blank" rel="noopener" class="btn btn--wa">Solicitar apresentação</a>
         <a href="index.html" class="btn btn--ghost">Voltar para MR Solutions</a>
       </div>
     </div>
@@ -47,22 +57,22 @@
       </div>
       <div class="cards">
         <article class="card reveal">
-          <div class="card__icon">🏪</div>
+          <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/></svg></div>
           <h3 class="card__title">Lojistas</h3>
           <p class="card__text">Quem quer acompanhar o desempenho da loja sem se perder em planilhas.</p>
         </article>
         <article class="card reveal">
-          <div class="card__icon">💼</div>
+          <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
           <h3 class="card__title">Pequenos negócios</h3>
           <p class="card__text">Negócios que vendem todo dia e precisam enxergar resultados com clareza.</p>
         </article>
         <article class="card reveal">
-          <div class="card__icon">🤝</div>
+          <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
           <h3 class="card__title">Equipes de vendas</h3>
           <p class="card__text">Times que querem acompanhar metas e desempenho de cada vendedor.</p>
         </article>
         <article class="card reveal">
-          <div class="card__icon">📋</div>
+          <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></div>
           <h3 class="card__title">Gestores</h3>
           <p class="card__text">Quem ainda usa papel ou planilhas soltas e quer uma visão organizada.</p>
         </article>
@@ -78,13 +88,13 @@
         <h2 class="section__title">Todos os indicadores que importam em um só lugar</h2>
       </div>
       <div class="show-grid">
-        <div class="show-item reveal"><span class="show-item__icon">💰</span><span>Faturamento</span></div>
-        <div class="show-item reveal"><span class="show-item__icon">🎯</span><span>Metas</span></div>
-        <div class="show-item reveal"><span class="show-item__icon">📈</span><span>Projeção mensal</span></div>
-        <div class="show-item reveal"><span class="show-item__icon">🧾</span><span>Ticket médio</span></div>
-        <div class="show-item reveal"><span class="show-item__icon">👤</span><span>Desempenho por vendedor</span></div>
-        <div class="show-item reveal"><span class="show-item__icon">🏬</span><span>Comparativo por loja ou setor</span></div>
-        <div class="show-item reveal"><span class="show-item__icon">📊</span><span>Indicadores comerciais</span></div>
+        <div class="show-item reveal"><span class="show-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg></span><span>Faturamento</span></div>
+        <div class="show-item reveal"><span class="show-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><span>Metas</span></div>
+        <div class="show-item reveal"><span class="show-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span><span>Projeção mensal</span></div>
+        <div class="show-item reveal"><span class="show-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg></span><span>Ticket médio</span></div>
+        <div class="show-item reveal"><span class="show-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span>Desempenho por vendedor</span></div>
+        <div class="show-item reveal"><span class="show-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></span><span>Comparativo por loja ou setor</span></div>
+        <div class="show-item reveal"><span class="show-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></span><span>Indicadores comerciais</span></div>
       </div>
     </div>
   </section>
@@ -126,7 +136,7 @@
     <div class="container cta__inner reveal">
       <h2 class="cta__title">Quer enxergar melhor os resultados da sua loja?</h2>
       <p class="cta__text">Fale com a MR Solutions e descubra como o PIV pode transformar suas vendas, metas e equipe em uma visão clara para decidir melhor.</p>
-      <a href="https://wa.me/5584999999999?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" class="btn btn--wa btn--lg">Falar no WhatsApp</a>
+      <a href="https://wa.me/5584986329566?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20PIV" target="_blank" rel="noopener" class="btn btn--wa btn--lg">Falar no WhatsApp</a>
     </div>
   </section>
 
@@ -150,8 +160,8 @@
       <div class="footer__col">
         <h4 class="footer__heading">Contato</h4>
         <ul class="footer__links">
-          <li><a href="https://wa.me/5584999999999?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener">Contato via WhatsApp</a></li>
-          <li><a href="mailto:contato@mrsolutions.com.br">contato@mrsolutions.com.br</a></li>
+          <li><a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener">Contato via WhatsApp</a></li>
+          <li><a href="mailto:murilorsilva1@gmail.com">murilorsilva1@gmail.com</a></li>
         </ul>
       </div>
     </div>
@@ -162,7 +172,7 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/5584999999999?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp">
+  <a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.41 14.13c-.21.58-1.2 1.11-1.68 1.18-.43.06-.97.09-1.56-.1-.36-.11-.82-.26-1.41-.52-2.48-1.07-4.11-3.57-4.23-3.74-.12-.16-1.01-1.34-1.01-2.56 0-1.22.63-1.82.86-2.07.23-.25.49-.31.66-.31h.48c.16.01.36-.05.56.43.2.5.7 1.72.76 1.84.06.12.1.26.02.43-.08.16-.12.27-.25.41-.12.14-.26.32-.37.43-.12.13-.25.26-.11.51.15.25.64 1.06 1.38 1.72.94.84 1.74 1.11 1.99 1.23.25.13.4.11.54-.06.15-.16.63-.72.79-.97.17-.25.33-.21.56-.13.22.09 1.44.69 1.69.81.25.12.41.18.47.28.07.11.07.6-.14 1.18Z"/></svg>
   </a>
 
