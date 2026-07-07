@@ -29,6 +29,116 @@
   <link rel="preload" as="image" href="thumb-dash.jpg" />
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- ============================================================
+       GOOGLE ANALYTICS 4 (GA4)
+       PASSO ÚNICO: troque G-XXXXXXXXXX pelo seu ID de medição
+       (crie grátis em https://analytics.google.com → Administrador
+       → Criar propriedade → Fluxo de dados Web → copie o "ID da métrica")
+       ============================================================ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Estilos dos novos blocos (autocontidos, não mexem no style.css) -->
+  <style>
+    /* ---------- Seção DOR: animação "do caos à clareza" ---------- */
+    .mrx-flow{
+      display:flex;align-items:center;justify-content:center;gap:22px;
+      flex-wrap:wrap;margin-top:38px;
+    }
+    .mrx-flow__old{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+    .mrx-chip{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:9px 16px;border-radius:999px;
+      font-size:.86rem;font-weight:500;line-height:1;white-space:nowrap;
+    }
+    .mrx-chip--old{
+      color:rgba(255,255,255,.75);
+      background:rgba(255,255,255,.06);
+      border:1px dashed rgba(255,255,255,.28);
+    }
+    .mrx-chip--new{
+      color:#0d1b12;background:#37d67a;
+      border:1px solid #37d67a;font-weight:600;
+      box-shadow:0 0 0 0 rgba(55,214,122,.45);
+      animation:mrxGlow 2.6s ease-in-out infinite;
+    }
+    .mrx-flow__arrow{
+      display:inline-flex;color:#37d67a;
+      animation:mrxArrow 1.6s ease-in-out infinite;
+    }
+    /* chips antigos "à deriva" (desorganizados); o novo fica firme */
+    .mrx-drift-1{animation:mrxDrift 4.2s ease-in-out infinite;}
+    .mrx-drift-2{animation:mrxDrift 5.1s ease-in-out infinite reverse;animation-delay:.6s;}
+    .mrx-drift-3{animation:mrxDrift 4.7s ease-in-out infinite;animation-delay:1.2s;}
+    @keyframes mrxDrift{
+      0%,100%{transform:translateY(0) rotate(0deg);}
+      25%{transform:translateY(-6px) rotate(-1.4deg);}
+      65%{transform:translateY(4px) rotate(1.2deg);}
+    }
+    @keyframes mrxArrow{
+      0%,100%{transform:translateX(0);opacity:.85;}
+      50%{transform:translateX(7px);opacity:1;}
+    }
+    @keyframes mrxGlow{
+      0%,100%{box-shadow:0 0 0 0 rgba(55,214,122,.45);}
+      50%{box-shadow:0 0 0 10px rgba(55,214,122,0);}
+    }
+    /* Mobile: empilha a animação e a seta aponta para baixo */
+    @media (max-width:640px){
+      .mrx-flow{flex-direction:column;gap:16px;margin-top:30px;}
+      .mrx-flow__old{gap:10px;}
+      .mrx-chip{font-size:.8rem;padding:8px 14px;}
+      .mrx-flow__arrow{transform:rotate(90deg);animation:mrxArrowDown 1.6s ease-in-out infinite;}
+      @keyframes mrxArrowDown{
+        0%,100%{transform:rotate(90deg) translateX(0);opacity:.85;}
+        50%{transform:rotate(90deg) translateX(7px);opacity:1;}
+      }
+    }
+
+    /* ---------- CTA final: novo layout em duas colunas ---------- */
+    .cta .mrx-cta{
+      display:grid;grid-template-columns:1.4fr 1fr;align-items:center;gap:44px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:24px;padding:52px 56px;
+      backdrop-filter:blur(4px);
+    }
+    .cta .mrx-cta .cta__title{text-align:left;margin:0 0 14px;}
+    .cta .mrx-cta .cta__text{text-align:left;margin:0;max-width:none;}
+    .mrx-cta__action{
+      display:flex;flex-direction:column;align-items:center;gap:14px;
+      justify-self:center;
+    }
+    .mrx-cta__btn{
+      position:relative;display:inline-flex;align-items:center;gap:10px;
+      padding-left:30px;padding-right:30px;
+      transform:translateZ(0);transition:transform .2s ease;
+    }
+    .mrx-cta__btn:hover{transform:translateY(-2px) scale(1.02);}
+    .mrx-cta__pulse{
+      position:absolute;inset:0;border-radius:inherit;
+      animation:mrxGlow 2.4s ease-in-out infinite;pointer-events:none;
+    }
+    .mrx-cta__note{
+      font-size:.82rem;color:rgba(255,255,255,.75);
+      text-align:center;letter-spacing:.01em;
+    }
+    @media (max-width:860px){
+      .cta .mrx-cta{grid-template-columns:1fr;padding:38px 26px;gap:28px;text-align:center;}
+      .cta .mrx-cta .cta__title,.cta .mrx-cta .cta__text{text-align:center;}
+    }
+    /* Acessibilidade: respeitar quem prefere menos movimento */
+    @media (prefers-reduced-motion:reduce){
+      .mrx-drift-1,.mrx-drift-2,.mrx-drift-3,
+      .mrx-flow__arrow,.mrx-chip--new,.mrx-cta__pulse{animation:none;}
+    }
+  </style>
 </head>
 <body>
 
@@ -50,7 +160,7 @@
         </ul>
       </nav>
 
-      <a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" class="btn btn--dark header__cta">
+      <a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" class="btn btn--dark header__cta" data-wa-loc="header">
         <span class="wa-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
         </span>
@@ -69,10 +179,10 @@
     <div class="container hero__inner">
       <div class="hero__content reveal">
         <span class="eyebrow">Dados · Automação · Vendas · Resultados</span>
-        <h1 class="hero__title">Soluções digitais para vender mais, organizar processos e <span class="accent">enxergar melhor seus resultados.</span></h1>
-        <p class="hero__sub">A MR Solutions cria dashboards, planilhas automatizadas, páginas de venda, catálogos digitais e automações para pequenos negócios que precisam de mais clareza, organização e crescimento.</p>
+        <h1 class="hero__title">Soluções digitais para vender mais, organizar processos e <span class="accent">acompanhar seus resultados com clareza.</span></h1>
+        <p class="hero__sub">A MR Solutions desenvolve dashboards, planilhas automatizadas, páginas de venda, catálogos digitais e automações para empresas que querem organizar informações, acompanhar indicadores e vender com mais controle.</p>
         <div class="hero__actions">
-          <a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" class="btn btn--wa">Falar no WhatsApp</a>
+          <a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" class="btn btn--wa" data-wa-loc="hero">Falar no WhatsApp</a>
           <a href="#projetos" class="btn btn--ghost">Ver projetos</a>
         </div>
       </div>
@@ -101,7 +211,7 @@
     <div class="container cred__inner">
       <div class="cred__item"><b>+10 anos</b><span>de experiência em varejo</span></div>
       <i class="cred__sep" aria-hidden="true"></i>
-      <div class="cred__item"><b>3 projetos</b><span>entregues e no ar</span></div>
+      <div class="cred__item"><b>Soluções sob medida</b><span>criadas para a realidade do seu negócio</span></div>
       <i class="cred__sep" aria-hidden="true"></i>
       <div class="cred__item"><b>Atendimento direto</b><span>você fala com quem desenvolve</span></div>
     </div>
@@ -142,6 +252,31 @@
     <div class="container pain__inner reveal">
       <h2 class="section__title">Você ainda usa papel, planilhas soltas ou controles manuais para entender seu negócio?</h2>
       <p class="pain__text">Muitos negócios vendem todos os dias, mas não conseguem enxergar com clareza os números que realmente importam. A MR Solutions transforma informações espalhadas em soluções simples, visuais e práticas para tomada de decisão.</p>
+
+      <!-- Animação: do caos à clareza -->
+      <div class="mrx-flow" aria-hidden="true">
+        <div class="mrx-flow__old">
+          <span class="mrx-chip mrx-chip--old mrx-drift-1">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+            Papel
+          </span>
+          <span class="mrx-chip mrx-chip--old mrx-drift-2">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 3v18"/></svg>
+            Planilhas soltas
+          </span>
+          <span class="mrx-chip mrx-chip--old mrx-drift-3">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            Controles manuais
+          </span>
+        </div>
+        <span class="mrx-flow__arrow">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+        <span class="mrx-chip mrx-chip--new">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+          Uma visão clara do negócio
+        </span>
+      </div>
     </div>
   </section>
 
@@ -255,10 +390,21 @@
 
   <!-- CTA FINAL -->
   <section class="cta" id="contato">
-    <div class="container cta__inner reveal">
-      <h2 class="cta__title">Pronto para enxergar melhor os resultados do seu negócio?</h2>
-      <p class="cta__text">Fale com a MR Solutions e descubra como transformar dados, planilhas e processos soltos em uma solução digital clara, organizada e profissional.</p>
-      <a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" class="btn btn--wa btn--lg">Falar no WhatsApp</a>
+    <div class="container">
+      <div class="mrx-cta reveal">
+        <div class="mrx-cta__text">
+          <h2 class="cta__title">Pronto para enxergar melhor os resultados do seu negócio?</h2>
+          <p class="cta__text">Fale com a MR Solutions e descubra como transformar dados, planilhas e processos soltos em uma solução digital clara, organizada e profissional.</p>
+        </div>
+        <div class="mrx-cta__action">
+          <a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" class="btn btn--wa btn--lg mrx-cta__btn" data-wa-loc="cta_final">
+            <span class="mrx-cta__pulse" aria-hidden="true"></span>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.41 14.13c-.21.58-1.2 1.11-1.68 1.18-.43.06-.97.09-1.56-.1-.36-.11-.82-.26-1.41-.52-2.48-1.07-4.11-3.57-4.23-3.74-.12-.16-1.01-1.34-1.01-2.56 0-1.22.63-1.82.86-2.07.23-.25.49-.31.66-.31h.48c.16.01.36-.05.56.43.2.5.7 1.72.76 1.84.06.12.1.26.02.43-.08.16-.12.27-.25.41-.12.14-.26.32-.37.43-.12.13-.25.26-.11.51.15.25.64 1.06 1.38 1.72.94.84 1.74 1.11 1.99 1.23.25.13.4.11.54-.06.15-.16.63-.72.79-.97.17-.25.33-.21.56-.13.22.09 1.44.69 1.69.81.25.12.41.18.47.28.07.11.07.6-.14 1.18Z"/></svg>
+            Falar no WhatsApp
+          </a>
+          <span class="mrx-cta__note">Resposta rápida · Sem compromisso · Orçamento gratuito</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -285,7 +431,7 @@
       <div class="footer__col">
         <h4 class="footer__heading">Contato</h4>
         <ul class="footer__links">
-          <li><a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener">Contato via WhatsApp</a></li>
+          <li><a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" data-wa-loc="footer">Contato via WhatsApp</a></li>
           <li><a href="mailto:murilorsilva1@gmail.com">murilorsilva1@gmail.com</a></li>
         </ul>
       </div>
@@ -297,10 +443,67 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp">
+  <a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Solutions" target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp" data-wa-loc="botao_flutuante">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.41 14.13c-.21.58-1.2 1.11-1.68 1.18-.43.06-.97.09-1.56-.1-.36-.11-.82-.26-1.41-.52-2.48-1.07-4.11-3.57-4.23-3.74-.12-.16-1.01-1.34-1.01-2.56 0-1.22.63-1.82.86-2.07.23-.25.49-.31.66-.31h.48c.16.01.36-.05.56.43.2.5.7 1.72.76 1.84.06.12.1.26.02.43-.08.16-.12.27-.25.41-.12.14-.26.32-.37.43-.12.13-.25.26-.11.51.15.25.64 1.06 1.38 1.72.94.84 1.74 1.11 1.99 1.23.25.13.4.11.54-.06.15-.16.63-.72.79-.97.17-.25.33-.21.56-.13.22.09 1.44.69 1.69.81.25.12.41.18.47.28.07.11.07.6-.14 1.18Z"/></svg>
   </a>
 
   <script src="script.js"></script>
+
+  <!-- ============================================================
+       RASTREAMENTO DO FUNIL (GA4)
+       Eventos enviados automaticamente:
+       - page_view ............ visita na página (nativo do GA4)
+       - secao_vista .......... usuário rolou até uma seção-chave
+       - whatsapp_click ....... clique em qualquer botão de WhatsApp
+       Funil no GA4: page_view → secao_vista(contato) → whatsapp_click
+       ============================================================ -->
+  <script>
+    (function () {
+      if (typeof gtag !== 'function') return;
+
+      // 1) Cliques em WhatsApp (com a localização do botão)
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          gtag('event', 'whatsapp_click', {
+            botao: link.getAttribute('data-wa-loc') || 'outro',
+            event_category: 'conversao'
+          });
+        });
+      });
+
+      // 2) Visualização das seções-chave do funil (dispara 1x por seção)
+      var secoes = ['bi406', 'solucoes', 'projetos', 'como-funciona', 'contato'];
+      if ('IntersectionObserver' in window) {
+        var vistos = {};
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting && !vistos[e.target.id]) {
+              vistos[e.target.id] = true;
+              gtag('event', 'secao_vista', {
+                secao: e.target.id,
+                event_category: 'funil'
+              });
+              obs.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.4 });
+        secoes.forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) obs.observe(el);
+        });
+      }
+
+      // 3) Profundidade de rolagem (chegou ao fim da página)
+      var fimEnviado = false;
+      window.addEventListener('scroll', function () {
+        if (fimEnviado) return;
+        var alcance = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+        if (alcance > 0.9) {
+          fimEnviado = true;
+          gtag('event', 'pagina_completa', { event_category: 'engajamento' });
+        }
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
