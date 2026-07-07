@@ -65,9 +65,12 @@
     .mrx-chip--new{
       color:#0d1b12;background:#37d67a;
       border:1px solid #37d67a;font-weight:600;
+      text-decoration:none;cursor:pointer;
       box-shadow:0 0 0 0 rgba(55,214,122,.45);
       animation:mrxGlow 2.6s ease-in-out infinite;
+      transition:transform .18s ease,background .18s ease;
     }
+    .mrx-chip--new:hover{transform:translateY(-3px) scale(1.04);background:#4ee68b;}
     .mrx-flow__arrow{
       display:inline-flex;color:#37d67a;
       animation:mrxArrow 1.6s ease-in-out infinite;
@@ -78,8 +81,8 @@
     .mrx-drift-3{animation:mrxDrift 4.7s ease-in-out infinite;animation-delay:1.2s;}
     @keyframes mrxDrift{
       0%,100%{transform:translateY(0) rotate(0deg);}
-      25%{transform:translateY(-6px) rotate(-1.4deg);}
-      65%{transform:translateY(4px) rotate(1.2deg);}
+      25%{transform:translateY(-11px) rotate(-2.6deg);}
+      65%{transform:translateY(8px) rotate(2.2deg);}
     }
     @keyframes mrxArrow{
       0%,100%{transform:translateX(0);opacity:.85;}
@@ -254,8 +257,8 @@
       <p class="pain__text">Muitos negócios vendem todos os dias, mas não conseguem enxergar com clareza os números que realmente importam. A MR Solutions transforma informações espalhadas em soluções simples, visuais e práticas para tomada de decisão.</p>
 
       <!-- Animação: do caos à clareza -->
-      <div class="mrx-flow" aria-hidden="true">
-        <div class="mrx-flow__old">
+      <div class="mrx-flow">
+        <div class="mrx-flow__old" aria-hidden="true">
           <span class="mrx-chip mrx-chip--old mrx-drift-1">
             <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
             Papel
@@ -269,13 +272,13 @@
             Controles manuais
           </span>
         </div>
-        <span class="mrx-flow__arrow">
+        <span class="mrx-flow__arrow" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </span>
-        <span class="mrx-chip mrx-chip--new">
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+        <a href="#solucoes" class="mrx-chip mrx-chip--new" aria-label="Ver as soluções da MR Solutions">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
           Uma visão clara do negócio
-        </span>
+        </a>
       </div>
     </div>
   </section>
