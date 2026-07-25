@@ -149,6 +149,119 @@
       .cta .mrx-cta{grid-template-columns:1fr;padding:38px 26px;gap:28px;text-align:center;}
       .cta .mrx-cta .cta__title,.cta .mrx-cta .cta__text{text-align:center;}
     }
+
+    /* ---------- CARRO-CHEFE: LOJA DIGITAL ----------------------------
+       Bloco autocontido. Todo seletor comeca em .ld para nunca colidir
+       com as regras do style.css. Verde = acao da MR Solucoes,
+       laranja = evidencia da DAM Shoes.
+       ---------------------------------------------------------------- */
+    .ld{
+      --ld-green:#37d67a; --ld-orange:#ff6b1a;
+      --ld-line:rgba(255,255,255,.14);
+      --ld-mut:rgba(255,255,255,.62);
+      --ld-surf:rgba(255,255,255,.045);
+      --ld-mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+      padding:clamp(58px,8vw,100px) 0;
+      border-top:1px solid var(--ld-line);
+      border-bottom:1px solid var(--ld-line);
+    }
+    .ld-tag{
+      display:inline-flex;align-items:center;gap:7px;
+      font-family:var(--ld-mono);font-size:.71rem;letter-spacing:.13em;
+      text-transform:uppercase;color:var(--ld-mut);
+      border:1px solid var(--ld-line);border-radius:999px;padding:6px 13px;
+    }
+    .ld-tag b{color:var(--ld-orange);font-weight:500;}
+    .ld-tag--g b{color:var(--ld-green);}
+    .ld-h2{
+      font-family:'Poppins',sans-serif;font-weight:700;
+      font-size:clamp(1.6rem,3.4vw,2.3rem);line-height:1.16;
+      letter-spacing:-.02em;margin:18px 0 16px;max-width:24ch;
+    }
+    .ld-h2 em{font-style:normal;color:var(--ld-green);}
+    .ld-lede{color:var(--ld-mut);font-size:1.03rem;line-height:1.62;max-width:60ch;margin:0;}
+    .ld-h3{font-family:'Poppins',sans-serif;font-size:1.02rem;font-weight:600;margin:0;letter-spacing:-.01em;}
+
+    .ld-btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      padding:14px 24px;border-radius:10px;font-weight:600;font-size:.95rem;
+      text-decoration:none;border:1px solid transparent;cursor:pointer;
+      transition:transform .16s ease,background .16s ease,border-color .16s ease;
+    }
+    .ld-btn--go{background:var(--ld-green);color:#07160d;}
+    .ld-btn--go:hover{transform:translateY(-2px);background:#4ee68b;}
+    .ld-btn--out{border-color:var(--ld-line);color:#fff;}
+    .ld-btn--out:hover{border-color:var(--ld-green);color:var(--ld-green);}
+    .ld-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+    .ld-note{margin:13px 0 0;font-size:.82rem;color:var(--ld-mut);}
+
+    /* antes / depois */
+    .ld-vs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px;}
+    .ld-vs__col{border:1px solid var(--ld-line);border-radius:14px;padding:24px;background:var(--ld-surf);}
+    .ld-vs__col--old{border-style:dashed;}
+    .ld-vs__col--old .ld-h3{color:var(--ld-mut);}
+    .ld-vs__col--new .ld-h3{color:var(--ld-green);}
+    .ld-vs__col ul{margin:13px 0 0;padding-left:19px;color:var(--ld-mut);font-size:.93rem;}
+    .ld-vs__col li+li{margin-top:7px;}
+
+    /* recursos */
+    .ld-feats{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:1px;
+      background:var(--ld-line);border:1px solid var(--ld-line);
+      border-radius:14px;overflow:hidden;margin-top:34px;
+    }
+    .ld-feat{background:#0f1512;padding:25px 21px;}
+    .ld-feat b{
+      display:block;font-family:var(--ld-mono);font-size:.7rem;letter-spacing:.12em;
+      color:var(--ld-green);margin-bottom:10px;font-weight:500;
+    }
+    .ld-feat p{color:var(--ld-mut);font-size:.9rem;margin:7px 0 0;line-height:1.55;}
+
+    /* ASSINATURA: calculadora de margem */
+    .ld-calc{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(26px,5vw,54px);
+      align-items:center;margin-top:38px;}
+    .ld-box{border:1px solid var(--ld-line);border-radius:16px;background:#0f1512;overflow:hidden;}
+    .ld-box__head{
+      display:flex;align-items:center;gap:9px;padding:13px 18px;
+      border-bottom:1px solid var(--ld-line);font-family:var(--ld-mono);
+      font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ld-mut);
+    }
+    .ld-dot{width:9px;height:9px;border-radius:50%;background:var(--ld-orange);flex:none;}
+    .ld-box__body{padding:21px 18px;}
+    .ld-field+.ld-field{margin-top:15px;}
+    .ld-field label{display:block;font-size:.82rem;color:var(--ld-mut);margin-bottom:7px;}
+    .ld-money{position:relative;}
+    .ld-money>span{
+      position:absolute;left:13px;top:50%;transform:translateY(-50%);
+      font-family:var(--ld-mono);font-size:.88rem;color:var(--ld-mut);
+    }
+    .ld-money input{
+      width:100%;padding:12px 13px 12px 40px;border-radius:9px;
+      border:1px solid var(--ld-line);background:#0a0f0c;color:#fff;
+      font-family:var(--ld-mono);font-size:1rem;
+    }
+    .ld-money input:focus-visible{outline:2px solid var(--ld-green);outline-offset:2px;}
+    .ld-out{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+      background:var(--ld-line);border-top:1px solid var(--ld-line);}
+    .ld-out>div{background:#0f1512;padding:16px 13px;text-align:center;}
+    .ld-out small{display:block;font-size:.68rem;letter-spacing:.09em;
+      text-transform:uppercase;color:var(--ld-mut);}
+    .ld-out b{display:block;font-family:var(--ld-mono);font-size:1.2rem;
+      font-weight:500;margin-top:6px;}
+    .ld-out b.ld-pos{color:var(--ld-green);}
+    .ld-out b.ld-neg{color:var(--ld-orange);}
+    .ld-out b.ld-zero{color:var(--ld-mut);}
+    .ld-hint{font-family:var(--ld-mono);font-size:.75rem;color:var(--ld-mut);
+      margin:0;padding:0 18px 18px;}
+
+    @media (max-width:860px){
+      .ld-vs,.ld-calc{grid-template-columns:1fr;}
+      .ld-out{grid-template-columns:1fr;}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .ld-btn{transition:none;}
+    }
+
     /* Acessibilidade: respeitar quem prefere menos movimento */
     @media (prefers-reduced-motion:reduce){
       .mrx-drift-1,.mrx-drift-2,.mrx-drift-3,
@@ -168,6 +281,7 @@
 
       <nav class="nav" id="nav">
         <ul class="nav__list">
+          <li><a href="#loja-digital" class="nav__link">Loja digital</a></li>
           <li><a href="#solucoes" class="nav__link">Soluções</a></li>
           <li><a href="#bi406" class="nav__link">BI406</a></li>
           <li><a href="#projetos" class="nav__link">Projetos</a></li>
@@ -230,6 +344,129 @@
       <div class="cred__item"><b>Soluções sob medida</b><span>criadas para a realidade do seu negócio</span></div>
       <i class="cred__sep" aria-hidden="true"></i>
       <div class="cred__item"><b>Atendimento direto</b><span>você fala com quem desenvolve</span></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CARRO-CHEFE — LOJA DIGITAL (prova: DAM Shoes)
+       ============================================================ -->
+  <section class="ld" id="loja-digital">
+    <div class="container">
+      <div class="reveal">
+        <span class="ld-tag">Negocio proprio &middot; <b>DAM Shoes</b></span>
+        <h2 class="ld-h2">Nao vendemos loja digital. <em>Nos temos uma.</em></h2>
+        <p class="ld-lede">
+          A DAM Shoes e a nossa loja &mdash; catalogo no ar, painel de produtos, venda
+          fechando pelo WhatsApp. Todo recurso que entra no sistema e testado vendendo
+          de verdade antes de ser entregue a alguem. E o mesmo sistema que montamos
+          para o seu negocio.
+        </p>
+        <div class="ld-actions">
+          <a href="https://wa.me/5584986329566?text=Ol&aacute;, quero uma loja digital com painel para o meu neg&oacute;cio"
+             target="_blank" rel="noopener" class="ld-btn ld-btn--go"
+             data-wa-loc="loja_digital" data-produto="loja_digital">Quero uma loja assim</a>
+          <a href="https://dam-shoes.netlify.app/" target="_blank" rel="noopener"
+             class="ld-btn ld-btn--out" data-projeto="dam_shoes" data-projeto-local="secao_loja_digital">
+             Ver a loja funcionando</a>
+        </div>
+        <p class="ld-note">Atendimento direto com quem desenvolve &middot; Voce mesmo cadastra seus produtos</p>
+      </div>
+
+      <div class="ld-vs reveal">
+        <div class="ld-vs__col ld-vs__col--old">
+          <h3 class="ld-h3">Vender por print de foto</h3>
+          <ul>
+            <li>Fotos soltas na galeria do celular</li>
+            <li>Preco no papel, na cabeca ou desatualizado</li>
+            <li>Sem saber a margem real de cada produto</li>
+            <li>Cada produto novo e trabalho manual repetido</li>
+          </ul>
+        </div>
+        <div class="ld-vs__col ld-vs__col--new">
+          <h3 class="ld-h3">Com loja e painel proprio</h3>
+          <ul>
+            <li>Catalogo com pagina propria, abre em qualquer celular</li>
+            <li>Preco num so lugar &mdash; muda no painel, muda na loja</li>
+            <li>Margem calculada no cadastro, antes de anunciar</li>
+            <li>Importacao em massa por planilha, nao item por item</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ld-feats reveal">
+        <div class="ld-feat">
+          <b>CATALOGO</b>
+          <h3 class="ld-h3">Vitrine com pagina de produto</h3>
+          <p>Fotos em carrossel, detalhe em modal e botao que abre o WhatsApp ja com o item na mensagem.</p>
+        </div>
+        <div class="ld-feat">
+          <b>PAINEL</b>
+          <h3 class="ld-h3">Area administrativa propria</h3>
+          <p>Voce cadastra, edita e tira produto do ar sozinho, com login protegido. Sem depender de mim para mudar preco.</p>
+        </div>
+        <div class="ld-feat">
+          <b>MARGEM</b>
+          <h3 class="ld-h3">Calculadora no cadastro</h3>
+          <p>Informa o custo e ve o lucro antes de definir o preco de venda. E o recurso abaixo, funcionando.</p>
+        </div>
+        <div class="ld-feat">
+          <b>IMPORTACAO</b>
+          <h3 class="ld-h3">Cadastro em massa por planilha</h3>
+          <p>Catalogo inteiro entra de uma vez por arquivo CSV com as fotos, em vez de um produto por vez.</p>
+        </div>
+        <div class="ld-feat">
+          <b>VENDA</b>
+          <h3 class="ld-h3">Fechamento no WhatsApp</h3>
+          <p>Sem carrinho, sem cadastro, sem taxa de gateway. A conversa vai para onde seu cliente ja esta.</p>
+        </div>
+        <div class="ld-feat">
+          <b>MEDICAO</b>
+          <h3 class="ld-h3">Google Analytics configurado</h3>
+          <p>Qual produto foi mais clicado, de onde veio a visita e onde a pessoa desistiu. Dado, nao achismo.</p>
+        </div>
+      </div>
+
+      <div class="ld-calc reveal">
+        <div class="ld-box">
+          <div class="ld-box__head"><span class="ld-dot" aria-hidden="true"></span> Cadastro de produto</div>
+          <div class="ld-box__body">
+            <div class="ld-field">
+              <label for="ld-custo">Quanto voce paga no produto</label>
+              <div class="ld-money"><span>R$</span>
+                <input id="ld-custo" type="number" inputmode="decimal" min="0" step="0.01" value="120" />
+              </div>
+            </div>
+            <div class="ld-field">
+              <label for="ld-venda">Por quanto pretende vender</label>
+              <div class="ld-money"><span>R$</span>
+                <input id="ld-venda" type="number" inputmode="decimal" min="0" step="0.01" value="199" />
+              </div>
+            </div>
+          </div>
+          <div class="ld-out">
+            <div><small>Lucro por venda</small><b id="ld-lucro" class="ld-pos">R$ 79,00</b></div>
+            <div><small>Margem</small><b id="ld-margem" class="ld-pos">39,7%</b></div>
+            <div><small>Markup</small><b id="ld-markup" class="ld-pos">65,8%</b></div>
+          </div>
+          <p class="ld-hint" id="ld-dica">Margem saudavel para revenda fisica.</p>
+        </div>
+
+        <div>
+          <span class="ld-tag ld-tag--g">Do painel da <b>DAM Shoes</b></span>
+          <h3 class="ld-h3" style="margin:16px 0 12px;">Experimente a calculadora de margem</h3>
+          <p class="ld-lede">
+            Esta e a mesma conta que roda no cadastro de produto da loja. Coloque o custo
+            e o preco de um item seu e veja o que sobra. A maioria dos lojistas define preco
+            comparando com o vizinho e descobre no fim do mes que o produto que mais vendeu
+            era o que menos dava lucro.
+          </p>
+          <p class="ld-lede" style="margin-top:14px;">
+            Passei dez anos no varejo optico, de tecnico a supervisor de rede de lojas.
+            Essa e a diferenca entre montar um site bonito e montar uma ferramenta de venda:
+            eu ja estive do outro lado do balcao, fechando mes.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -341,9 +578,10 @@
             <span class="project__tag">Catálogo digital</span>
           </div>
           <div class="project__body">
+            <p style="margin:0 0 10px;font-size:.74rem;letter-spacing:.11em;text-transform:uppercase;color:#37d67a;">Negócio próprio</p>
             <h3 class="project__title">DAM Shoes</h3>
             <p class="project__text">Catálogo digital de tênis premium com identidade visual personalizada, vitrine de produtos, promoção ativa e compra via WhatsApp.</p>
-            <a href="https://dam-shoes.netlify.app/" target="_blank" rel="noopener" class="project__link" data-projeto="dam_shoes" data-projeto-local="grid_projetos">Ver projeto <span aria-hidden="true">→</span></a>
+            <a href="#loja-digital" class="project__link" data-projeto="dam_shoes" data-projeto-local="grid_projetos">Ver como funciona <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
@@ -352,6 +590,7 @@
             <span class="project__tag">Landing page</span>
           </div>
           <div class="project__body">
+            <p style="margin:0 0 10px;font-size:.74rem;letter-spacing:.11em;text-transform:uppercase;color:rgba(255,255,255,.55);">Cliente</p>
             <h3 class="project__title">Souza Neto Refrigeração</h3>
             <p class="project__text">Landing page profissional para empresa de serviços, com apresentação institucional, serviços, diferenciais e chamada direta para orçamento.</p>
             <a href="https://souzanetorefrigeracao.netlify.app/" target="_blank" rel="noopener" class="project__link" data-projeto="souza_neto" data-projeto-local="grid_projetos">Ver projeto <span aria-hidden="true">→</span></a>
@@ -363,6 +602,7 @@
             <span class="project__tag">Dashboard / BI406</span>
           </div>
           <div class="project__body">
+            <p style="margin:0 0 10px;font-size:.74rem;letter-spacing:.11em;text-transform:uppercase;color:#37d67a;">Negócio próprio</p>
             <h3 class="project__title">Dashboard de Vendas / BI406</h3>
             <p class="project__text">Painel de vendas para varejo com indicadores, metas, projeções, equipe e visão gerencial.</p>
             <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="project__link" data-projeto="bi406" data-projeto-local="grid_projetos">Ver projeto <span aria-hidden="true">→</span></a>
@@ -465,6 +705,61 @@
 
   <script src="script.js"></script>
 
+  <script>
+    /* ---------- Calculadora de margem (secao Loja digital) ---------- */
+    (function () {
+      var custo = document.getElementById('ld-custo');
+      var venda = document.getElementById('ld-venda');
+      var elL = document.getElementById('ld-lucro');
+      var elM = document.getElementById('ld-margem');
+      var elK = document.getElementById('ld-markup');
+      var elD = document.getElementById('ld-dica');
+      if (!custo || !venda) return;
+
+      function brl(v){ return 'R$ ' + v.toFixed(2).replace('.', ','); }
+      function pct(v){ return v.toFixed(1).replace('.', ',') + '%'; }
+      function cor(el, v){ el.className = v > 0 ? 'ld-pos' : (v < 0 ? 'ld-neg' : 'ld-zero'); }
+
+      function calcular() {
+        var c = parseFloat(custo.value) || 0;
+        var p = parseFloat(venda.value) || 0;
+        var lucro = p - c;
+
+        elL.textContent = brl(lucro); cor(elL, lucro);
+
+        var margem = p > 0 ? (lucro / p) * 100 : 0;
+        elM.textContent = p > 0 ? pct(margem) : '—'; cor(elM, p > 0 ? margem : 0);
+
+        var markup = c > 0 ? (lucro / c) * 100 : 0;
+        elK.textContent = c > 0 ? pct(markup) : '—'; cor(elK, c > 0 ? markup : 0);
+
+        if (p <= 0 || c <= 0)      elD.textContent = 'Preencha os dois campos para ver o resultado.';
+        else if (lucro < 0)        elD.textContent = 'Prejuízo: você está vendendo abaixo do que paga.';
+        else if (margem < 15)      elD.textContent = 'Margem apertada — frete ou taxa pode zerar o lucro.';
+        else if (margem < 30)      elD.textContent = 'Margem baixa para revenda física. Dá para melhorar.';
+        else if (margem < 55)      elD.textContent = 'Margem saudável para revenda física.';
+        else                       elD.textContent = 'Margem alta — confira se o preço segue competitivo.';
+      }
+
+      custo.addEventListener('input', calcular);
+      venda.addEventListener('input', calcular);
+      calcular();
+
+      /* usar a calculadora e sinal forte de interesse (dispara 1x) */
+      var usou = false;
+      [custo, venda].forEach(function (el) {
+        el.addEventListener('change', function () {
+          if (usou || typeof gtag !== 'function') return;
+          usou = true;
+          gtag('event', 'usou_calculadora', {
+            produto: 'loja_digital',
+            event_category: 'interesse'
+          });
+        });
+      });
+    })();
+  </script>
+
   <!-- ============================================================
        RASTREAMENTO DO FUNIL (GA4)
        Eventos enviados automaticamente:
@@ -500,7 +795,7 @@
       });
 
       // 2) Visualização das seções-chave do funil (dispara 1x por seção)
-      var secoes = ['bi406', 'solucoes', 'projetos', 'como-funciona', 'contato'];
+      var secoes = ['loja-digital', 'bi406', 'solucoes', 'projetos', 'como-funciona', 'contato'];
       if ('IntersectionObserver' in window) {
         var vistos = {};
         var obs = new IntersectionObserver(function (entries) {
