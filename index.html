@@ -41,6 +41,18 @@
   <script>
     window.GA_ID = 'G-ME1D6SH7L3'; // MR Soluções — landing page
 
+    /* ============================================================
+       GOOGLE ADS — tag de conversão
+       1) ADS_ID: em https://ads.google.com → Ferramentas →
+          Medição → Conversões → sua tag (formato AW-XXXXXXXXX)
+       2) ADS_WHATSAPP_LABEL: rótulo da ação de conversão
+          "Clique no WhatsApp" (o trecho depois da barra em
+          AW-XXXXXXXXX/AbCdEfGhIj). Enquanto estiverem vazios,
+          nada quebra: só o GA4 roda.
+       ============================================================ */
+    window.ADS_ID = '';               // ex.: 'AW-123456789'
+    window.ADS_WHATSAPP_LABEL = '';   // ex.: 'AbCdEfGhIj'
+
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
 
@@ -52,6 +64,11 @@
 
       gtag('js', new Date());
       gtag('config', window.GA_ID, { send_page_view: true });
+
+      // Google Ads: mesma biblioteca gtag.js, só configura o segundo ID
+      if (window.ADS_ID && window.ADS_ID.indexOf('AW-') === 0) {
+        gtag('config', window.ADS_ID);
+      }
     } else {
       console.warn('[MR Soluções] GA4 não configurado: substitua GA_ID no index.html');
     }
@@ -396,7 +413,7 @@
             montamos para o seu negócio.
           </p>
           <div class="ld-actions">
-            <a href="https://wa.me/5584986329566?text=Olá, quero uma loja digital com painel para o meu negócio"
+            <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20quero%20uma%20loja%20digital%20com%20painel%20para%20o%20meu%20neg%C3%B3cio"
                target="_blank" rel="noopener" class="ld-btn ld-btn--go"
                data-wa-loc="loja_digital" data-produto="loja_digital">Quero uma loja assim</a>
             <a href="https://dam-shoes.netlify.app/" target="_blank" rel="noopener"
@@ -535,7 +552,7 @@
         </ul>
         <div class="piv__actions">
           <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="btn btn--dark" data-projeto="bi406" data-projeto-local="botao_saiba_mais">Ver o BI406 ao vivo</a>
-          <a href="https://wa.me/5584986329566?text=Olá, quero saber mais sobre o BI406 (painel de vendas)" target="_blank" rel="noopener" class="btn btn--ghost" data-wa-loc="secao_bi406" data-produto="bi406">Falar sobre o BI406</a>
+          <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20BI406%20%28painel%20de%20vendas%29" target="_blank" rel="noopener" class="btn btn--ghost" data-wa-loc="secao_bi406" data-produto="bi406">Falar sobre o BI406</a>
         </div>
       </div>
     </div>
@@ -837,6 +854,13 @@
             produto: link.getAttribute('data-produto') || 'nao_especificado',
             event_category: 'conversao'
           });
+
+          // Google Ads: registra a conversão "Clique no WhatsApp"
+          if (window.ADS_ID && window.ADS_WHATSAPP_LABEL) {
+            gtag('event', 'conversion', {
+              send_to: window.ADS_ID + '/' + window.ADS_WHATSAPP_LABEL
+            });
+          }
         });
       });
 
