@@ -7,6 +7,7 @@
   <meta name="description" content="A MR Soluções cria páginas de venda, dashboards, planilhas automatizadas, catálogos digitais e análise de dados com Google Analytics para pequenos negócios que precisam de mais clareza, organização e crescimento." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="mr-solutions-logo.png" />
 
@@ -32,13 +33,13 @@
 
   <!-- ============================================================
        GOOGLE ANALYTICS 4 (GA4)
-       PASSO ÚNICO: troque G-XXXXXXXXXX (linha abaixo) pelo seu ID de medição.
+       ID de medição já configurado abaixo (window.GA_ID).
        É o único lugar do arquivo que precisa ser editado.
        Onde pegar: https://analytics.google.com → Administrador →
        Fluxos de dados → seu site → "ID da métrica" (formato G-XXXXXXXXXX)
        ============================================================ -->
   <script>
-    window.GA_ID = 'G-XXXXXXXXXX'; // <<< COLE SEU ID AQUI
+    window.GA_ID = 'G-ME1D6SH7L3'; // MR Soluções — landing page
 
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -204,15 +205,15 @@
 
       <!-- SHOWCASE — PROJETOS REAIS -->
       <div class="hero-showcase reveal">
-        <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="shot shot--main" aria-label="Ver demonstração do dashboard BI406">
+        <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="shot shot--main" aria-label="Ver demonstração do dashboard BI406" data-projeto="bi406" data-projeto-local="hero_vitrine">
           <span class="shot__bar"><i></i><i></i><i></i><b>BI406 — Dashboard de Vendas</b></span>
           <img src="thumb-dash.jpg" alt="Dashboard de vendas BI406 em funcionamento" />
         </a>
-        <a href="https://dam-shoes.netlify.app/" target="_blank" rel="noopener" class="shot shot--sm shot--left" aria-label="Ver projeto DAM Shoes">
+        <a href="https://dam-shoes.netlify.app/" target="_blank" rel="noopener" class="shot shot--sm shot--left" aria-label="Ver projeto DAM Shoes" data-projeto="dam_shoes" data-projeto-local="hero_vitrine">
           <img src="thumb-shoes.jpg" alt="Catálogo digital DAM Shoes" loading="lazy" />
           <span class="shot__tag">Catálogo digital</span>
         </a>
-        <a href="https://souzanetorefrigeracao.netlify.app/" target="_blank" rel="noopener" class="shot shot--sm shot--right" aria-label="Ver projeto Souza Neto Refrigeração">
+        <a href="https://souzanetorefrigeracao.netlify.app/" target="_blank" rel="noopener" class="shot shot--sm shot--right" aria-label="Ver projeto Souza Neto Refrigeração" data-projeto="souza_neto" data-projeto-local="hero_vitrine">
           <img src="thumb-refri.jpg" alt="Landing page Souza Neto Refrigeração" loading="lazy" />
           <span class="shot__tag">Landing page</span>
         </a>
@@ -237,7 +238,7 @@
     <div class="container piv__inner">
       <div class="piv__media reveal">
         <div class="piv__badge">Produto em destaque</div>
-        <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="piv__shot" aria-label="Ver o BI406 ao vivo">
+        <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="piv__shot" aria-label="Ver o BI406 ao vivo" data-projeto="bi406" data-projeto-local="secao_bi406">
           <span class="piv__shot-bar"><i></i><i></i><i></i><b>BI406 — Painel de Vendas</b></span>
           <img src="bi406-preview.jpg" alt="Painel BI406 com faturamento, metas e desempenho por loja" loading="lazy" />
         </a>
@@ -255,8 +256,8 @@
           <li>Use uma planilha estruturada como base para alimentar o painel</li>
         </ul>
         <div class="piv__actions">
-          <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="btn btn--dark">Saiba mais sobre o BI406</a>
-          <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="btn btn--ghost">Ver demonstração</a>
+          <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="btn btn--dark" data-projeto="bi406" data-projeto-local="botao_saiba_mais">Ver o BI406 ao vivo</a>
+          <a href="https://wa.me/5584986329566?text=Olá, quero saber mais sobre o BI406 (painel de vendas)" target="_blank" rel="noopener" class="btn btn--ghost" data-wa-loc="secao_bi406" data-produto="bi406">Falar sobre o BI406</a>
         </div>
       </div>
     </div>
@@ -342,7 +343,7 @@
           <div class="project__body">
             <h3 class="project__title">DAM Shoes</h3>
             <p class="project__text">Catálogo digital de tênis premium com identidade visual personalizada, vitrine de produtos, promoção ativa e compra via WhatsApp.</p>
-            <a href="https://dam-shoes.netlify.app/" target="_blank" rel="noopener" class="project__link">Ver projeto <span aria-hidden="true">→</span></a>
+            <a href="https://dam-shoes.netlify.app/" target="_blank" rel="noopener" class="project__link" data-projeto="dam_shoes" data-projeto-local="grid_projetos">Ver projeto <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
@@ -353,7 +354,7 @@
           <div class="project__body">
             <h3 class="project__title">Souza Neto Refrigeração</h3>
             <p class="project__text">Landing page profissional para empresa de serviços, com apresentação institucional, serviços, diferenciais e chamada direta para orçamento.</p>
-            <a href="https://souzanetorefrigeracao.netlify.app/" target="_blank" rel="noopener" class="project__link">Ver projeto <span aria-hidden="true">→</span></a>
+            <a href="https://souzanetorefrigeracao.netlify.app/" target="_blank" rel="noopener" class="project__link" data-projeto="souza_neto" data-projeto-local="grid_projetos">Ver projeto <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
@@ -364,7 +365,7 @@
           <div class="project__body">
             <h3 class="project__title">Dashboard de Vendas / BI406</h3>
             <p class="project__text">Painel de vendas para varejo com indicadores, metas, projeções, equipe e visão gerencial.</p>
-            <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="project__link">Ver projeto <span aria-hidden="true">→</span></a>
+            <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="project__link" data-projeto="bi406" data-projeto-local="grid_projetos">Ver projeto <span aria-hidden="true">→</span></a>
           </div>
         </article>
       </div>
@@ -476,12 +477,24 @@
     (function () {
       if (typeof gtag !== 'function') return;
 
-      // 1) Cliques em WhatsApp (com a localização do botão)
+      // 1) Cliques em WhatsApp (com a localização do botão e o produto, quando houver)
       document.querySelectorAll('a[href*="wa.me"]').forEach(function (link) {
         link.addEventListener('click', function () {
           gtag('event', 'whatsapp_click', {
             botao: link.getAttribute('data-wa-loc') || 'outro',
+            produto: link.getAttribute('data-produto') || 'nao_especificado',
             event_category: 'conversao'
+          });
+        });
+      });
+
+      // 1b) Cliques em produtos/projetos — ranking de interesse por produto
+      document.querySelectorAll('[data-projeto]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          gtag('event', 'clique_projeto', {
+            projeto: el.getAttribute('data-projeto'),
+            local: el.getAttribute('data-projeto-local') || 'nao_definido',
+            event_category: 'interesse'
           });
         });
       });
