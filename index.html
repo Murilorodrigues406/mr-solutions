@@ -158,13 +158,29 @@
     .ld{
       --ld-green:#37d67a; --ld-orange:#ff6b1a;
       --ld-line:rgba(255,255,255,.14);
-      --ld-mut:rgba(255,255,255,.62);
+      --ld-mut:rgba(255,255,255,.64);
       --ld-surf:rgba(255,255,255,.045);
       --ld-mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
       padding:clamp(58px,8vw,100px) 0;
-      border-top:1px solid var(--ld-line);
-      border-bottom:1px solid var(--ld-line);
+      /* fundo proprio: a secao nao depende da cor do style.css ao redor */
+      background:#0b100d;
+      color:#fff;
     }
+    .ld-top{
+      display:grid;grid-template-columns:1.08fr .92fr;
+      gap:clamp(26px,5vw,54px);align-items:center;
+    }
+    .ld-shot{
+      display:block;text-decoration:none;overflow:hidden;
+      border:1px solid var(--ld-line);border-radius:14px;background:#0f1512;
+    }
+    .ld-shot img{display:block;width:100%;height:auto;}
+    .ld-shot figcaption{
+      display:flex;align-items:center;gap:8px;padding:11px 14px;
+      border-top:1px solid var(--ld-line);font-family:var(--ld-mono);
+      font-size:.73rem;color:var(--ld-mut);
+    }
+    .ld-shot figcaption b{color:var(--ld-orange);font-weight:500;}
     .ld-tag{
       display:inline-flex;align-items:center;gap:7px;
       font-family:var(--ld-mono);font-size:.71rem;letter-spacing:.13em;
@@ -176,11 +192,11 @@
     .ld-h2{
       font-family:'Poppins',sans-serif;font-weight:700;
       font-size:clamp(1.6rem,3.4vw,2.3rem);line-height:1.16;
-      letter-spacing:-.02em;margin:18px 0 16px;max-width:24ch;
+      letter-spacing:-.02em;margin:18px 0 16px;max-width:24ch;color:#fff;
     }
     .ld-h2 em{font-style:normal;color:var(--ld-green);}
     .ld-lede{color:var(--ld-mut);font-size:1.03rem;line-height:1.62;max-width:60ch;margin:0;}
-    .ld-h3{font-family:'Poppins',sans-serif;font-size:1.02rem;font-weight:600;margin:0;letter-spacing:-.01em;}
+    .ld-h3{font-family:'Poppins',sans-serif;font-size:1.02rem;font-weight:600;margin:0;letter-spacing:-.01em;color:#fff;}
 
     .ld-btn{
       display:inline-flex;align-items:center;justify-content:center;gap:9px;
@@ -255,12 +271,29 @@
       margin:0;padding:0 18px 18px;}
 
     @media (max-width:860px){
-      .ld-vs,.ld-calc{grid-template-columns:1fr;}
+      .ld-top,.ld-vs,.ld-calc{grid-template-columns:1fr;}
       .ld-out{grid-template-columns:1fr;}
     }
     @media (prefers-reduced-motion:reduce){
       .ld-btn{transition:none;}
     }
+
+
+    /* ---------- Tecnologias por projeto (cards do grid) ---------- */
+    .ptec{
+      margin:14px 0 0;padding:12px 0 0;list-style:none;
+      border-top:1px dashed rgba(255,255,255,.16);
+    }
+    .ptec li{
+      font-size:.84rem;line-height:1.5;color:rgba(255,255,255,.62);
+      padding-left:18px;position:relative;
+    }
+    .ptec li+li{margin-top:6px;}
+    .ptec li::before{
+      content:"";position:absolute;left:0;top:.52em;
+      width:7px;height:7px;border-radius:2px;background:#37d67a;opacity:.85;
+    }
+    .ptec b{color:rgba(255,255,255,.88);font-weight:600;}
 
     /* Acessibilidade: respeitar quem prefere menos movimento */
     @media (prefers-reduced-motion:reduce){
@@ -348,81 +381,89 @@
   </section>
 
   <!-- ============================================================
-       CARRO-CHEFE — LOJA DIGITAL (prova: DAM Shoes)
+       CARRO-CHEFE — LOJA DIGITAL
        ============================================================ -->
   <section class="ld" id="loja-digital">
     <div class="container">
-      <div class="reveal">
-        <span class="ld-tag">Negocio proprio &middot; <b>DAM Shoes</b></span>
-        <h2 class="ld-h2">Nao vendemos loja digital. <em>Nos temos uma.</em></h2>
-        <p class="ld-lede">
-          A DAM Shoes e a nossa loja &mdash; catalogo no ar, painel de produtos, venda
-          fechando pelo WhatsApp. Todo recurso que entra no sistema e testado vendendo
-          de verdade antes de ser entregue a alguem. E o mesmo sistema que montamos
-          para o seu negocio.
-        </p>
-        <div class="ld-actions">
-          <a href="https://wa.me/5584986329566?text=Ol&aacute;, quero uma loja digital com painel para o meu neg&oacute;cio"
-             target="_blank" rel="noopener" class="ld-btn ld-btn--go"
-             data-wa-loc="loja_digital" data-produto="loja_digital">Quero uma loja assim</a>
-          <a href="https://dam-shoes.netlify.app/" target="_blank" rel="noopener"
-             class="ld-btn ld-btn--out" data-projeto="dam_shoes" data-projeto-local="secao_loja_digital">
-             Ver a loja funcionando</a>
+      <div class="ld-top reveal">
+        <div>
+          <span class="ld-tag ld-tag--g">Loja digital</span>
+          <h2 class="ld-h2">Catálogo no ar, painel próprio e a venda fechando no WhatsApp.</h2>
+          <p class="ld-lede">
+            A DAM Shoes é uma loja digital completa: vitrine de produtos, área administrativa
+            para cadastrar e alterar preço a qualquer hora, cálculo de margem no momento do
+            cadastro e a conversa de venda indo direto para o WhatsApp. É esse sistema que
+            montamos para o seu negócio.
+          </p>
+          <div class="ld-actions">
+            <a href="https://wa.me/5584986329566?text=Olá, quero uma loja digital com painel para o meu negócio"
+               target="_blank" rel="noopener" class="ld-btn ld-btn--go"
+               data-wa-loc="loja_digital" data-produto="loja_digital">Quero uma loja assim</a>
+            <a href="https://dam-shoes.netlify.app/" target="_blank" rel="noopener"
+               class="ld-btn ld-btn--out" data-projeto="dam_shoes" data-projeto-local="secao_loja_digital">
+               Ver a loja funcionando</a>
+          </div>
+          <p class="ld-note">Atendimento direto com quem desenvolve &middot; Você mesmo cadastra seus produtos</p>
         </div>
-        <p class="ld-note">Atendimento direto com quem desenvolve &middot; Voce mesmo cadastra seus produtos</p>
+
+        <a class="ld-shot" href="https://dam-shoes.netlify.app/" target="_blank" rel="noopener"
+           data-projeto="dam_shoes" data-projeto-local="imagem_loja_digital">
+          <img src="thumb-shoes.jpg" alt="Catálogo da loja digital DAM Shoes aberto no navegador" loading="lazy" />
+          <figcaption><b>dam-shoes.netlify.app</b> &middot; no ar</figcaption>
+        </a>
       </div>
 
       <div class="ld-vs reveal">
         <div class="ld-vs__col ld-vs__col--old">
-          <h3 class="ld-h3">Vender por print de foto</h3>
+          <h3 class="ld-h3">Vendendo por print de foto</h3>
           <ul>
             <li>Fotos soltas na galeria do celular</li>
-            <li>Preco no papel, na cabeca ou desatualizado</li>
+            <li>Preço no papel, na cabeça ou desatualizado</li>
             <li>Sem saber a margem real de cada produto</li>
-            <li>Cada produto novo e trabalho manual repetido</li>
+            <li>Cada produto novo é trabalho manual repetido</li>
           </ul>
         </div>
         <div class="ld-vs__col ld-vs__col--new">
-          <h3 class="ld-h3">Com loja e painel proprio</h3>
+          <h3 class="ld-h3">Com loja e painel próprio</h3>
           <ul>
-            <li>Catalogo com pagina propria, abre em qualquer celular</li>
-            <li>Preco num so lugar &mdash; muda no painel, muda na loja</li>
+            <li>Catálogo com página própria, abre em qualquer celular</li>
+            <li>Preço num só lugar &mdash; muda no painel, muda na loja</li>
             <li>Margem calculada no cadastro, antes de anunciar</li>
-            <li>Importacao em massa por planilha, nao item por item</li>
+            <li>Importação em massa por planilha, não item por item</li>
           </ul>
         </div>
       </div>
 
       <div class="ld-feats reveal">
         <div class="ld-feat">
-          <b>CATALOGO</b>
-          <h3 class="ld-h3">Vitrine com pagina de produto</h3>
-          <p>Fotos em carrossel, detalhe em modal e botao que abre o WhatsApp ja com o item na mensagem.</p>
+          <b>CATÁLOGO</b>
+          <h3 class="ld-h3">Vitrine com página de produto</h3>
+          <p>Fotos em carrossel, detalhe em modal e botão que abre o WhatsApp já com o item na mensagem.</p>
         </div>
         <div class="ld-feat">
           <b>PAINEL</b>
-          <h3 class="ld-h3">Area administrativa propria</h3>
-          <p>Voce cadastra, edita e tira produto do ar sozinho, com login protegido. Sem depender de mim para mudar preco.</p>
+          <h3 class="ld-h3">Área administrativa própria</h3>
+          <p>Você cadastra, edita e tira produto do ar sozinho, com login protegido. Sem depender de mim para mudar preço.</p>
         </div>
         <div class="ld-feat">
           <b>MARGEM</b>
           <h3 class="ld-h3">Calculadora no cadastro</h3>
-          <p>Informa o custo e ve o lucro antes de definir o preco de venda. E o recurso abaixo, funcionando.</p>
+          <p>Informa o custo e vê o lucro antes de definir o preço de venda. É o recurso abaixo, funcionando.</p>
         </div>
         <div class="ld-feat">
-          <b>IMPORTACAO</b>
+          <b>IMPORTAÇÃO</b>
           <h3 class="ld-h3">Cadastro em massa por planilha</h3>
-          <p>Catalogo inteiro entra de uma vez por arquivo CSV com as fotos, em vez de um produto por vez.</p>
+          <p>Catálogo inteiro entra de uma vez por arquivo CSV com as fotos, em vez de um produto por vez.</p>
         </div>
         <div class="ld-feat">
           <b>VENDA</b>
           <h3 class="ld-h3">Fechamento no WhatsApp</h3>
-          <p>Sem carrinho, sem cadastro, sem taxa de gateway. A conversa vai para onde seu cliente ja esta.</p>
+          <p>Sem carrinho, sem cadastro, sem taxa de gateway. A conversa vai para onde seu cliente já está.</p>
         </div>
         <div class="ld-feat">
-          <b>MEDICAO</b>
+          <b>MEDIÇÃO</b>
           <h3 class="ld-h3">Google Analytics configurado</h3>
-          <p>Qual produto foi mais clicado, de onde veio a visita e onde a pessoa desistiu. Dado, nao achismo.</p>
+          <p>Qual produto foi mais clicado, de onde veio a visita e onde a pessoa desistiu. Dado, não achismo.</p>
         </div>
       </div>
 
@@ -431,7 +472,7 @@
           <div class="ld-box__head"><span class="ld-dot" aria-hidden="true"></span> Cadastro de produto</div>
           <div class="ld-box__body">
             <div class="ld-field">
-              <label for="ld-custo">Quanto voce paga no produto</label>
+              <label for="ld-custo">Quanto você paga no produto</label>
               <div class="ld-money"><span>R$</span>
                 <input id="ld-custo" type="number" inputmode="decimal" min="0" step="0.01" value="120" />
               </div>
@@ -448,22 +489,22 @@
             <div><small>Margem</small><b id="ld-margem" class="ld-pos">39,7%</b></div>
             <div><small>Markup</small><b id="ld-markup" class="ld-pos">65,8%</b></div>
           </div>
-          <p class="ld-hint" id="ld-dica">Margem saudavel para revenda fisica.</p>
+          <p class="ld-hint" id="ld-dica">Margem saudável para revenda física.</p>
         </div>
 
         <div>
-          <span class="ld-tag ld-tag--g">Do painel da <b>DAM Shoes</b></span>
+          <span class="ld-tag">Recurso do painel</span>
           <h3 class="ld-h3" style="margin:16px 0 12px;">Experimente a calculadora de margem</h3>
           <p class="ld-lede">
-            Esta e a mesma conta que roda no cadastro de produto da loja. Coloque o custo
-            e o preco de um item seu e veja o que sobra. A maioria dos lojistas define preco
-            comparando com o vizinho e descobre no fim do mes que o produto que mais vendeu
+            Esta é a mesma conta que roda no cadastro de produto da loja. Coloque o custo e o
+            preço de um item seu e veja o que sobra. A maioria dos lojistas define preço
+            comparando com o vizinho e descobre no fim do mês que o produto que mais vendeu
             era o que menos dava lucro.
           </p>
           <p class="ld-lede" style="margin-top:14px;">
-            Passei dez anos no varejo optico, de tecnico a supervisor de rede de lojas.
-            Essa e a diferenca entre montar um site bonito e montar uma ferramenta de venda:
-            eu ja estive do outro lado do balcao, fechando mes.
+            Passei dez anos no varejo óptico, de técnico a supervisor de rede de lojas.
+            Essa é a diferença entre montar um site bonito e montar uma ferramenta de venda:
+            eu já estive do outro lado do balcão, fechando mês.
           </p>
         </div>
       </div>
@@ -578,9 +619,14 @@
             <span class="project__tag">Catálogo digital</span>
           </div>
           <div class="project__body">
-            <p style="margin:0 0 10px;font-size:.74rem;letter-spacing:.11em;text-transform:uppercase;color:#37d67a;">Negócio próprio</p>
             <h3 class="project__title">DAM Shoes</h3>
-            <p class="project__text">Catálogo digital de tênis premium com identidade visual personalizada, vitrine de produtos, promoção ativa e compra via WhatsApp.</p>
+            <p class="project__text">Loja digital completa: vitrine de produtos, painel administrativo e compra via WhatsApp.</p>
+            <ul class="ptec">
+              <li><b>Supabase</b> — banco de dados profissional na nuvem: os produtos ficam salvos com segurança, não num arquivo solto</li>
+              <li><b>Login protegido</b> — só quem tem a senha entra no painel para mudar preço ou cadastrar produto</li>
+              <li><b>Calculadora de margem</b> — o lucro de cada produto aparece na hora do cadastro, antes de anunciar</li>
+              <li><b>Importação por planilha</b> — o catálogo inteiro entra de uma vez, com fotos, em vez de item por item</li>
+            </ul>
             <a href="#loja-digital" class="project__link" data-projeto="dam_shoes" data-projeto-local="grid_projetos">Ver como funciona <span aria-hidden="true">→</span></a>
           </div>
         </article>
@@ -592,7 +638,12 @@
           <div class="project__body">
             <p style="margin:0 0 10px;font-size:.74rem;letter-spacing:.11em;text-transform:uppercase;color:rgba(255,255,255,.55);">Cliente</p>
             <h3 class="project__title">Souza Neto Refrigeração</h3>
-            <p class="project__text">Landing page profissional para empresa de serviços, com apresentação institucional, serviços, diferenciais e chamada direta para orçamento.</p>
+            <p class="project__text">Landing page profissional para empresa de serviços, com apresentação institucional e chamada direta para orçamento.</p>
+            <ul class="ptec">
+              <li><b>Dados estruturados (Schema.org)</b> — o Google entende que é uma empresa local, o que ajuda a aparecer nas buscas da região</li>
+              <li><b>Google Analytics</b> — o dono vê quantas pessoas visitaram e quantas chamaram no WhatsApp</li>
+              <li><b>Imagens otimizadas (WebP)</b> — página leve, que abre rápido até em internet de celular fraca</li>
+            </ul>
             <a href="https://souzanetorefrigeracao.netlify.app/" target="_blank" rel="noopener" class="project__link" data-projeto="souza_neto" data-projeto-local="grid_projetos">Ver projeto <span aria-hidden="true">→</span></a>
           </div>
         </article>
@@ -602,9 +653,15 @@
             <span class="project__tag">Dashboard / BI406</span>
           </div>
           <div class="project__body">
-            <p style="margin:0 0 10px;font-size:.74rem;letter-spacing:.11em;text-transform:uppercase;color:#37d67a;">Negócio próprio</p>
+            <p style="margin:0 0 10px;font-size:.74rem;letter-spacing:.11em;text-transform:uppercase;color:#37d67a;">Produto próprio</p>
             <h3 class="project__title">Dashboard de Vendas / BI406</h3>
-            <p class="project__text">Painel de vendas para varejo com indicadores, metas, projeções, equipe e visão gerencial.</p>
+            <p class="project__text">Painel de vendas para varejo com indicadores, metas, projeções e visão gerencial da equipe.</p>
+            <ul class="ptec">
+              <li><b>Importa Excel e Google Sheets</b> — funciona com a planilha que a loja já usa, sem mudar a rotina</li>
+              <li><b>Lê relatórios de ERP</b> — reconhece as colunas de sistemas como Bling, Tiny e Omie automaticamente</li>
+              <li><b>Roda no navegador</b> — nada para instalar; abre no computador ou no celular</li>
+              <li><b>Dados no seu aparelho</b> — as vendas ficam salvas localmente, não em servidor de terceiros</li>
+            </ul>
             <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="project__link" data-projeto="bi406" data-projeto-local="grid_projetos">Ver projeto <span aria-hidden="true">→</span></a>
           </div>
         </article>
