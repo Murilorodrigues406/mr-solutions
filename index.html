@@ -312,6 +312,60 @@
     }
     .ptec b{color:rgba(255,255,255,.88);font-weight:600;}
 
+    /* ---------- Vitrine do hero: modelos + projetos ---------- */
+    .mrh{display:flex;flex-direction:column;gap:14px;}
+    .mrh-main{
+      display:flex;flex-direction:column;gap:12px;
+      background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+      border:1px solid rgba(55,214,122,.4);
+      border-radius:18px;padding:26px 24px;
+      transition:border-color .25s ease,transform .25s ease;
+    }
+    .mrh-main:hover{border-color:#37d67a;transform:translateY(-3px);}
+    .mrh-kicker{
+      font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+      color:#37d67a;
+    }
+    .mrh-title{font-size:1.25rem;font-weight:700;color:#fff;line-height:1.2;font-family:'Poppins','Inter',sans-serif;}
+    .mrh-tiles{display:flex;flex-wrap:wrap;gap:8px;}
+    .mrh-tile{
+      font-size:.76rem;font-weight:600;color:#fff;line-height:1;
+      padding:9px 14px;border-radius:999px;white-space:nowrap;
+    }
+    .mrh-tile--adv{background:linear-gradient(135deg,#16304f,#2c5583);}
+    .mrh-tile--est{background:linear-gradient(135deg,#8c4a56,#c07d89);}
+    .mrh-tile--tec{background:linear-gradient(135deg,#7a4c0a,#b07a1e);}
+    .mrh-price{
+      display:flex;align-items:baseline;gap:8px;margin-top:4px;
+      padding-top:14px;border-top:1px dashed rgba(255,255,255,.16);
+      font-size:1.45rem;font-weight:700;color:#37d67a;line-height:1;
+    }
+    .mrh-price small{font-size:.74rem;font-weight:500;color:rgba(255,255,255,.55);}
+    .mrh-price i{font-style:normal;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.75);margin-left:auto;}
+    .mrh-side{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+    .mrh-shot{
+      position:relative;display:block;border-radius:14px;overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      transition:border-color .25s ease,transform .25s ease;
+    }
+    .mrh-shot:hover{border-color:rgba(255,255,255,.4);transform:translateY(-3px);}
+    .mrh-shot img{display:block;width:100%;height:110px;object-fit:cover;object-position:top;}
+    .mrh-shot__tag{
+      position:absolute;left:10px;bottom:10px;
+      font-size:.68rem;font-weight:600;color:#fff;line-height:1;
+      background:rgba(10,14,12,.72);border:1px solid rgba(255,255,255,.25);
+      padding:6px 10px;border-radius:999px;backdrop-filter:blur(4px);
+    }
+    .mrh-more{
+      align-self:flex-end;font-size:.84rem;font-weight:600;color:rgba(255,255,255,.65);
+      transition:color .2s ease;
+    }
+    .mrh-more:hover{color:#37d67a;}
+    @media (max-width:560px){
+      .mrh-side{grid-template-columns:1fr;}
+      .mrh-shot img{height:130px;}
+    }
+
     /* ---------- Seção MODELOS POR NICHO ---------- */
     .mn{padding:96px 0;}
     .mn-sub{
@@ -326,10 +380,39 @@
       display:flex;flex-direction:column;
       background:rgba(255,255,255,.04);
       border:1px solid rgba(255,255,255,.1);
-      border-radius:16px;padding:28px 26px;
+      border-radius:16px;padding:0;overflow:hidden;
       transition:border-color .25s ease,transform .25s ease;
     }
     .mn-card:hover{border-color:#37d67a;transform:translateY(-4px);}
+    .mn-body{display:flex;flex-direction:column;flex:1;padding:24px 26px 28px;}
+    .mn-cover{
+      position:relative;display:flex;flex-direction:column;justify-content:flex-end;
+      min-height:150px;padding:20px 26px 18px;
+    }
+    .mn-cover::after{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.32) 100%);
+    }
+    .mn-cover>*{position:relative;z-index:1;}
+    .mn-cover--adv{background:linear-gradient(135deg,#16304f,#2c5583);}
+    .mn-cover--est{background:linear-gradient(135deg,#8c4a56,#c07d89);}
+    .mn-cover--tec{background:linear-gradient(135deg,#7a4c0a,#b07a1e);}
+    .mn-cover__kicker{
+      font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+      color:rgba(255,255,255,.75);margin-bottom:6px;
+    }
+    .mn-cover__title{
+      font-size:1.5rem;font-weight:700;color:#fff;line-height:1.1;margin-bottom:8px;
+      font-family:'Poppins','Inter',sans-serif;
+    }
+    .mn-cover__profs{
+      display:flex;flex-wrap:wrap;gap:6px;
+    }
+    .mn-cover__profs span{
+      font-size:.7rem;font-weight:600;color:#fff;line-height:1;
+      background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);
+      padding:5px 10px;border-radius:999px;white-space:nowrap;
+    }
     .mn-tag{
       align-self:flex-start;display:inline-flex;align-items:center;gap:6px;
       font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
@@ -341,6 +424,12 @@
     .mn-card>p{margin:0;font-size:.9rem;line-height:1.6;color:rgba(255,255,255,.66);}
     .mn-card .ptec{flex:1;}
     .mn-actions{margin-top:20px;display:flex;flex-direction:column;gap:10px;}
+    .mn-price{
+      margin-top:18px;display:flex;align-items:baseline;gap:8px;
+      padding-top:16px;border-top:1px dashed rgba(255,255,255,.16);
+    }
+    .mn-price small{font-size:.74rem;color:rgba(255,255,255,.55);letter-spacing:.02em;}
+    .mn-price b{font-size:1.35rem;color:#37d67a;font-weight:700;line-height:1;}
     .mn-actions .btn{justify-content:center;text-align:center;}
     .mn-note{
       margin:36px auto 0;max-width:560px;text-align:center;
@@ -367,11 +456,11 @@
 
       <nav class="nav" id="nav">
         <ul class="nav__list">
+          <li><a href="#modelos" class="nav__link">Modelos</a></li>
           <li><a href="#loja-digital" class="nav__link">Loja digital</a></li>
           <li><a href="#solucoes" class="nav__link">Soluções</a></li>
           <li><a href="#bi406" class="nav__link">BI406</a></li>
           <li><a href="#projetos" class="nav__link">Projetos</a></li>
-          <li><a href="#modelos" class="nav__link">Modelos</a></li>
           <li><a href="#como-funciona" class="nav__link">Como funciona</a></li>
           <li><a href="#contato" class="nav__link">Contato</a></li>
         </ul>
@@ -396,29 +485,37 @@
     <div class="container hero__inner">
       <div class="hero__content reveal">
         <span class="eyebrow">Dados · Automação · Vendas · Resultados</span>
-        <h1 class="hero__title">Soluções digitais para vender mais, organizar processos e <span class="accent">acompanhar seus resultados com clareza.</span></h1>
-        <p class="hero__sub">A MR Soluções desenvolve páginas de venda, dashboards, planilhas automatizadas e catálogos digitais, com análise de dados via Google Analytics, para empresas que querem vender mais, acompanhar indicadores e organizar processos com controle.</p>
+        <h1 class="hero__title">Sua página de vendas profissional, pronta para vender — <span class="accent">a partir de R$ 697.</span></h1>
+        <p class="hero__sub">Você escolhe o modelo do seu ramo, a MR Soluções personaliza com a sua marca e a página entra no ar em poucos dias — com WhatsApp, formulário e Google Analytics configurados. Também criamos lojas digitais, dashboards e planilhas automatizadas.</p>
         <div class="hero__actions">
           <a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Soluções" target="_blank" rel="noopener" class="btn btn--wa" data-wa-loc="hero">Falar no WhatsApp</a>
-          <a href="#projetos" class="btn btn--ghost">Ver projetos</a>
+          <a href="#modelos" class="btn btn--ghost">Ver modelos e preços</a>
         </div>
       </div>
 
-      <!-- SHOWCASE — PROJETOS REAIS -->
-      <div class="hero-showcase reveal">
-        <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="shot shot--main" aria-label="Ver demonstração do dashboard BI406" data-projeto="bi406" data-projeto-local="hero_vitrine">
-          <span class="shot__bar"><i></i><i></i><i></i><b>BI406 — Dashboard de Vendas</b></span>
-          <img src="thumb-dash.jpg" alt="Dashboard de vendas BI406 em funcionamento" />
+      <!-- SHOWCASE — MODELOS + PROJETOS -->
+      <div class="mrh reveal">
+        <a href="#modelos" class="mrh-main" data-projeto="modelos" data-projeto-local="hero_vitrine" aria-label="Ver os modelos de página de vendas por nicho">
+          <span class="mrh-kicker">Modelos prontos por nicho</span>
+          <span class="mrh-title">Páginas de vendas de alto padrão</span>
+          <div class="mrh-tiles">
+            <span class="mrh-tile mrh-tile--adv">Advocacia</span>
+            <span class="mrh-tile mrh-tile--est">Estética &amp; Beleza</span>
+            <span class="mrh-tile mrh-tile--tec">Serviços técnicos</span>
+          </div>
+          <span class="mrh-price"><small>A partir de</small> R$ 697 <i>Ver modelos →</i></span>
         </a>
-        <a href="https://dam-shoes.netlify.app/" target="_blank" rel="noopener" class="shot shot--sm shot--left" aria-label="Ver projeto DAM Shoes" data-projeto="dam_shoes" data-projeto-local="hero_vitrine">
-          <img src="thumb-shoes.jpg" alt="Catálogo digital DAM Shoes" loading="lazy" />
-          <span class="shot__tag">Catálogo digital</span>
-        </a>
-        <a href="https://souzanetorefrigeracao.netlify.app/" target="_blank" rel="noopener" class="shot shot--sm shot--right" aria-label="Ver projeto Souza Neto Refrigeração" data-projeto="souza_neto" data-projeto-local="hero_vitrine">
-          <img src="thumb-refri.jpg" alt="Landing page Souza Neto Refrigeração" loading="lazy" />
-          <span class="shot__tag">Landing page</span>
-        </a>
-        <a href="#projetos" class="hero-showcase__more">Projetos reais, entregues e no ar →</a>
+        <div class="mrh-side">
+          <a href="https://dam-shoes.netlify.app/" target="_blank" rel="noopener" class="mrh-shot" data-projeto="dam_shoes" data-projeto-local="hero_vitrine" aria-label="Ver projeto DAM Shoes">
+            <img src="thumb-shoes.jpg" alt="Catálogo digital DAM Shoes" loading="lazy" />
+            <span class="mrh-shot__tag">Loja digital</span>
+          </a>
+          <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="mrh-shot" data-projeto="bi406" data-projeto-local="hero_vitrine" aria-label="Ver o dashboard BI406">
+            <img src="thumb-dash.jpg" alt="Dashboard de vendas BI406" loading="lazy" />
+            <span class="mrh-shot__tag">Dashboard BI406</span>
+          </a>
+        </div>
+        <a href="#projetos" class="mrh-more">Projetos reais, entregues e no ar →</a>
       </div>
     </div>
   </section>
@@ -431,6 +528,91 @@
       <div class="cred__item"><b>Soluções sob medida</b><span>criadas para a realidade do seu negócio</span></div>
       <i class="cred__sep" aria-hidden="true"></i>
       <div class="cred__item"><b>Atendimento direto</b><span>você fala com quem desenvolve</span></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MODELOS PRONTOS POR NICHO — página de vendas alto padrão
+       Para ativar o link de demonstração de um modelo: descomente o
+       <a> "Ver demonstração" do card e coloque a URL da demo no ar.
+       ============================================================ -->
+  <section class="mn" id="modelos">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="eyebrow eyebrow--green">Modelos prontos por nicho</span>
+        <h2 class="section__title">Sua página de vendas pronta para o seu ramo</h2>
+      </div>
+      <p class="mn-sub reveal">Design de alto padrão já estruturado para converter: você escolhe o modelo do seu segmento, eu personalizo com a sua marca, seus textos e seu WhatsApp — e a página entra no ar em poucos dias.</p>
+
+      <div class="mn-grid">
+        <article class="mn-card reveal">
+          <div class="mn-cover mn-cover--adv">
+            <span class="mn-cover__kicker">Página de vendas · Modelo pronto</span>
+            <span class="mn-cover__title">Advocacia</span>
+            <div class="mn-cover__profs"><span>Advogados</span><span>Escritórios jurídicos</span><span>Consultoria preventiva</span></div>
+          </div>
+          <div class="mn-body">
+          <h3>Advocacia</h3>
+          <p>Página sóbria e elegante para advogados e escritórios: transmite autoridade, discrição e confiança desde o primeiro clique.</p>
+          <ul class="ptec">
+            <li><b>Agendamento direto</b> — o cliente chama no WhatsApp ou envia o caso pelo formulário, com sigilo</li>
+            <li><b>Áreas de atuação em destaque</b> — trabalhista, civil, consultoria: o visitante encontra o que precisa em segundos</li>
+            <li><b>Google Analytics</b> — você vê quantas pessoas visitaram e quantas entraram em contato</li>
+          </ul>
+          <p class="mn-price"><small>A partir de</small> <b>R$ 697</b></p>
+          <div class="mn-actions">
+            <a href="advocacia.html" target="_blank" rel="noopener" class="btn btn--ghost" data-projeto="modelo_advocacia" data-projeto-local="secao_modelos">Ver demonstração</a>
+            <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20quero%20a%20p%C3%A1gina%20modelo%20para%20advocacia" target="_blank" rel="noopener" class="btn btn--wa" data-wa-loc="secao_modelos" data-produto="modelo_advocacia">Quero este modelo</a>
+          </div>
+          </div>
+        </article>
+
+        <article class="mn-card reveal">
+          <div class="mn-cover mn-cover--est">
+            <span class="mn-cover__kicker">Página de vendas · Modelo pronto</span>
+            <span class="mn-cover__title">Estética &amp; Beleza</span>
+            <div class="mn-cover__profs"><span>Clínicas de estética</span><span>Harmonização</span><span>Studios &amp; salões</span></div>
+          </div>
+          <div class="mn-body">
+          <h3>Estética &amp; Beleza</h3>
+          <p>Página sofisticada para clínicas de estética, harmonização e studios: passa cuidado, segurança e resultado natural.</p>
+          <ul class="ptec">
+            <li><b>Agendamento de avaliação</b> — a cliente marca pelo WhatsApp com um toque, sem burocracia</li>
+            <li><b>Vitrine de procedimentos</b> — cada serviço apresentado com foco no benefício, não no termo técnico</li>
+            <li><b>Google Analytics</b> — você descobre qual procedimento desperta mais interesse</li>
+          </ul>
+          <p class="mn-price"><small>A partir de</small> <b>R$ 697</b></p>
+          <div class="mn-actions">
+            <a href="estetica.html" target="_blank" rel="noopener" class="btn btn--ghost" data-projeto="modelo_estetica" data-projeto-local="secao_modelos">Ver demonstração</a>
+            <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20quero%20a%20p%C3%A1gina%20modelo%20para%20cl%C3%ADnica%20de%20est%C3%A9tica" target="_blank" rel="noopener" class="btn btn--wa" data-wa-loc="secao_modelos" data-produto="modelo_estetica">Quero este modelo</a>
+          </div>
+          </div>
+        </article>
+
+        <article class="mn-card reveal">
+          <div class="mn-cover mn-cover--tec">
+            <span class="mn-cover__kicker">Página de vendas · Modelo pronto</span>
+            <span class="mn-cover__title">Serviços técnicos</span>
+            <div class="mn-cover__profs"><span>Eletricistas</span><span>Refrigeração</span><span>Manutenção &amp; reformas</span></div>
+          </div>
+          <div class="mn-body">
+          <h3>Serviços técnicos</h3>
+          <p>Página direta para eletricistas, refrigeração, manutenção e reformas: transmite confiança, rapidez e serviço com garantia.</p>
+          <ul class="ptec">
+            <li><b>Orçamento em um clique</b> — o cliente descreve o problema e já cai no seu WhatsApp</li>
+            <li><b>Destaque para urgência</b> — atendimento rápido e garantia em evidência, que é o que o cliente procura</li>
+            <li><b>Google Analytics</b> — você mede de onde vêm os pedidos de orçamento</li>
+          </ul>
+          <p class="mn-price"><small>A partir de</small> <b>R$ 697</b></p>
+          <div class="mn-actions">
+            <a href="tecnico.html" target="_blank" rel="noopener" class="btn btn--ghost" data-projeto="modelo_tecnico" data-projeto-local="secao_modelos">Ver demonstração</a>
+            <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20quero%20a%20p%C3%A1gina%20modelo%20para%20servi%C3%A7os%20t%C3%A9cnicos" target="_blank" rel="noopener" class="btn btn--wa" data-wa-loc="secao_modelos" data-produto="modelo_tecnico">Quero este modelo</a>
+          </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="mn-note reveal"><b>Seu ramo não está aqui?</b> A estrutura se adapta a qualquer serviço que fecha venda por conversa — <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20quero%20uma%20p%C3%A1gina%20de%20vendas%20para%20o%20meu%20ramo" target="_blank" rel="noopener" style="color:#37d67a;" data-wa-loc="secao_modelos" data-produto="modelo_outro_ramo">me chame</a> e eu monto para o seu.</p>
     </div>
   </section>
 
@@ -723,69 +905,6 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       MODELOS PRONTOS POR NICHO — página de vendas alto padrão
-       Para ativar o link de demonstração de um modelo: descomente o
-       <a> "Ver demonstração" do card e coloque a URL da demo no ar.
-       ============================================================ -->
-  <section class="mn" id="modelos">
-    <div class="container">
-      <div class="section__head reveal">
-        <span class="eyebrow eyebrow--green">Modelos prontos por nicho</span>
-        <h2 class="section__title">Sua página de vendas pronta para o seu ramo</h2>
-      </div>
-      <p class="mn-sub reveal">Design de alto padrão já estruturado para converter: você escolhe o modelo do seu segmento, eu personalizo com a sua marca, seus textos e seu WhatsApp — e a página entra no ar em poucos dias.</p>
-
-      <div class="mn-grid">
-        <article class="mn-card reveal">
-          <span class="mn-tag">Modelo pronto</span>
-          <h3>Advocacia</h3>
-          <p>Página sóbria e elegante para advogados e escritórios: transmite autoridade, discrição e confiança desde o primeiro clique.</p>
-          <ul class="ptec">
-            <li><b>Agendamento direto</b> — o cliente chama no WhatsApp ou envia o caso pelo formulário, com sigilo</li>
-            <li><b>Áreas de atuação em destaque</b> — trabalhista, civil, consultoria: o visitante encontra o que precisa em segundos</li>
-            <li><b>Google Analytics</b> — você vê quantas pessoas visitaram e quantas entraram em contato</li>
-          </ul>
-          <div class="mn-actions">
-            <a href="advocacia.html" target="_blank" rel="noopener" class="btn btn--ghost" data-projeto="modelo_advocacia" data-projeto-local="secao_modelos">Ver demonstração</a>
-            <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20quero%20a%20p%C3%A1gina%20modelo%20para%20advocacia" target="_blank" rel="noopener" class="btn btn--wa" data-wa-loc="secao_modelos" data-produto="modelo_advocacia">Quero este modelo</a>
-          </div>
-        </article>
-
-        <article class="mn-card reveal">
-          <span class="mn-tag">Modelo pronto</span>
-          <h3>Estética &amp; Beleza</h3>
-          <p>Página sofisticada para clínicas de estética, harmonização e studios: passa cuidado, segurança e resultado natural.</p>
-          <ul class="ptec">
-            <li><b>Agendamento de avaliação</b> — a cliente marca pelo WhatsApp com um toque, sem burocracia</li>
-            <li><b>Vitrine de procedimentos</b> — cada serviço apresentado com foco no benefício, não no termo técnico</li>
-            <li><b>Google Analytics</b> — você descobre qual procedimento desperta mais interesse</li>
-          </ul>
-          <div class="mn-actions">
-            <a href="estetica.html" target="_blank" rel="noopener" class="btn btn--ghost" data-projeto="modelo_estetica" data-projeto-local="secao_modelos">Ver demonstração</a>
-            <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20quero%20a%20p%C3%A1gina%20modelo%20para%20cl%C3%ADnica%20de%20est%C3%A9tica" target="_blank" rel="noopener" class="btn btn--wa" data-wa-loc="secao_modelos" data-produto="modelo_estetica">Quero este modelo</a>
-          </div>
-        </article>
-
-        <article class="mn-card reveal">
-          <span class="mn-tag">Modelo pronto</span>
-          <h3>Serviços técnicos</h3>
-          <p>Página direta para eletricistas, refrigeração, manutenção e reformas: transmite confiança, rapidez e serviço com garantia.</p>
-          <ul class="ptec">
-            <li><b>Orçamento em um clique</b> — o cliente descreve o problema e já cai no seu WhatsApp</li>
-            <li><b>Destaque para urgência</b> — atendimento rápido e garantia em evidência, que é o que o cliente procura</li>
-            <li><b>Google Analytics</b> — você mede de onde vêm os pedidos de orçamento</li>
-          </ul>
-          <div class="mn-actions">
-            <a href="tecnico.html" target="_blank" rel="noopener" class="btn btn--ghost" data-projeto="modelo_tecnico" data-projeto-local="secao_modelos">Ver demonstração</a>
-            <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20quero%20a%20p%C3%A1gina%20modelo%20para%20servi%C3%A7os%20t%C3%A9cnicos" target="_blank" rel="noopener" class="btn btn--wa" data-wa-loc="secao_modelos" data-produto="modelo_tecnico">Quero este modelo</a>
-          </div>
-        </article>
-      </div>
-
-      <p class="mn-note reveal"><b>Seu ramo não está aqui?</b> A estrutura se adapta a qualquer serviço que fecha venda por conversa — <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20quero%20uma%20p%C3%A1gina%20de%20vendas%20para%20o%20meu%20ramo" target="_blank" rel="noopener" style="color:#37d67a;" data-wa-loc="secao_modelos" data-produto="modelo_outro_ramo">me chame</a> e eu monto para o seu.</p>
-    </div>
-  </section>
 
   <!-- COMO FUNCIONA -->
   <section class="steps" id="como-funciona">
