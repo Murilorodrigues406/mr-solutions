@@ -232,10 +232,15 @@
     .ld-vs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px;}
     .ld-vs__col{border:1px solid var(--ld-line);border-radius:14px;padding:24px;background:var(--ld-surf);}
     .ld-vs__col--old{border-style:dashed;}
-    .ld-vs__col--old .ld-h3{color:var(--ld-mut);}
+    .ld-vs__ask{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ld-mut);border:1px solid var(--ld-line);border-radius:999px;padding:4px 12px;margin-bottom:12px;}
+    .ld-vs__ask--g{color:var(--ld-green);border-color:rgba(55,214,122,.4);}
+    .ld-vs__col--old .ld-h3{color:rgba(255,255,255,.85);}
     .ld-vs__col--new .ld-h3{color:var(--ld-green);}
-    .ld-vs__col ul{margin:13px 0 0;padding-left:19px;color:var(--ld-mut);font-size:.93rem;}
-    .ld-vs__col li+li{margin-top:7px;}
+    .ld-vs__col ul{margin:14px 0 0;padding:0;list-style:none;color:rgba(255,255,255,.88);font-size:.95rem;}
+    .ld-vs__col li{position:relative;padding-left:26px;}
+    .ld-vs__col li+li{margin-top:9px;}
+    .ld-vs__col--old li::before{content:'✗';position:absolute;left:0;color:var(--ld-orange);font-weight:700;}
+    .ld-vs__col--new li::before{content:'✓';position:absolute;left:0;color:var(--ld-green);font-weight:700;}
 
     /* recursos */
     .ld-feats{
@@ -526,17 +531,6 @@
           </div>
           <span class="mrh-price"><small>A partir de</small> R$ 697 <i>Ver modelos →</i></span>
         </a>
-        <div class="mrh-side">
-          <a href="https://dam-shoes.netlify.app/" target="_blank" rel="noopener" class="mrh-shot" data-projeto="dam_shoes" data-projeto-local="hero_vitrine" aria-label="Ver projeto DAM Shoes">
-            <img src="thumb-shoes.jpg" alt="Catálogo digital DAM Shoes" loading="lazy" />
-            <span class="mrh-shot__tag">Loja digital</span>
-          </a>
-          <a href="https://bi406.netlify.app/" target="_blank" rel="noopener" class="mrh-shot" data-projeto="bi406" data-projeto-local="hero_vitrine" aria-label="Ver o dashboard BI406">
-            <img src="thumb-dash.jpg" alt="Dashboard de vendas BI406" loading="lazy" />
-            <span class="mrh-shot__tag">Dashboard BI406</span>
-          </a>
-        </div>
-        <a href="#projetos" class="mrh-more">Projetos reais, entregues e no ar →</a>
       </div>
     </div>
   </section>
@@ -560,15 +554,15 @@
   <section class="mn" id="modelos">
     <div class="container">
       <div class="section__head reveal">
-        <span class="eyebrow eyebrow--green">Páginas de vendas por segmento</span>
-        <h2 class="section__title">Sua página de vendas pronta para o seu ramo</h2>
+        <span class="eyebrow eyebrow--green">Modelos de landing page</span>
+        <h2 class="section__title">Sua landing page pronta para o seu ramo</h2>
       </div>
       <p class="mn-sub reveal">Design de alto padrão já estruturado para converter: você escolhe o modelo do seu segmento, eu personalizo com a sua marca, seus textos e seu WhatsApp — e a página entra no ar em poucos dias.</p>
 
       <div class="mn-grid">
         <article class="mn-card reveal">
           <div class="mn-cover mn-cover--adv">
-            <span class="mn-cover__kicker">Página de vendas · Modelo pronto</span>
+            <span class="mn-cover__kicker">Landing page</span>
             <span class="mn-cover__title">Advocacia</span>
             <div class="mn-cover__profs"><span>Advogados</span><span>Escritórios jurídicos</span><span>Consultoria preventiva</span></div>
           </div>
@@ -590,7 +584,7 @@
 
         <article class="mn-card reveal">
           <div class="mn-cover mn-cover--est">
-            <span class="mn-cover__kicker">Página de vendas · Modelo pronto</span>
+            <span class="mn-cover__kicker">Landing page</span>
             <span class="mn-cover__title">Estética &amp; Beleza</span>
             <div class="mn-cover__profs"><span>Clínicas de estética</span><span>Harmonização</span><span>Studios &amp; salões</span></div>
           </div>
@@ -612,7 +606,7 @@
 
         <article class="mn-card reveal">
           <div class="mn-cover mn-cover--tec">
-            <span class="mn-cover__kicker">Página de vendas · Modelo pronto</span>
+            <span class="mn-cover__kicker">Landing page</span>
             <span class="mn-cover__title">Serviços técnicos</span>
             <div class="mn-cover__profs"><span>Eletricistas</span><span>Refrigeração</span><span>Manutenção &amp; reformas</span></div>
           </div>
@@ -672,21 +666,23 @@
 
       <div class="ld-vs reveal">
         <div class="ld-vs__col ld-vs__col--old">
-          <h3 class="ld-h3">Vendendo por print de foto</h3>
+          <span class="ld-vs__ask">Como você vende hoje?</span>
+          <h3 class="ld-h3">Mandando print de foto no WhatsApp</h3>
           <ul>
-            <li>Fotos soltas na galeria do celular</li>
-            <li>Preço no papel, na cabeça ou desatualizado</li>
-            <li>Sem saber a margem real de cada produto</li>
-            <li>Cada produto novo é trabalho manual repetido</li>
+            <li>Fotos perdidas na galeria do celular</li>
+            <li>Preço de cabeça &mdash; e às vezes desatualizado</li>
+            <li>Sem saber quanto lucra em cada produto</li>
+            <li>Todo produto novo dá o mesmo trabalho de novo</li>
           </ul>
         </div>
         <div class="ld-vs__col ld-vs__col--new">
-          <h3 class="ld-h3">Com loja e painel próprio</h3>
+          <span class="ld-vs__ask ld-vs__ask--g">E se fosse assim?</span>
+          <h3 class="ld-h3">Sua loja com link próprio e painel de controle</h3>
           <ul>
-            <li>Catálogo com página própria, abre em qualquer celular</li>
-            <li>Preço num só lugar &mdash; muda no painel, muda na loja</li>
-            <li>Margem calculada no cadastro, antes de anunciar</li>
-            <li>Importação em massa por planilha, não item por item</li>
+            <li>Um link só com todos os produtos, abre em qualquer celular</li>
+            <li>Mudou o preço no painel? Mudou na loja na hora</li>
+            <li>O lucro de cada produto aparece antes de você anunciar</li>
+            <li>Cadastre tudo de uma vez por planilha</li>
           </ul>
         </div>
       </div>
@@ -757,11 +753,6 @@
             preço de um item seu e veja o que sobra. A maioria dos lojistas define preço
             comparando com o vizinho e descobre no fim do mês que o produto que mais vendeu
             era o que menos dava lucro.
-          </p>
-          <p class="ld-lede" style="margin-top:14px;">
-            Passei dez anos no varejo óptico, de técnico a supervisor de rede de lojas.
-            Essa é a diferença entre montar um site bonito e montar uma ferramenta de venda:
-            eu já estive do outro lado do balcão, fechando mês.
           </p>
         </div>
       </div>
