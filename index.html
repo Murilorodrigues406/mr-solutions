@@ -518,133 +518,6 @@
     /* ---------- Coluna direita: mockups ---------- */
     .nh-visual{position:relative;padding:34px 8px 26px 0;}
 
-    /* selo circular de preço */
-    .nh-price{
-      position:absolute;top:0;right:-6px;z-index:3;
-      display:flex;flex-direction:column;align-items:center;justify-content:center;
-      width:148px;height:148px;border-radius:50%;text-align:center;
-      background:linear-gradient(145deg,#aec2b0,#8aa78d);
-      color:#fff;box-shadow:0 14px 34px rgba(70,96,76,.32);
-      font-size:.8rem;font-weight:500;line-height:1.25;padding:14px;
-      transform:rotate(3deg);
-    }
-    .nh-price b{
-      font-family:'Poppins','Inter',sans-serif;
-      font-size:1.75rem;font-weight:700;line-height:1.05;margin-top:2px;
-    }
-    .nh-arrow{
-      position:absolute;top:150px;right:20px;z-index:3;
-      color:#8aa78d;pointer-events:none;
-    }
-
-    /* notebook */
-    .nh-laptop{
-      position:relative;z-index:1;width:88%;
-      filter:drop-shadow(0 26px 44px rgba(16,42,29,.22));
-    }
-    .nh-laptop__screen{
-      background:#0b0f0d;border-radius:14px 14px 6px 6px;
-      padding:10px 10px 12px;border:1px solid #232926;
-    }
-    .nh-laptop__base{
-      height:13px;margin:0 -5%;
-      background:linear-gradient(180deg,#d7dcd9,#aab1ad);
-      border-radius:0 0 14px 14px;
-      box-shadow:inset 0 2px 2px rgba(255,255,255,.6);
-    }
-    .nh-laptop__base::after{
-      content:"";display:block;width:12%;height:4px;margin:0 auto;
-      background:#8f9793;border-radius:0 0 8px 8px;
-    }
-
-    /* celular sobreposto */
-    .nh-phone{
-      position:absolute;right:2px;bottom:10px;z-index:2;width:31%;max-width:172px;
-      background:#0b0f0d;border:1px solid #232926;border-radius:22px;padding:7px;
-      filter:drop-shadow(0 20px 34px rgba(16,42,29,.3));
-    }
-    .nh-phone::before{
-      content:"";position:absolute;top:11px;left:50%;transform:translateX(-50%);
-      width:34%;height:5px;border-radius:999px;background:#232926;z-index:2;
-    }
-
-    /* ---------- Tela: mini landing (demonstração de projeto) ---------- */
-    .nhs{background:#fff;border-radius:8px;overflow:hidden;font-family:'Inter',sans-serif;}
-    .nhs--phone{border-radius:16px;}
-    .nhs-top{
-      display:flex;align-items:center;gap:8px;
-      padding:7px 10px;background:#fff;border-bottom:1px solid #eef1ef;
-    }
-    .nhs-brand{display:flex;align-items:center;gap:5px;min-width:0;}
-    .nhs-brand i{
-      flex:0 0 auto;width:13px;height:13px;border-radius:50%;
-      background:linear-gradient(135deg,#37d67a,#17a356);
-    }
-    .nhs-brand b{font-size:6.5px;font-weight:700;letter-spacing:.04em;color:#101613;line-height:1.15;display:block;}
-    .nhs-brand small{font-size:4.6px;font-weight:600;letter-spacing:.16em;color:#6b7570;display:block;}
-    .nhs-nav{display:flex;gap:7px;margin-left:auto;}
-    .nhs-nav span{font-size:5px;font-weight:500;color:#5a6360;}
-    .nhs-pill{
-      flex:0 0 auto;font-size:5px;font-weight:600;color:#0d1b12;
-      background:#37d67a;border-radius:999px;padding:3.5px 7px;white-space:nowrap;
-    }
-    .nhs-hero{
-      position:relative;overflow:hidden;
-      display:flex;flex-direction:column;justify-content:center;
-      background:linear-gradient(120deg,#0e2233 0%,#143349 62%,#1a3f58 100%);
-      padding:16px 14px;min-height:118px;
-    }
-    .nhs-hero::after{
-      content:"";position:absolute;right:-34px;top:-24px;width:120px;height:120px;
-      border-radius:50%;background:radial-gradient(closest-side,rgba(55,214,122,.24),rgba(55,214,122,0));
-    }
-    .nhs-hero h3{
-      margin:0 0 5px;max-width:70%;
-      font-family:'Poppins','Inter',sans-serif;
-      font-size:11px;font-weight:700;line-height:1.25;color:#fff;
-    }
-    .nhs-hero h3 em{font-style:normal;color:#37d67a;}
-    .nhs-hero p{margin:0 0 8px;max-width:64%;font-size:5.6px;line-height:1.5;color:rgba(255,255,255,.78);}
-    .nhs-wa{
-      display:inline-flex;align-items:center;gap:4px;align-self:flex-start;
-      font-size:5.6px;font-weight:600;color:#0d1b12;
-      background:#37d67a;border-radius:6px;padding:4.5px 8px;
-    }
-    .nhs-wa i{width:6px;height:6px;border-radius:50%;background:#0d1b12;opacity:.8;flex:0 0 auto;}
-    .nhs-feats{display:flex;background:#fff;border-top:1px solid #eef1ef;}
-    .nhs-feats span{
-      flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;
-      padding:8px 4px;text-align:center;
-      font-size:5px;font-weight:600;color:#3c453f;line-height:1.3;
-    }
-    .nhs-feats span+span{border-left:1px solid #eef1ef;}
-    .nhs-feats i{
-      width:9px;height:9px;border-radius:3px;flex:0 0 auto;
-      background:rgba(23,163,86,.14);
-      position:relative;
-    }
-    .nhs-feats i::after{
-      content:"";position:absolute;inset:2.5px;border-radius:2px;background:#17a356;
-    }
-    /* versão celular: mesma página, condensada */
-    .nhs--phone .nhs-top{padding:9px 8px 6px;}
-    .nhs--phone .nhs-hero{min-height:96px;padding:12px 10px;}
-    .nhs--phone .nhs-hero h3{max-width:100%;font-size:9px;}
-    .nhs--phone .nhs-hero p{max-width:92%;font-size:5.2px;}
-    .nhs--phone .nhs-list{padding:7px 8px 9px;display:flex;flex-direction:column;gap:5px;background:#fff;}
-    .nhs--phone .nhs-list span{
-      display:flex;align-items:center;gap:5px;
-      font-size:5.2px;font-weight:600;color:#3c453f;
-      border:1px solid #eef1ef;border-radius:6px;padding:5px 7px;
-    }
-    .nhs--phone .nhs-list i{
-      width:8px;height:8px;border-radius:50%;flex:0 0 auto;
-      background:rgba(23,163,86,.16);position:relative;
-    }
-    .nhs--phone .nhs-list i::after{
-      content:"";position:absolute;inset:2.2px;border-radius:50%;background:#17a356;
-    }
-
     /* ---------- Responsividade da nova hero ---------- */
     @media (max-width:980px){
       .hero.nh{padding:48px 0 56px !important;}
@@ -653,10 +526,6 @@
       .nh-sub{margin-left:auto;margin-right:auto;}
       .nh-actions,.nh-benefits{justify-content:center;}
       .nh-visual{max-width:560px;margin:0 auto;padding:30px 6px 20px 0;width:100%;}
-      .nh-laptop{width:90%;}
-      .nh-price{width:120px;height:120px;font-size:.72rem;right:0;}
-      .nh-price b{font-size:1.4rem;}
-      .nh-arrow{display:none;}
     }
     @media (max-width:640px){
       .nh-badge{font-size:.64rem;letter-spacing:.1em;padding:7px 12px;}
@@ -667,10 +536,6 @@
       .nh-benefits{gap:8px 16px;}
       .nh-benefits li{font-size:.8rem;}
       .nh-visual{padding:26px 2px 14px 0;}
-      .nh-laptop{width:100%;}
-      .nh-phone{width:34%;right:0;bottom:6px;}
-      .nh-price{width:104px;height:104px;top:-6px;right:2px;transform:rotate(2deg);}
-      .nh-price b{font-size:1.22rem;}
     }
 
     /* Acessibilidade: respeitar quem prefere menos movimento */
@@ -679,6 +544,163 @@
       .mrx-flow__arrow,.mrx-chip--new,.mrx-cta__pulse{animation:none;}
     }
   </style>
+
+  <style id="hero-final-overrides">
+    /* Ajuste final da HERO — mais próxima da referência aprovada */
+    .hero.nh{
+      padding:76px 0 74px !important;
+      background:
+        radial-gradient(circle at 84% 18%, rgba(124,132,107,.12), transparent 24%),
+        linear-gradient(180deg,#ffffff 0%,#f8faf8 100%) !important;
+    }
+    .hero.nh::after{
+      content:"" !important;
+      position:absolute;
+      right:-6%;
+      bottom:-44%;
+      width:62%;
+      height:95%;
+      border-radius:50%;
+      border:1px solid rgba(124,132,107,.10);
+      box-shadow:
+        0 0 0 54px rgba(124,132,107,.035),
+        0 0 0 108px rgba(124,132,107,.025);
+      pointer-events:none;
+    }
+    .nh-inner{
+      grid-template-columns:minmax(0,46%) minmax(0,54%);
+      gap:34px;
+      max-width:1200px;
+    }
+    .nh-copy{
+      padding:4px 0 0;
+    }
+    .nh-badge{
+      margin-bottom:27px;
+      color:#657056;
+      background:#eef2ea;
+      border:0;
+      font-size:.70rem;
+      letter-spacing:.12em;
+      padding:8px 17px;
+    }
+    .nh-title{
+      max-width:620px;
+      margin-bottom:24px;
+      font-size:clamp(2.25rem,4.05vw,3.65rem);
+      line-height:1.12;
+      letter-spacing:-.045em;
+    }
+    .nh-title .nh-accent{
+      color:#7c846b;
+    }
+    .nh-sub{
+      max-width:570px;
+      margin-bottom:30px;
+      color:#666d69;
+      font-size:1.04rem;
+      line-height:1.72;
+    }
+    .nh-actions{
+      gap:14px;
+      margin-bottom:29px;
+    }
+    .nh-actions .btn{
+      min-height:52px;
+      padding:0 25px;
+      border-radius:18px;
+      font-size:.94rem;
+      font-weight:600;
+    }
+    .nh-actions .btn--wa{
+      background:#2bd36f;
+      box-shadow:0 14px 28px rgba(43,211,111,.20);
+    }
+    .nh-actions .btn--ghost{
+      background:#fff;
+      border-color:#d9ddda;
+      color:#202321;
+    }
+    .nh-benefits{
+      gap:12px 28px;
+    }
+    .nh-benefits li{
+      font-size:.81rem;
+      color:#303632;
+    }
+    .nh-benefits svg{
+      color:#7c846b;
+    }
+
+    .nh-visual{
+      min-height:455px;
+      padding:40px 10px 20px 0;
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+    }
+    @media (max-width:980px){
+      .hero.nh{padding:54px 0 58px !important;}
+      .nh-inner{grid-template-columns:1fr;gap:18px;}
+      .nh-title{max-width:760px;margin-left:auto;margin-right:auto;}
+      .nh-copy{text-align:center;}
+      .nh-visual{min-height:410px;max-width:650px;}
+    }
+    @media (max-width:640px){
+      .hero.nh{padding:38px 0 44px !important;}
+      .nh-title{
+        font-size:clamp(1.82rem,8vw,2.25rem);
+        line-height:1.15;
+      }
+      .nh-title br{display:none;}
+      .nh-badge{margin-bottom:19px;}
+      .nh-sub{font-size:.94rem;line-height:1.6;}
+      .nh-actions .btn{border-radius:14px;}
+      .nh-benefits{justify-content:flex-start;text-align:left;}
+      .nh-benefits li{width:100%;justify-content:flex-start;}
+      .nh-visual{min-height:290px;padding-top:28px;}
+    }
+  </style>
+
+
+  <style id="hero-estetica-image">
+    .nh-visual--image{
+      min-height:455px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 !important;
+      overflow:visible;
+    }
+    .nh-estetica-img{
+      display:block;
+      width:100%;
+      max-width:760px;
+      height:auto;
+      object-fit:contain;
+      filter:drop-shadow(0 24px 34px rgba(25,33,28,.16));
+    }
+    @media (max-width:980px){
+      .nh-visual--image{
+        min-height:auto;
+        max-width:720px;
+        margin:0 auto;
+      }
+      .nh-estetica-img{
+        width:100%;
+      }
+    }
+    @media (max-width:640px){
+      .nh-visual--image{
+        margin-top:8px;
+      }
+      .nh-estetica-img{
+        width:108%;
+        max-width:none;
+      }
+    }
+  </style>
+
 </head>
 <body>
 
@@ -723,7 +745,7 @@
       <!-- Coluna esquerda: texto -->
       <div class="nh-copy reveal">
         <span class="nh-badge">Páginas profissionais para negócios locais</span>
-        <h1 class="nh-title">Pare de perder clientes por não ter uma página que <span class="nh-accent">transmite confiança</span></h1>
+        <h1 class="nh-title">Pare de perder clientes<br>por não ter uma página<br>que <span class="nh-accent">transmite confiança</span></h1>
         <p class="nh-sub">Criamos sua página de vendas com design profissional, WhatsApp, formulário e Google Analytics configurados — pronta para divulgar e receber clientes.</p>
         <div class="nh-actions">
           <a href="https://wa.me/5584986329566?text=Olá,%20quero%20conhecer%20as%20soluções%20da%20MR%20Soluções" target="_blank" rel="noopener" class="btn btn--wa" data-wa-loc="hero">
@@ -750,51 +772,16 @@
         </ul>
       </div>
 
-      <!-- Coluna direita: mockup notebook + celular (demonstração de página de serviço técnico) -->
-      <div class="nh-visual reveal" role="img" aria-label="Mockup de notebook e celular exibindo uma página de vendas profissional criada pela MR Soluções, com selo de preço: páginas a partir de R$ 697">
-        <span class="nh-price" aria-hidden="true">Páginas a partir de <b>R$ 697</b></span>
-        <svg class="nh-arrow" width="46" height="52" viewBox="0 0 46 52" fill="none" aria-hidden="true"><path d="M40 2c4 12-2 26-14 34-8 5.5-16 7-22 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M11 35l-7 7 9.5 2.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
 
-        <div class="nh-laptop" aria-hidden="true">
-          <div class="nh-laptop__screen">
-            <div class="nhs">
-              <div class="nhs-top">
-                <span class="nhs-brand"><i></i><span><b>HIDROFÁCIL</b><small>ENCANAMENTOS</small></span></span>
-                <span class="nhs-nav"><span>Início</span><span>Serviços</span><span>Sobre nós</span><span>Depoimentos</span></span>
-                <span class="nhs-pill">Fale no WhatsApp</span>
-              </div>
-              <div class="nhs-hero">
-                <h3>Soluções hidráulicas com qualidade e <em>compromisso</em></h3>
-                <p>Atendimento rápido, serviço garantido e preços justos para sua tranquilidade.</p>
-                <span class="nhs-wa"><i></i>Fale no WhatsApp</span>
-              </div>
-              <div class="nhs-feats">
-                <span><i></i>Serviços Especializados</span>
-                <span><i></i>Garantia em Todos os Serviços</span>
-                <span><i></i>Atendimento Rápido</span>
-              </div>
-            </div>
-          </div>
-          <div class="nh-laptop__base"></div>
-        </div>
-
-        <div class="nh-phone" aria-hidden="true">
-          <div class="nhs nhs--phone">
-            <div class="nhs-top">
-              <span class="nhs-brand"><i></i><span><b>HIDROFÁCIL</b><small>ENCANAMENTOS</small></span></span>
-            </div>
-            <div class="nhs-hero">
-              <h3>Soluções hidráulicas com qualidade e <em>compromisso</em></h3>
-              <p>Atendimento rápido, serviço garantido e preços justos.</p>
-              <span class="nhs-wa"><i></i>Fale no WhatsApp</span>
-            </div>
-            <div class="nhs-list">
-              <span><i></i>Serviços Especializados</span>
-              <span><i></i>Garantia em Todos os Serviços</span>
-              <span><i></i>Atendimento Rápido</span>
-            </div>
-          </div>
-        </div>
+      <!-- Coluna direita: mockup de estética -->
+      <div class="nh-visual nh-visual--image reveal">
+        <img
+          src="hero-estetica-mockup.png"
+          alt="Notebook e celular exibindo uma landing page profissional para clínica de estética"
+          class="nh-estetica-img"
+          loading="eager"
+          decoding="async"
+        />
       </div>
 
     </div>
@@ -820,7 +807,7 @@
     <div class="container">
       <div class="section__head reveal">
         <span class="eyebrow eyebrow--green">Modelos de landing page</span>
-        <h2 class="section__title">Sua landing page pronta para o seu ramo</h2>
+        <h2 class="section__title">Sua landing page</h2>
       </div>
       <p class="mn-sub reveal">Design de alto padrão já estruturado para converter: você escolhe o modelo do seu segmento, eu personalizo com a sua marca, seus textos e seu WhatsApp — e a página entra no ar em poucos dias.</p>
 
