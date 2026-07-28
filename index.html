@@ -436,6 +436,22 @@
       background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);
       padding:5px 10px;border-radius:999px;white-space:nowrap;
     }
+    /* Cover com mockup (imagem do modelo) */
+    .mn-cover--img{
+      justify-content:flex-start;
+      min-height:0;padding:16px 18px 0;
+    }
+    .mn-cover--img .mn-cover__title{margin-bottom:2px;}
+    .mn-cover__mock{
+      position:relative;z-index:1;display:block;
+      width:100%;height:auto;margin-top:10px;
+      transform:translateY(8px);
+      filter:drop-shadow(0 10px 20px rgba(0,0,0,.28));
+    }
+    @media (max-width:640px){
+      .mn-cover--img{min-height:0;padding:14px 14px 0;}
+      .mn-cover__mock{margin-top:8px;}
+    }
     .mn-tag{
       align-self:flex-start;display:inline-flex;align-items:center;gap:6px;
       font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
@@ -777,10 +793,13 @@
       <!-- Coluna direita: mockup de estética -->
       <div class="nh-visual nh-visual--image reveal">
         <img
-          src="hero-estetica-mockup.png"
+          src="mockup-estetica.png"
           alt="Notebook e celular exibindo uma landing page profissional para clínica de estética"
           class="nh-estetica-img"
+          width="1600"
+          height="1084"
           loading="eager"
+          fetchpriority="high"
           decoding="async"
         />
       </div>
@@ -814,10 +833,10 @@
 
       <div class="mn-grid">
         <article class="mn-card reveal">
-          <div class="mn-cover mn-cover--adv">
+          <div class="mn-cover mn-cover--adv mn-cover--img">
             <span class="mn-cover__kicker">Landing page</span>
             <span class="mn-cover__title">Advocacia</span>
-            <div class="mn-cover__profs"><span>Advogados</span><span>Escritórios jurídicos</span><span>Consultoria preventiva</span></div>
+            <img class="mn-cover__mock" src="mockup-advocacia.png" alt="Mockup da landing page modelo para advocacia em notebook e celular" width="1600" height="1090" loading="lazy" decoding="async" />
           </div>
           <div class="mn-body">
           <h3>Advocacia</h3>
@@ -836,10 +855,10 @@
         </article>
 
         <article class="mn-card reveal">
-          <div class="mn-cover mn-cover--est">
+          <div class="mn-cover mn-cover--est mn-cover--img">
             <span class="mn-cover__kicker">Landing page</span>
             <span class="mn-cover__title">Estética &amp; Beleza</span>
-            <div class="mn-cover__profs"><span>Clínicas de estética</span><span>Harmonização</span><span>Studios &amp; salões</span></div>
+            <img class="mn-cover__mock" src="mockup-estetica.png" alt="Mockup da landing page modelo para clínicas de estética em notebook e celular" width="1600" height="1084" loading="lazy" decoding="async" />
           </div>
           <div class="mn-body">
           <h3>Estética &amp; Beleza</h3>
@@ -858,10 +877,10 @@
         </article>
 
         <article class="mn-card reveal">
-          <div class="mn-cover mn-cover--tec">
+          <div class="mn-cover mn-cover--tec mn-cover--img">
             <span class="mn-cover__kicker">Landing page</span>
             <span class="mn-cover__title">Serviços técnicos</span>
-            <div class="mn-cover__profs"><span>Eletricistas</span><span>Refrigeração</span><span>Manutenção &amp; reformas</span></div>
+            <img class="mn-cover__mock" src="mockup-tecnico.png" alt="Mockup da landing page modelo para serviços técnicos em notebook e celular" width="1600" height="1111" loading="lazy" decoding="async" />
           </div>
           <div class="mn-body">
           <h3>Serviços técnicos</h3>
