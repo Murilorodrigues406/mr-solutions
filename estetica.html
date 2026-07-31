@@ -1,246 +1,675 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modelo Estética — Modelo demonstrativo | MR Soluções</title>
-<meta name="description" content="Página modelo demonstrativa criada pela MR Soluções para o nicho de estética e beleza.">
-<meta name="robots" content="noindex">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>SUA MARCA — Estética Avançada</title>
+<meta name="description" content="Modelo de página para clínica de estética: harmonização facial, toxina botulínica, preenchimento e protocolos de pele, com avaliação individual." />
+
+<!-- =========================================================
+     PÁGINA DEMONSTRATIVA — Murilo Rodrigues
+     Modelo sem marca. Os campos do cliente ficam como espaço
+     reservado, só para mostrar onde cada informação entra.
+
+     CAMPOS A PREENCHER NA VERSÃO DO CLIENTE:
+     1. SUA MARCA .......... nome e logo (topo, rodapé e blocos de foto)
+     2. CRBM 0000 .......... registro profissional do responsável
+     3. Endereço ........... rua, bairro, cidade e horários
+     4. (00) 00000-0000 .... telefone exibido
+     5. Blocos .ph ......... trocar por fotos reais (mesmo tamanho)
+     6. Faixa .demo-bar .... remover na entrega final
+     ========================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<script>
+  /* GA4 — mesma propriedade do site principal, para medir as demos */
+  window.GA_ID = 'G-ME1D6SH7L3';
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function(){
+    var s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_ID;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', window.GA_ID, { send_page_view: true, page_title: 'demo_estetica' });
+  })();
+</script>
+
 <style>
 :root{
-  --ink:#111111;--ink-soft:#3d3d3a;--muted:#77756e;--line:#e7e5df;
-  --paper:#ffffff;--paper-2:#faf9f6;--accent:#a4626d;--accent-soft:#f7ecee;
-  --radius:6px;--wrap:1120px;
+  --ink:#2A1F27;
+  --ink-soft:#6A5A63;
+  --porcelain:#FBF8F5;
+  --sand:#F1E8DF;
+  --blush:#EBD5CD;
+  --bronze:#9C6B3C;
+  --bronze-lt:#C9A06A;
+  --line:#E4D9CF;
+  --white:#fff;
+  --serif:'Cormorant Garamond', Georgia, serif;
+  --sans:'Jost', -apple-system, 'Segoe UI', sans-serif;
+  --wrap:1140px;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;color:var(--ink-soft);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--ink);font-weight:500;line-height:1.12;letter-spacing:-.01em}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
-.btn{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:15px;padding:14px 26px;border-radius:var(--radius);transition:transform .15s ease;cursor:pointer;border:1px solid var(--ink)}
-.btn:hover{transform:translateY(-1px)}
-.btn-solid{background:var(--ink);color:#fff}
-.btn-ghost{background:transparent;color:var(--ink)}
-.demo-bar{background:var(--accent);color:#fff;font-size:13px;padding:9px 0;text-align:center}
-.demo-bar a{color:#fff;text-decoration:underline;font-weight:600}
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{font-family:'Fraunces',serif;font-size:21px;font-weight:600;color:var(--ink);letter-spacing:-.02em}
-.nav-links{display:flex;gap:30px;align-items:center}
-.nav-links a{font-size:14px;color:var(--ink-soft);font-weight:500}
-.nav-links a:hover{color:var(--ink)}
-.nav-cta{font-size:13px;font-weight:500;color:var(--ink);padding:9px 16px;border:1px solid var(--ink);border-radius:var(--radius);white-space:nowrap}
-@media(max-width:840px){.nav-links{display:none}}
-@media(max-width:640px){
-  .demo-bar{font-size:12px;padding:8px 14px;line-height:1.4}
-  .nav{height:60px}
-  .hero{padding:56px 0 52px}
-  section{padding:56px 0}
-  .hero-actions .btn{flex:1;justify-content:center;min-width:170px}
-  .hero-trust{gap:22px;margin-top:40px}
-  .hero-trust .n{font-size:25px}
-  .section-head{margin-bottom:36px}
-  .card{padding:26px 22px}
-  .quote-card{padding:30px 24px}
-  .quote-card .q{font-size:20px}
-  .stat{padding:26px 16px}
-  .stat .n{font-size:36px}
-  form{padding:24px 20px}
-  .wa-box{padding:16px 16px}
-  footer{padding:40px 0 24px}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--porcelain);color:var(--ink);
+  font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;
 }
-.hero{padding:90px 0 84px;border-bottom:1px solid var(--line)}
-.hero .eyebrow{margin-bottom:20px;display:block}
-.hero h1{font-size:clamp(38px,6vw,68px);max-width:16ch;margin-bottom:24px}
-.hero p{font-size:18px;max-width:54ch;margin-bottom:34px}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-.hero-trust{display:flex;gap:40px;margin-top:52px;flex-wrap:wrap}
-.hero-trust .n{font-family:'Fraunces',serif;font-size:32px;color:var(--ink);font-weight:600;line-height:1}
-.hero-trust .l{font-size:13px;color:var(--muted);margin-top:6px;max-width:20ch}
-section{padding:84px 0}
-.section-head{max-width:60ch;margin-bottom:52px}
-.section-head h2{font-size:clamp(28px,4vw,42px);margin:14px 0 16px}
-.section-head p{font-size:17px}
-.alt{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media(max-width:840px){.grid-3{grid-template-columns:1fr}}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:32px 28px;transition:border-color .2s ease,transform .2s ease}
-.card:hover{border-color:var(--accent);transform:translateY(-3px)}
-.card .num{font-family:'Fraunces',serif;font-size:14px;color:var(--accent);font-weight:600}
-.card h3{font-size:21px;margin:12px 0 10px}
-.card p{font-size:15px}
-.split{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
-@media(max-width:840px){.split{grid-template-columns:1fr;gap:40px}}
-.feature-list{list-style:none;display:flex;flex-direction:column;gap:24px}
-.feature-list li{display:flex;gap:15px;align-items:flex-start}
-.feature-list .dot{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;margin-top:2px}
-.feature-list h3{font-size:17px;margin-bottom:3px}
-.feature-list p{font-size:14px}
-.quote-card{background:var(--ink);color:#fff;border-radius:16px;padding:44px 38px}
-.quote-card .q{font-family:'Fraunces',serif;font-size:24px;line-height:1.35;color:#fff}
-.quote-card .who{margin-top:26px;font-size:14px;color:#c9c7c0}
-.quote-card .who strong{color:#fff;display:block}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:center}
-@media(max-width:720px){.stats{grid-template-columns:1fr}}
-.stat{padding:34px 18px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
-.stat .n{font-family:'Fraunces',serif;font-size:44px;color:var(--ink);font-weight:600;line-height:1}
-.stat .l{font-size:14px;color:var(--muted);margin-top:9px}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
-@media(max-width:840px){.contact-grid{grid-template-columns:1fr;gap:38px}}
-.contact-side h2{font-size:clamp(28px,4vw,40px);margin-bottom:16px}
-.contact-side p{font-size:17px;margin-bottom:28px}
-.wa-box{display:flex;align-items:center;gap:15px;padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:var(--paper-2)}
-.wa-box .ico{flex:none;width:44px;height:44px;border-radius:12px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:21px}
-.wa-box .t{font-weight:600;color:var(--ink);font-size:15px}
-.wa-box .s{font-size:13px;color:var(--muted)}
-form{display:flex;flex-direction:column;gap:15px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:32px 28px}
-label{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:-7px}
-input,textarea{font-family:inherit;font-size:15px;color:var(--ink);padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);width:100%}
-input:focus,textarea:focus{outline:none;border-color:var(--accent)}
-textarea{resize:vertical;min-height:105px}
-form .btn-solid{width:100%;justify-content:center;margin-top:4px;padding:14px}
-.form-note{font-size:12px;color:var(--muted);text-align:center}
-.form-demo-msg{display:none;background:var(--accent-soft);color:var(--ink);border:1px solid var(--accent);border-radius:var(--radius);padding:12px 14px;font-size:14px;text-align:center}
-footer{background:var(--ink);color:#c9c7c0;padding:50px 0 30px}
-.foot{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
-footer .logo{color:#fff}
-footer p{font-size:14px;max-width:38ch;margin-top:12px}
-.foot-bottom{border-top:1px solid #2a2a28;margin-top:40px;padding-top:20px;font-size:13px;color:#8f8d86}
-.foot-bottom a{color:#fff;text-decoration:underline}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.btn:hover,.card:hover{transform:none}}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--bronze);outline-offset:3px;}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 28px;}
+
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:.01em;margin:0;}
+h1{font-size:clamp(2.6rem,5.4vw,4.3rem);line-height:1.06;}
+h2{font-size:clamp(2rem,3.6vw,2.9rem);line-height:1.14;}
+h3{font-size:1.35rem;line-height:1.3;}
+p{margin:0 0 1.1em;}
+
+.eyebrow{
+  font-family:var(--sans);font-size:.72rem;font-weight:400;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--bronze);
+  display:inline-block;margin-bottom:18px;
+}
+.lead{font-size:1.08rem;color:var(--ink-soft);max-width:56ch;}
+
+/* ---------- faixa da demo (única marca do Murilo na página) ---------- */
+.demo-bar{
+  background:var(--ink);color:#F3EBE4;
+  font-size:.82rem;letter-spacing:.02em;
+}
+.demo-bar__in{
+  max-width:var(--wrap);margin:0 auto;padding:9px 28px;
+  display:flex;align-items:center;justify-content:center;gap:10px 18px;flex-wrap:wrap;text-align:center;
+}
+.demo-bar b{font-weight:500;color:#fff;}
+.demo-bar span{opacity:.7;}
+.demo-bar a{
+  color:#fff;text-decoration:none;border-bottom:1px solid var(--bronze-lt);
+  padding-bottom:1px;white-space:nowrap;
+}
+.demo-bar a:hover{color:var(--bronze-lt);}
+
+/* ---------- topo da clínica ---------- */
+.top{
+  position:sticky;top:0;z-index:40;background:rgba(251,248,245,.92);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+}
+.top__in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 28px;max-width:var(--wrap);margin:0 auto;}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.brand__mark{
+  width:40px;height:40px;border:1px dashed var(--bronze);border-radius:50%;
+  display:grid;place-items:center;font-family:var(--sans);font-size:.58rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--bronze);flex:none;opacity:.85;
+}
+.brand__name{font-family:var(--serif);font-size:1.42rem;line-height:1;letter-spacing:.06em;}
+.brand__sub{display:block;font-family:var(--sans);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);margin-top:5px;}
+.menu{display:flex;gap:30px;list-style:none;margin:0;padding:0;font-size:.9rem;}
+.menu a{text-decoration:none;color:var(--ink-soft);transition:color .2s;}
+.menu a:hover{color:var(--bronze);}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:14px 26px;border-radius:2px;font-size:.86rem;letter-spacing:.13em;
+  text-transform:uppercase;text-decoration:none;font-weight:400;
+  border:1px solid var(--bronze);transition:all .25s ease;cursor:pointer;
+}
+.btn--solid{background:var(--bronze);color:#fff;}
+.btn--solid:hover{background:#875A30;border-color:#875A30;}
+.btn--line{background:transparent;color:var(--bronze);}
+.btn--line:hover{background:var(--bronze);color:#fff;}
+.btn--sm{padding:11px 20px;font-size:.76rem;}
+.top .btn{flex:none;}
+
+/* ---------- hero ---------- */
+.hero{padding:88px 0 96px;position:relative;overflow:hidden;}
+.hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center;}
+.hero h1 em{font-style:italic;color:var(--bronze);}
+.hero .lead{margin-top:6px;}
+.hero__cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px;}
+.hero__facts{
+  display:flex;gap:38px;flex-wrap:wrap;margin-top:52px;
+  padding-top:30px;border-top:1px solid var(--line);
+}
+.fact b{display:block;font-family:var(--serif);font-size:2.1rem;line-height:1;color:var(--bronze);font-weight:400;}
+.fact span{font-size:.79rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-soft);}
+
+/* bloco de imagem (substituir por foto real) */
+.ph{
+  position:relative;border-radius:2px;overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 78% 12%, rgba(255,255,255,.75), transparent 60%),
+    linear-gradient(150deg, var(--blush) 0%, var(--sand) 52%, #E6DCD2 100%);
+}
+.ph::after{
+  content:attr(data-mark);position:absolute;inset:0;display:grid;place-items:center;
+  font-family:var(--sans);font-size:.72rem;font-weight:400;letter-spacing:.3em;
+  text-transform:uppercase;color:rgba(156,107,60,.5);text-align:center;
+}
+.ph--tag::before{
+  content:attr(data-tag);position:absolute;left:0;bottom:0;z-index:2;
+  background:rgba(42,31,39,.72);color:#fff;font-size:.7rem;letter-spacing:.16em;
+  text-transform:uppercase;padding:8px 14px;
+}
+.hero__art{position:relative;}
+.hero__art .ph{aspect-ratio:4/5;}
+.hero__badge{
+  position:absolute;left:-34px;bottom:44px;background:var(--white);
+  border:1px solid var(--line);padding:20px 24px;max-width:230px;
+  box-shadow:0 18px 40px rgba(42,31,39,.09);
+}
+.hero__badge b{font-family:var(--serif);font-size:1.5rem;font-weight:400;display:block;line-height:1.2;}
+.hero__badge span{font-size:.8rem;color:var(--ink-soft);}
+
+/* ---------- seções ---------- */
+section{scroll-margin-top:86px;}
+.band{padding:96px 0;}
+.band--sand{background:var(--sand);}
+.band--ink{background:var(--ink);color:#EFE6DF;}
+.band--ink h2,.band--ink .fact b{color:#fff;}
+.band--ink .lead{color:#C9BCC3;}
+.head{max-width:640px;margin-bottom:56px;}
+.head--center{margin-left:auto;margin-right:auto;text-align:center;}
+
+/* ---------- menu de protocolos (assinatura da página) ---------- */
+.menu-cat{margin-bottom:46px;}
+.menu-cat__title{
+  font-size:.75rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bronze);
+  padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:8px;
+}
+.item{padding:18px 0;border-bottom:1px solid rgba(228,217,207,.7);}
+.item__row{display:flex;align-items:baseline;gap:12px;}
+.item__name{font-family:var(--serif);font-size:1.3rem;white-space:nowrap;}
+.item__dots{flex:1;border-bottom:1px dotted #C9BAAC;transform:translateY(-5px);min-width:24px;}
+.item__price{font-size:.95rem;color:var(--bronze);white-space:nowrap;letter-spacing:.03em;}
+.item__desc{font-size:.93rem;color:var(--ink-soft);margin:6px 0 0;max-width:62ch;}
+.item__meta{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:#9C8B95;margin-top:7px;}
+.menu-note{font-size:.86rem;color:var(--ink-soft);font-style:italic;}
+
+/* ---------- etapas ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;}
+.step__n{font-family:var(--serif);font-size:1rem;color:var(--bronze);letter-spacing:.2em;display:block;margin-bottom:14px;}
+.step h3{margin-bottom:10px;}
+.step p{font-size:.95rem;color:var(--ink-soft);margin:0;}
+
+/* ---------- profissional ---------- */
+.pro{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center;}
+.pro .ph{aspect-ratio:3/4;}
+.pro__sign{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--bronze);margin-top:26px;}
+.pro__reg{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+
+/* ---------- depoimentos ---------- */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;}
+.quote{background:var(--white);border:1px solid var(--line);padding:34px 30px;}
+.quote__stars{color:var(--bronze-lt);letter-spacing:.24em;font-size:.85rem;margin-bottom:16px;}
+.quote p{font-family:var(--serif);font-size:1.16rem;line-height:1.55;font-style:italic;color:var(--ink);}
+.quote footer{font-size:.82rem;letter-spacing:.06em;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:14px;margin-top:20px;}
+
+/* ---------- galeria ---------- */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.gal .ph{aspect-ratio:3/4;}
+.gal .ph:nth-child(2),.gal .ph:nth-child(4){margin-top:32px;}
+
+/* ---------- faq ---------- */
+.faq{max-width:780px;margin:0 auto;}
+details{border-bottom:1px solid var(--line);}
+summary{
+  list-style:none;cursor:pointer;padding:22px 40px 22px 0;position:relative;
+  font-family:var(--serif);font-size:1.24rem;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{
+  content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  color:var(--bronze);font-family:var(--sans);font-size:1.3rem;font-weight:300;transition:transform .25s;
+}
+details[open] summary::after{content:'–';}
+details p{font-size:.96rem;color:var(--ink-soft);margin:0 0 22px;max-width:64ch;}
+
+/* ---------- visita ---------- */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.hours{width:100%;border-collapse:collapse;margin-top:8px;}
+.hours td{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.13);font-size:.95rem;}
+.hours td:last-child{text-align:right;color:#fff;}
+.visit .ph{aspect-ratio:16/11;}
+.addr{font-size:1.02rem;line-height:1.9;}
+.addr strong{font-weight:400;color:#fff;}
+
+/* ---------- cta final ---------- */
+.close{padding:104px 0;text-align:center;background:var(--sand);}
+.close h2{max-width:16ch;margin:0 auto 20px;}
+.close .lead{margin:0 auto 34px;text-align:center;}
+
+/* ---------- rodapé ---------- */
+.foot{background:var(--ink);color:#B7A8B0;padding:66px 0 0;font-size:.9rem;}
+.foot__grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:48px;}
+.foot h4{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#fff;margin:0 0 18px;font-weight:400;}
+.foot ul{list-style:none;margin:0;padding:0;}
+.foot li{margin-bottom:10px;}
+.foot a{text-decoration:none;transition:color .2s;}
+.foot a:hover{color:var(--bronze-lt);}
+.foot .brand__name,.foot .brand__mark{color:#fff;}
+.foot .brand__mark{border-color:rgba(255,255,255,.4);}
+.foot__bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:56px;padding:22px 0;font-size:.8rem;}
+.foot__bottom .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+
+/* ---------- whatsapp flutuante ---------- */
+.wa{
+  position:fixed;right:22px;bottom:22px;z-index:60;width:56px;height:56px;border-radius:50%;
+  background:#25D366;color:#fff;display:grid;place-items:center;
+  box-shadow:0 10px 26px rgba(37,211,102,.36);transition:transform .2s;
+}
+.wa:hover{transform:scale(1.07);}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+.rv.on{opacity:1;transform:none;}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;}
+  .rv{opacity:1;transform:none;}
+  html{scroll-behavior:auto;}
+}
+
+/* ---------- responsivo ---------- */
+@media (max-width:980px){
+  .menu{display:none;}
+  .hero{padding:56px 0 64px;}
+  .hero__grid,.pro,.visit{grid-template-columns:1fr;gap:44px;}
+  .hero__art{order:-1;}
+  .hero__art .ph{aspect-ratio:5/4;}
+  .hero__badge{left:auto;right:16px;bottom:-22px;}
+  .steps,.quotes{grid-template-columns:1fr;gap:32px;}
+  .gal{grid-template-columns:repeat(2,1fr);}
+  .band{padding:66px 0;}
+}
+@media (max-width:560px){
+  body{font-size:16px;}
+  .wrap,.top__in,.demo-bar__in{padding-left:20px;padding-right:20px;}
+  .top__in .btn{padding:10px 14px;font-size:.7rem;}
+  .brand__name{font-size:1.2rem;}
+  .hero__facts{gap:26px;}
+  .item__row{flex-wrap:wrap;}
+  .item__dots{display:none;}
+  .item__price{width:100%;order:3;margin-top:2px;}
+  .foot__grid{grid-template-columns:1fr;gap:36px;}
+  .hero__badge{position:static;margin-top:18px;max-width:none;}
+}
 </style>
 </head>
 <body>
 
-<div class="demo-bar">Página demonstrativa da MR Soluções — <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20vi%20o%20modelo%20de%20est%C3%A9tica%20e%20quero%20uma%20p%C3%A1gina%20assim" target="_blank" rel="noopener">quero uma assim para o meu negócio</a></div>
+<!-- ÚNICA MARCA DO MURILO NA PÁGINA -->
+<div class="demo-bar">
+  <div class="demo-bar__in">
+    <span><b>Página demonstrativa</b> — os textos, valores e imagens são exemplos.</span>
+    <a href="https://wa.me/5584986329566?text=Ol%C3%A1%20Murilo%2C%20vi%20a%20p%C3%A1gina%20modelo%20de%20est%C3%A9tica%20e%20quero%20uma%20assim%20para%20o%20meu%20neg%C3%B3cio" target="_blank" rel="noopener" data-wa-loc="demo_topo" data-produto="modelo_estetica">Criada por Murilo Rodrigues — quero uma assim</a>
+  </div>
+</div>
 
-<header>
-  <div class="wrap nav">
-    <a href="#topo" class="logo">sua marca</a>
-    <nav class="nav-links">
-      <a href="#servicos">Procedimentos</a>
-      <a href="#diferenciais">Diferenciais</a>
+<header class="top">
+  <div class="top__in">
+    <a href="#inicio" class="brand" aria-label="Sua marca">
+      <span class="brand__mark" aria-hidden="true">logo</span>
+      <span>
+        <span class="brand__name">SUA MARCA</span>
+        <span class="brand__sub">Estética avançada</span>
+      </span>
+    </a>
+    <nav>
+      <ul class="menu">
+        <li><a href="#protocolos">Protocolos</a></li>
+        <li><a href="#atendimento">Atendimento</a></li>
+        <li><a href="#equipe">Quem atende</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#visita">Onde estamos</a></li>
+      </ul>
     </nav>
-    <a href="#contato" class="nav-cta">Agendar avaliação</a>
+    <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener" class="btn btn--solid btn--sm" data-wa-loc="header">Agendar avaliação</a>
   </div>
 </header>
 
-<section id="topo" class="hero">
-  <div class="wrap">
-    <span class="eyebrow reveal">Estética avançada · Resultados naturais</span>
-    <h1 class="reveal">Sua beleza realçada com técnica e delicadeza.</h1>
-    <p class="reveal">Procedimentos personalizados para quem busca resultado natural e atendimento acolhedor. Avaliamos cada rosto de forma única e indicamos apenas o que realmente faz sentido para você.</p>
-    <div class="hero-actions reveal">
-      <a class="btn btn-solid" href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">Falar no WhatsApp</a>
-      <a class="btn btn-ghost" href="#contato">Agendar avaliação</a>
-    </div>
-    <div class="hero-trust reveal">
-      <div><div class="n">+8</div><div class="l">anos de experiência</div></div>
-      <div><div class="n">100%</div><div class="l">protocolos seguros</div></div>
-      <div><div class="n">+2mil</div><div class="l">atendimentos realizados</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="servicos" class="alt">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Procedimentos</span>
-      <h2>Procedimentos pensados para realçar, nunca descaracterizar.</h2>
-      <p>Técnica, produtos certificados e um olhar individual para cada cliente.</p>
-    </div>
-    <div class="grid-3">
-      <div class="card reveal"><div class="num">01</div><h3>Harmonização Facial</h3><p>Realce dos seus traços com equilíbrio e naturalidade, respeitando a sua identidade.</p></div>
-      <div class="card reveal"><div class="num">02</div><h3>Skincare Avançado</h3><p>Protocolos personalizados para a saúde e o viço da sua pele.</p></div>
-      <div class="card reveal"><div class="num">03</div><h3>Bioestimuladores</h3><p>Estímulo natural de colágeno para uma pele firme e rejuvenescida.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="diferenciais">
-  <div class="wrap split">
-    <div class="reveal">
-      <span class="eyebrow">Por que escolher</span>
-      <h2 style="font-size:clamp(26px,4vw,38px);margin:14px 0 32px">Alto padrão está nos detalhes que você sente.</h2>
-      <ul class="feature-list">
-        <li><span class="dot">✓</span><div><h3>Avaliação individual</h3><p>Cada plano é feito para o seu rosto, nunca um pacote genérico.</p></div></li>
-        <li><span class="dot">✓</span><div><h3>Produtos premium</h3><p>Trabalhamos apenas com marcas certificadas e de referência.</p></div></li>
-        <li><span class="dot">✓</span><div><h3>Ambiente acolhedor</h3><p>Você se sente cuidada do primeiro contato ao pós-procedimento.</p></div></li>
-        <li><span class="dot">✓</span><div><h3>Resultado natural</h3><p>Nosso compromisso é realçar, nunca descaracterizar.</p></div></li>
-      </ul>
-    </div>
-    <div class="quote-card reveal">
-      <div class="q">"Me senti segura e o resultado ficou lindo e natural. Melhor decisão que tomei."</div>
-      <div class="who"><strong>Espaço do depoimento real da sua cliente</strong>Depoimento ilustrativo do modelo</div>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
-      <span class="eyebrow">Resultados</span>
-      <h2>Confiança construída atendimento por atendimento.</h2>
-    </div>
-    <div class="stats">
-      <div class="stat reveal"><div class="n">+2mil</div><div class="l">atendimentos</div></div>
-      <div class="stat reveal"><div class="n">98%</div><div class="l">de clientes satisfeitas</div></div>
-      <div class="stat reveal"><div class="n">4.9</div><div class="l">avaliação média</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="contato">
-  <div class="wrap contact-grid">
-    <div class="contact-side reveal">
-      <span class="eyebrow">Contato</span>
-      <h2>Vamos cuidar de você.</h2>
-      <p>Conte o que você deseja e retornamos com uma avaliação personalizada, sem compromisso.</p>
-      <a class="wa-box" href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">
-        <span class="ico">✆</span>
-        <span><span class="t">Falar direto no WhatsApp</span><br><span class="s">Resposta rápida · Sem compromisso</span></span>
-      </a>
-    </div>
-    <form id="demo-form">
-      <label for="nome">Nome</label>
-      <input id="nome" type="text" placeholder="Seu nome" required>
-      <label for="contato">E-mail ou telefone</label>
-      <input id="contato" type="text" placeholder="Como podemos retornar" required>
-      <label for="msg">Mensagem</label>
-      <textarea id="msg" placeholder="Qual procedimento você tem interesse?" required></textarea>
-      <button type="submit" class="btn btn-solid">Enviar mensagem</button>
-      <p class="form-demo-msg" id="demo-msg">✓ Em uma página real, esta mensagem chegaria agora no seu e-mail. Este é um modelo demonstrativo da MR Soluções.</p>
-      <p class="form-note">Resposta rápida · Avaliação sem compromisso.</p>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="foot">
-      <div>
-        <div class="logo">sua marca</div>
-        <p>Aqui entra a apresentação da sua clínica ou studio, com a sua marca e o seu contato.</p>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap hero__grid">
+    <div class="rv">
+      <span class="eyebrow">Seu bairro · sua cidade</span>
+      <h1>O seu rosto,<br>com <em>naturalidade</em><br>e técnica.</h1>
+      <p class="lead">Harmonização facial, toxina botulínica e protocolos de pele conduzidos por profissional registrada. Cada procedimento começa por uma avaliação individual — nada de pacote pronto.</p>
+      <div class="hero__cta">
+        <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener" class="btn btn--solid" data-wa-loc="hero">Agendar avaliação</a>
+        <a href="#protocolos" class="btn btn--line">Ver protocolos</a>
+      </div>
+      <div class="hero__facts">
+        <div class="fact"><b>9 anos</b><span>de atendimento</span></div>
+        <div class="fact"><b>4,9</b><span>no Google</span></div>
+        <div class="fact"><b>+2.400</b><span>procedimentos</span></div>
       </div>
     </div>
-    <div class="foot-bottom">Modelo demonstrativo desenvolvido por <a href="https://mr-solutions.netlify.app/" target="_blank" rel="noopener">MR Soluções</a> — quero uma página assim: <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20vi%20o%20modelo%20de%20est%C3%A9tica%20e%20quero%20uma%20p%C3%A1gina%20assim" target="_blank" rel="noopener">falar no WhatsApp</a></div>
+    <div class="hero__art rv">
+      <div class="ph" data-mark="foto do espaço" role="img" aria-label="Espaço reservado para foto do ambiente"></div>
+      <div class="hero__badge">
+        <b>Avaliação sem custo</b>
+        <span>Primeira consulta com plano de tratamento por escrito.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROTOCOLOS -->
+<section class="band band--sand" id="protocolos">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Protocolos</span>
+      <h2>O que fazemos aqui</h2>
+      <p class="lead">Os valores abaixo são a base de cada procedimento. O preço final sai na avaliação, quando definimos quantidade de produto e número de sessões para o seu caso.</p>
+    </div>
+
+    <div class="menu-cat rv">
+      <p class="menu-cat__title">Face</p>
+
+      <div class="item">
+        <div class="item__row">
+          <span class="item__name">Toxina botulínica</span>
+          <span class="item__dots" aria-hidden="true"></span>
+          <span class="item__price">a partir de R$ 890</span>
+        </div>
+        <p class="item__desc">Suaviza as linhas de expressão da testa, glabela e região dos olhos mantendo o movimento natural do rosto. Retorno em 15 dias para ajuste, já incluso.</p>
+        <p class="item__meta">40 min · efeito de 4 a 6 meses</p>
+      </div>
+
+      <div class="item">
+        <div class="item__row">
+          <span class="item__name">Preenchimento labial</span>
+          <span class="item__dots" aria-hidden="true"></span>
+          <span class="item__price">a partir de R$ 1.150</span>
+        </div>
+        <p class="item__desc">Ácido hialurônico aplicado para hidratar e corrigir contorno, respeitando a proporção do seu rosto. Aplicação com anestésico tópico e cânula.</p>
+        <p class="item__meta">50 min · resultado imediato</p>
+      </div>
+
+      <div class="item">
+        <div class="item__row">
+          <span class="item__name">Harmonização facial</span>
+          <span class="item__dots" aria-hidden="true"></span>
+          <span class="item__price">sob avaliação</span>
+        </div>
+        <p class="item__desc">Plano combinando dois ou mais procedimentos, definido a partir da análise das proporções do rosto. Você recebe o planejamento por escrito antes de decidir.</p>
+        <p class="item__meta">avaliação de 1h · plano em até 48h</p>
+      </div>
+    </div>
+
+    <div class="menu-cat rv">
+      <p class="menu-cat__title">Pele</p>
+
+      <div class="item">
+        <div class="item__row">
+          <span class="item__name">Limpeza de pele profunda</span>
+          <span class="item__dots" aria-hidden="true"></span>
+          <span class="item__price">R$ 220</span>
+        </div>
+        <p class="item__desc">Extração, esfoliação e máscara calmante. Indicada para pele oleosa e com cravos; sai do studio sem vermelhidão que impeça o dia a dia.</p>
+        <p class="item__meta">1h20 · a cada 30 dias</p>
+      </div>
+
+      <div class="item">
+        <div class="item__row">
+          <span class="item__name">Microagulhamento</span>
+          <span class="item__dots" aria-hidden="true"></span>
+          <span class="item__price">R$ 390 <small>/ sessão</small></span>
+        </div>
+        <p class="item__desc">Estimula colágeno para marcas de acne, poros dilatados e textura irregular. Protocolo padrão de 4 sessões com intervalo de 21 dias.</p>
+        <p class="item__meta">1h · pacote de 4 com desconto</p>
+      </div>
+
+      <div class="item">
+        <div class="item__row">
+          <span class="item__name">Peeling químico</span>
+          <span class="item__dots" aria-hidden="true"></span>
+          <span class="item__price">R$ 280 <small>/ sessão</small></span>
+        </div>
+        <p class="item__desc">Ativo escolhido conforme o seu tipo de pele para clarear manchas e uniformizar o tom. Fazemos preparo da pele nas duas semanas anteriores.</p>
+        <p class="item__meta">45 min · fora do verão intenso</p>
+      </div>
+    </div>
+
+    <p class="menu-note rv">Pagamento em até 6x sem juros no cartão, Pix ou dinheiro. Remarcações com 24h de antecedência, sem taxa.</p>
+  </div>
+</section>
+
+<!-- COMO É O ATENDIMENTO -->
+<section class="band" id="atendimento">
+  <div class="wrap">
+    <div class="head head--center rv">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Da primeira conversa ao retorno</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv">
+        <span class="step__n">I</span>
+        <h3>Avaliação</h3>
+        <p>Uma hora reservada só para você: análise do rosto e da pele, histórico de saúde e o que te incomoda. Aqui não se vende procedimento — se entende o caso.</p>
+      </div>
+      <div class="step rv">
+        <span class="step__n">II</span>
+        <h3>Plano por escrito</h3>
+        <p>Você recebe no WhatsApp o que é indicado, em quantas sessões, com quais produtos e quanto custa. Leva para casa, pensa, e decide sem pressão.</p>
+      </div>
+      <div class="step rv">
+        <span class="step__n">III</span>
+        <h3>Procedimento e retorno</h3>
+        <p>Aplicação com material lacrado na sua frente e orientação de pós no papel. O retorno de 15 dias já está incluso — ajuste fino faz parte do resultado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUEM ATENDE -->
+<section class="band band--sand" id="equipe">
+  <div class="wrap pro">
+    <div class="rv"><div class="ph" data-mark="foto da profissional" role="img" aria-label="Espaço reservado para foto da profissional"></div></div>
+    <div class="rv">
+      <span class="eyebrow">Quem atende você</span>
+      <h2>Nome da profissional</h2>
+      <p class="lead">Biomédica esteta, formada há nove anos e especializada em preenchedores faciais. Atende pessoalmente todos os procedimentos injetáveis — você não é encaminhada para outra pessoa depois da avaliação.</p>
+      <p class="lead">A regra da casa é simples: se um procedimento não for indicado para o seu caso, ele não é feito. Prefiro perder uma venda a entregar um resultado que você vai querer desfazer daqui a seis meses.</p>
+      <p class="pro__sign">Assinatura</p>
+      <p class="pro__reg">Biomédica esteta · CRBM 0000</p>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="band">
+  <div class="wrap">
+    <div class="head head--center rv">
+      <span class="eyebrow">Quem já passou por aqui</span>
+      <h2>Resultados que continuam parecendo você</h2>
+    </div>
+    <div class="quotes">
+      <blockquote class="quote rv">
+        <div class="quote__stars" aria-label="5 de 5">★★★★★</div>
+        <p>Cheguei com medo de ficar com aquele rosto travado. Saí com a expressão leve e ninguém percebeu que eu tinha feito nada — só perguntaram se eu estava dormindo melhor.</p>
+        <footer>Camila R. · cliente desde 2023</footer>
+      </blockquote>
+      <blockquote class="quote rv">
+        <div class="quote__stars" aria-label="5 de 5">★★★★★</div>
+        <p>Fui na avaliação decidida a preencher os lábios e ela me explicou que o meu caso pedia outra coisa, mais barata. Ganhou minha confiança ali.</p>
+        <footer>Juliana M. · cliente desde 2024</footer>
+      </blockquote>
+      <blockquote class="quote rv">
+        <div class="quote__stars" aria-label="5 de 5">★★★★★</div>
+        <p>Fiz as quatro sessões de microagulhamento para marcas de acne. As fotos do antes e depois me surpreenderam — e o acompanhamento por mensagem entre as sessões fez diferença.</p>
+        <footer>Priscila A. · cliente desde 2022</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ESPAÇO -->
+<section class="band band--sand">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">O espaço</span>
+      <h2>Um lugar tranquilo para cuidar de você</h2>
+      <p class="lead">Atendimento com hora marcada e uma pessoa por vez: sem sala de espera cheia, sem pressa.</p>
+    </div>
+    <div class="gal rv">
+      <div class="ph ph--tag" data-mark="foto" data-tag="Recepção" role="img" aria-label="Espaço reservado para foto da recepção"></div>
+      <div class="ph ph--tag" data-mark="foto" data-tag="Sala de procedimentos" role="img" aria-label="Espaço reservado para foto da sala de procedimentos"></div>
+      <div class="ph ph--tag" data-mark="foto" data-tag="Sala de pele" role="img" aria-label="Espaço reservado para foto da sala de pele"></div>
+      <div class="ph ph--tag" data-mark="foto" data-tag="Detalhes" role="img" aria-label="Espaço reservado para foto de detalhes"></div>
+    </div>
+  </div>
+</section>
+
+<!-- DÚVIDAS -->
+<section class="band" id="duvidas">
+  <div class="wrap">
+    <div class="head head--center rv">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>O que perguntam antes de marcar</h2>
+    </div>
+    <div class="faq rv">
+      <details>
+        <summary>Dói?</summary>
+        <p>A toxina botulínica usa agulhas muito finas e a maioria das pessoas descreve como uma fisgada rápida. Nos preenchimentos aplicamos anestésico tópico 20 minutos antes e trabalhamos com cânula, o que reduz bastante o desconforto.</p>
+      </details>
+      <details>
+        <summary>Consigo voltar a trabalhar no mesmo dia?</summary>
+        <p>Sim, na maior parte dos casos. Toxina botulínica e limpeza de pele não deixam marcas que impeçam a rotina. Preenchimento labial pode inchar por dois ou três dias — se tiver um compromisso importante, agendamos com folga.</p>
+      </details>
+      <details>
+        <summary>Quanto tempo dura o resultado?</summary>
+        <p>Toxina botulínica costuma durar de 4 a 6 meses. Preenchimento com ácido hialurônico, de 8 a 12 meses, variando com o metabolismo. Nos protocolos de pele o resultado se mantém com sessões de manutenção espaçadas.</p>
+      </details>
+      <details>
+        <summary>Posso fazer se estiver amamentando ou grávida?</summary>
+        <p>Procedimentos injetáveis não são realizados durante a gestação e a amamentação. Alguns protocolos de pele são liberados, mas isso é definido caso a caso na avaliação, com o aval do seu obstetra.</p>
+      </details>
+      <details>
+        <summary>Como funciona o pagamento?</summary>
+        <p>Cartão em até 6x sem juros, Pix ou dinheiro. Pacotes fechados têm desconto e podem ser divididos ao longo das sessões. O valor é informado antes de qualquer procedimento — sem surpresa no final.</p>
+      </details>
+      <details>
+        <summary>Preciso agendar ou posso chegar?</summary>
+        <p>Somente com hora marcada. Como cada atendimento é individual, não trabalhamos com fila de espera — o horário reservado é seu do começo ao fim.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- VISITA -->
+<section class="band band--ink" id="visita">
+  <div class="wrap visit">
+    <div class="rv">
+      <span class="eyebrow">Onde estamos</span>
+      <h2>Seu endereço</h2>
+      <p class="addr">
+        <strong>Rua, número e sala</strong><br>
+        Bairro · Cidade / UF · CEP<br>
+        Referência do local (estacionamento, ponto próximo).
+      </p>
+      <table class="hours">
+        <tr><td>Segunda a sexta</td><td>09h — 19h</td></tr>
+        <tr><td>Sábado</td><td>09h — 14h</td></tr>
+        <tr><td>Domingo e feriados</td><td>Fechado</td></tr>
+      </table>
+      <p style="margin-top:30px">
+        <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener" class="btn btn--solid" data-wa-loc="visita">Falar no WhatsApp</a>
+      </p>
+    </div>
+    <div class="rv"><div class="ph ph--tag" data-mark="foto" data-tag="Fachada" role="img" aria-label="Espaço reservado para foto da fachada"></div></div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="close">
+  <div class="wrap rv">
+    <span class="eyebrow">Primeiro passo</span>
+    <h2>Vamos olhar o seu caso com calma?</h2>
+    <p class="lead">A avaliação é sem custo e sem compromisso. Você sai daqui sabendo exatamente o que é indicado, quanto custa e em quanto tempo — mesmo que decida não fazer agora.</p>
+    <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener" class="btn btn--solid" data-wa-loc="cta_final">Agendar minha avaliação</a>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div>
+      <div class="brand" style="margin-bottom:18px">
+        <span class="brand__mark" aria-hidden="true">logo</span>
+        <span>
+          <span class="brand__name">SUA MARCA</span>
+          <span class="brand__sub">Estética avançada</span>
+        </span>
+      </div>
+      <p style="max-width:38ch">Harmonização facial, injetáveis e protocolos de pele com avaliação individual.</p>
+    </div>
+    <div>
+      <h4>Navegar</h4>
+      <ul>
+        <li><a href="#protocolos">Protocolos</a></li>
+        <li><a href="#atendimento">Como funciona</a></li>
+        <li><a href="#equipe">Quem atende</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener" data-wa-loc="rodape">WhatsApp · (00) 00000-0000</a></li>
+        <li><a href="#visita">Rua, número — Bairro · Cidade / UF</a></li>
+        <li><a href="#inicio">Seg a sex 09h—19h · Sáb 09h—14h</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot__bottom">
+    <div class="wrap">
+      <span>© <span id="ano"></span> SUA MARCA — todos os direitos reservados.</span>
+      <span>Responsável técnica: nome · CRBM 0000</span>
+    </div>
   </div>
 </footer>
 
+<a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener" class="wa" aria-label="Falar no WhatsApp" data-wa-loc="flutuante">
+  <svg viewBox="0 0 24 24" width="27" height="27" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.41 14.13c-.21.58-1.2 1.11-1.68 1.18-.43.06-.97.09-1.56-.1-.36-.11-.82-.26-1.41-.52-2.48-1.07-4.11-3.57-4.23-3.74-.12-.16-1.01-1.34-1.01-2.56 0-1.22.63-1.82.86-2.07.23-.25.49-.31.66-.31h.48c.16.01.36-.05.56.43.2.5.7 1.72.76 1.84.06.12.1.26.02.43-.08.16-.12.27-.25.41-.12.14-.26.32-.37.43-.12.13-.25.26-.11.51.15.25.64 1.06 1.38 1.72.94.84 1.74 1.11 1.99 1.23.25.13.4.11.54-.06.15-.16.63-.72.79-.97.17-.25.33-.21.56-.13.22.09 1.44.69 1.69.81.25.12.41.18.47.28.07.11.07.6-.14 1.18Z"/></svg>
+</a>
+
 <script>
-var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
-document.getElementById('demo-form').addEventListener('submit',function(ev){
-  ev.preventDefault();
-  document.getElementById('demo-msg').style.display='block';
-});
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  /* revelação suave ao rolar */
+  (function(){
+    var els = document.querySelectorAll('.rv');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function(e){ e.classList.add('on'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ en.target.classList.add('on'); io.unobserve(en.target); }
+      });
+    }, { threshold:.14, rootMargin:'0px 0px -40px 0px' });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+
+  /* rastreio de cliques no WhatsApp (GA4) */
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      if (typeof gtag !== 'function') return;
+      gtag('event', 'whatsapp_click', {
+        botao: a.getAttribute('data-wa-loc') || 'outro',
+        produto: a.getAttribute('data-produto') || 'demo_estetica',
+        event_category: 'conversao'
+      });
+    });
+  });
 </script>
 </body>
 </html>
