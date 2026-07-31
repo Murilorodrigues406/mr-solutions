@@ -1,246 +1,538 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modelo Advocacia — Modelo demonstrativo | MR Soluções</title>
-<meta name="description" content="Página modelo demonstrativa criada pela MR Soluções para o nicho de advocacia.">
-<meta name="robots" content="noindex">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>SUA MARCA — Advocacia</title>
+<meta name="description" content="Modelo de página para escritório de advocacia: áreas de atuação, atendimento inicial, equipe e canais de contato, dentro do que o Código de Ética da OAB permite." />
+
+<!-- =========================================================
+     PÁGINA DEMONSTRATIVA — Murilo Rodrigues
+     Modelo sem marca. Os campos do cliente ficam como espaço
+     reservado, só para mostrar onde cada informação entra.
+
+     CAMPOS A PREENCHER NA VERSÃO DO CLIENTE:
+     1. SUA MARCA .......... nome e logo (topo, rodapé e blocos de foto)
+     2. OAB 000.000 ........ inscrição do advogado responsável
+     3. Endereço ........... rua, bairro, cidade e horários
+     4. (00) 00000-0000 .... telefone exibido
+     5. Blocos .ph ......... trocar por fotos reais (mesmo tamanho)
+     6. Faixa .demo-bar .... remover na entrega final
+
+     OBSERVAÇÃO IMPORTANTE (Provimento 205/2021 da OAB):
+     publicidade de advogado é informativa, nunca mercantil.
+     Por isso esta página NÃO traz preços, promessas de
+     resultado, depoimentos de clientes nem chamadas do tipo
+     "contrate agora". Não inclua nada disso na versão final.
+     ========================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<script>
+  window.GA_ID = 'G-ME1D6SH7L3';
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function(){
+    var s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_ID;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', window.GA_ID, { send_page_view: true, page_title: 'demo_advocacia' });
+  })();
+</script>
+
 <style>
 :root{
-  --ink:#111111;--ink-soft:#3d3d3a;--muted:#77756e;--line:#e7e5df;
-  --paper:#ffffff;--paper-2:#faf9f6;--accent:#1e3a5f;--accent-soft:#e8eef5;
-  --radius:6px;--wrap:1120px;
+  --ink:#111A26;
+  --ink-2:#1B2837;
+  --slate:#5C6675;
+  --paper:#F6F5F1;
+  --paper-2:#EDEBE4;
+  --brass:#8A7038;
+  --brass-lt:#B79A55;
+  --line:#DCD9CF;
+  --serif:'Spectral', Georgia, serif;
+  --sans:'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
+  --wrap:1120px;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;color:var(--ink-soft);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--ink);font-weight:500;line-height:1.12;letter-spacing:-.01em}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
-.btn{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:15px;padding:14px 26px;border-radius:var(--radius);transition:transform .15s ease;cursor:pointer;border:1px solid var(--ink)}
-.btn:hover{transform:translateY(-1px)}
-.btn-solid{background:var(--ink);color:#fff}
-.btn-ghost{background:transparent;color:var(--ink)}
-.demo-bar{background:var(--accent);color:#fff;font-size:13px;padding:9px 0;text-align:center}
-.demo-bar a{color:#fff;text-decoration:underline;font-weight:600}
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{font-family:'Fraunces',serif;font-size:21px;font-weight:600;color:var(--ink);letter-spacing:-.02em}
-.nav-links{display:flex;gap:30px;align-items:center}
-.nav-links a{font-size:14px;color:var(--ink-soft);font-weight:500}
-.nav-links a:hover{color:var(--ink)}
-.nav-cta{font-size:13px;font-weight:500;color:var(--ink);padding:9px 16px;border:1px solid var(--ink);border-radius:var(--radius);white-space:nowrap}
-@media(max-width:840px){.nav-links{display:none}}
-@media(max-width:640px){
-  .demo-bar{font-size:12px;padding:8px 14px;line-height:1.4}
-  .nav{height:60px}
-  .hero{padding:56px 0 52px}
-  section{padding:56px 0}
-  .hero-actions .btn{flex:1;justify-content:center;min-width:170px}
-  .hero-trust{gap:22px;margin-top:40px}
-  .hero-trust .n{font-size:25px}
-  .section-head{margin-bottom:36px}
-  .card{padding:26px 22px}
-  .quote-card{padding:30px 24px}
-  .quote-card .q{font-size:20px}
-  .stat{padding:26px 16px}
-  .stat .n{font-size:36px}
-  form{padding:24px 20px}
-  .wa-box{padding:16px 16px}
-  footer{padding:40px 0 24px}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.78;
+  -webkit-font-smoothing:antialiased;
 }
-.hero{padding:90px 0 84px;border-bottom:1px solid var(--line)}
-.hero .eyebrow{margin-bottom:20px;display:block}
-.hero h1{font-size:clamp(38px,6vw,68px);max-width:16ch;margin-bottom:24px}
-.hero p{font-size:18px;max-width:54ch;margin-bottom:34px}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-.hero-trust{display:flex;gap:40px;margin-top:52px;flex-wrap:wrap}
-.hero-trust .n{font-family:'Fraunces',serif;font-size:32px;color:var(--ink);font-weight:600;line-height:1}
-.hero-trust .l{font-size:13px;color:var(--muted);margin-top:6px;max-width:20ch}
-section{padding:84px 0}
-.section-head{max-width:60ch;margin-bottom:52px}
-.section-head h2{font-size:clamp(28px,4vw,42px);margin:14px 0 16px}
-.section-head p{font-size:17px}
-.alt{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media(max-width:840px){.grid-3{grid-template-columns:1fr}}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:32px 28px;transition:border-color .2s ease,transform .2s ease}
-.card:hover{border-color:var(--accent);transform:translateY(-3px)}
-.card .num{font-family:'Fraunces',serif;font-size:14px;color:var(--accent);font-weight:600}
-.card h3{font-size:21px;margin:12px 0 10px}
-.card p{font-size:15px}
-.split{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
-@media(max-width:840px){.split{grid-template-columns:1fr;gap:40px}}
-.feature-list{list-style:none;display:flex;flex-direction:column;gap:24px}
-.feature-list li{display:flex;gap:15px;align-items:flex-start}
-.feature-list .dot{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;margin-top:2px}
-.feature-list h3{font-size:17px;margin-bottom:3px}
-.feature-list p{font-size:14px}
-.quote-card{background:var(--ink);color:#fff;border-radius:16px;padding:44px 38px}
-.quote-card .q{font-family:'Fraunces',serif;font-size:24px;line-height:1.35;color:#fff}
-.quote-card .who{margin-top:26px;font-size:14px;color:#c9c7c0}
-.quote-card .who strong{color:#fff;display:block}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:center}
-@media(max-width:720px){.stats{grid-template-columns:1fr}}
-.stat{padding:34px 18px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
-.stat .n{font-family:'Fraunces',serif;font-size:44px;color:var(--ink);font-weight:600;line-height:1}
-.stat .l{font-size:14px;color:var(--muted);margin-top:9px}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
-@media(max-width:840px){.contact-grid{grid-template-columns:1fr;gap:38px}}
-.contact-side h2{font-size:clamp(28px,4vw,40px);margin-bottom:16px}
-.contact-side p{font-size:17px;margin-bottom:28px}
-.wa-box{display:flex;align-items:center;gap:15px;padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:var(--paper-2)}
-.wa-box .ico{flex:none;width:44px;height:44px;border-radius:12px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:21px}
-.wa-box .t{font-weight:600;color:var(--ink);font-size:15px}
-.wa-box .s{font-size:13px;color:var(--muted)}
-form{display:flex;flex-direction:column;gap:15px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:32px 28px}
-label{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:-7px}
-input,textarea{font-family:inherit;font-size:15px;color:var(--ink);padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);width:100%}
-input:focus,textarea:focus{outline:none;border-color:var(--accent)}
-textarea{resize:vertical;min-height:105px}
-form .btn-solid{width:100%;justify-content:center;margin-top:4px;padding:14px}
-.form-note{font-size:12px;color:var(--muted);text-align:center}
-.form-demo-msg{display:none;background:var(--accent-soft);color:var(--ink);border:1px solid var(--accent);border-radius:var(--radius);padding:12px 14px;font-size:14px;text-align:center}
-footer{background:var(--ink);color:#c9c7c0;padding:50px 0 30px}
-.foot{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
-footer .logo{color:#fff}
-footer p{font-size:14px;max-width:38ch;margin-top:12px}
-.foot-bottom{border-top:1px solid #2a2a28;margin-top:40px;padding-top:20px;font-size:13px;color:#8f8d86}
-.foot-bottom a{color:#fff;text-decoration:underline}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.btn:hover,.card:hover{transform:none}}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 28px;}
+
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.005em;}
+h1{font-size:clamp(2.3rem,4.6vw,3.6rem);line-height:1.12;}
+h2{font-size:clamp(1.8rem,3.2vw,2.5rem);line-height:1.2;}
+h3{font-size:1.22rem;line-height:1.35;}
+p{margin:0 0 1.1em;}
+
+.eyebrow{
+  font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--brass);display:inline-block;margin-bottom:16px;
+}
+.lead{font-size:1.05rem;color:var(--slate);max-width:58ch;}
+
+/* ---------- faixa da demo (única marca do Murilo) ---------- */
+.demo-bar{background:var(--ink);color:#DDE3EB;font-size:.82rem;}
+.demo-bar__in{
+  max-width:var(--wrap);margin:0 auto;padding:9px 28px;
+  display:flex;align-items:center;justify-content:center;gap:10px 18px;flex-wrap:wrap;text-align:center;
+}
+.demo-bar b{font-weight:500;color:#fff;}
+.demo-bar span{opacity:.72;}
+.demo-bar a{color:#fff;text-decoration:none;border-bottom:1px solid var(--brass-lt);white-space:nowrap;}
+.demo-bar a:hover{color:var(--brass-lt);}
+
+/* ---------- topo ---------- */
+.top{position:sticky;top:0;z-index:40;background:rgba(246,245,241,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.top__in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:15px 28px;max-width:var(--wrap);margin:0 auto;}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none;}
+.brand__mark{
+  width:38px;height:38px;border:1px dashed var(--brass);
+  display:grid;place-items:center;font-size:.56rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--brass);flex:none;opacity:.85;
+}
+.brand__name{font-family:var(--serif);font-size:1.32rem;line-height:1;letter-spacing:.09em;}
+.brand__sub{display:block;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--slate);margin-top:6px;}
+.menu{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:.88rem;}
+.menu a{text-decoration:none;color:var(--slate);transition:color .2s;}
+.menu a:hover{color:var(--brass);}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:14px 26px;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;
+  text-decoration:none;border:1px solid var(--ink);transition:all .24s ease;cursor:pointer;
+}
+.btn--solid{background:var(--ink);color:#fff;}
+.btn--solid:hover{background:var(--brass);border-color:var(--brass);}
+.btn--line{background:transparent;color:var(--ink);}
+.btn--line:hover{background:var(--ink);color:#fff;}
+.btn--sm{padding:11px 19px;font-size:.72rem;}
+.top .btn{flex:none;}
+
+/* ---------- hero ---------- */
+.hero{padding:82px 0 90px;border-bottom:1px solid var(--line);}
+.hero__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center;}
+.hero h1 em{font-style:italic;color:var(--brass);}
+.hero__cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px;}
+.hero__note{font-size:.83rem;color:var(--slate);margin-top:22px;max-width:46ch;}
+.hero .ph{aspect-ratio:4/5;}
+
+/* bloco de imagem */
+.ph{
+  position:relative;overflow:hidden;
+  background:
+    linear-gradient(180deg, rgba(17,26,38,.05), rgba(17,26,38,.02)),
+    repeating-linear-gradient(135deg, var(--paper-2) 0 14px, #E6E3DA 14px 28px);
+  border:1px solid var(--line);
+}
+.ph::after{
+  content:attr(data-mark);position:absolute;inset:0;display:grid;place-items:center;
+  font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(138,112,56,.6);text-align:center;
+}
+.ph--tag::before{
+  content:attr(data-tag);position:absolute;left:0;bottom:0;z-index:2;
+  background:rgba(17,26,38,.82);color:#fff;font-size:.68rem;letter-spacing:.16em;
+  text-transform:uppercase;padding:8px 14px;
+}
+
+/* ---------- seções ---------- */
+section{scroll-margin-top:82px;}
+.band{padding:90px 0;}
+.band--paper2{background:var(--paper-2);}
+.band--ink{background:var(--ink);color:#D7DCE3;}
+.band--ink h2,.band--ink h3{color:#fff;}
+.band--ink .lead{color:#A9B3C0;}
+.head{max-width:620px;margin-bottom:52px;}
+
+/* ---------- áreas de atuação (assinatura: índice numerado) ---------- */
+.areas{border-top:1px solid var(--line);}
+.area{
+  display:grid;grid-template-columns:76px 1fr 1.15fr;gap:28px;align-items:start;
+  padding:30px 0;border-bottom:1px solid var(--line);
+}
+.area__n{font-family:var(--serif);font-size:1rem;color:var(--brass);letter-spacing:.14em;padding-top:5px;}
+.area h3{padding-top:1px;}
+.area p{margin:0;font-size:.96rem;color:var(--slate);}
+.area ul{margin:10px 0 0;padding-left:18px;font-size:.9rem;color:var(--slate);}
+.area li{margin-bottom:4px;}
+
+/* ---------- etapas ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
+.step__n{font-family:var(--serif);font-size:.95rem;color:var(--brass-lt);letter-spacing:.2em;display:block;margin-bottom:12px;}
+.step p{font-size:.94rem;margin:8px 0 0;color:#A9B3C0;}
+
+/* ---------- equipe ---------- */
+.pro{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center;}
+.pro .ph{aspect-ratio:3/4;}
+.pro__reg{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);border-top:1px solid var(--line);padding-top:18px;margin-top:26px;}
+
+/* ---------- faq ---------- */
+.faq{max-width:760px;}
+details{border-bottom:1px solid var(--line);}
+summary{list-style:none;cursor:pointer;padding:21px 40px 21px 0;position:relative;font-family:var(--serif);font-size:1.18rem;}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--brass);font-family:var(--sans);font-size:1.25rem;font-weight:300;}
+details[open] summary::after{content:'–';}
+details p{font-size:.95rem;color:var(--slate);margin:0 0 21px;max-width:64ch;}
+
+/* ---------- contato ---------- */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.dl{margin:0;font-size:.97rem;}
+.dl dt{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-lt);margin-top:24px;}
+.dl dd{margin:5px 0 0;color:#fff;font-weight:300;}
+.dl dd small{color:#A9B3C0;}
+.contact .ph{aspect-ratio:4/3;}
+
+/* ---------- cta ---------- */
+.close{padding:96px 0;background:var(--paper-2);border-top:1px solid var(--line);}
+.close__in{display:grid;grid-template-columns:1.3fr auto;gap:44px;align-items:center;}
+
+/* ---------- rodapé ---------- */
+.foot{background:var(--ink);color:#9EA9B7;padding:60px 0 0;font-size:.9rem;}
+.foot__grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:44px;}
+.foot h4{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#fff;margin:0 0 16px;font-weight:400;font-family:var(--sans);}
+.foot ul{list-style:none;margin:0;padding:0;}
+.foot li{margin-bottom:9px;}
+.foot a{text-decoration:none;}
+.foot a:hover{color:var(--brass-lt);}
+.foot .brand__name{color:#fff;}
+.foot .brand__mark{border-color:rgba(255,255,255,.35);color:#fff;}
+.foot__bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:50px;padding:20px 0;font-size:.79rem;}
+.foot__bottom .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.foot__ethic{font-size:.79rem;line-height:1.6;max-width:60ch;opacity:.8;margin-top:14px;}
+
+/* ---------- whatsapp ---------- */
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:54px;height:54px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px rgba(37,211,102,.34);transition:transform .2s;}
+.wa:hover{transform:scale(1.07);}
+
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+.rv.on{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;}
+  .rv{opacity:1;transform:none;}
+  html{scroll-behavior:auto;}
+}
+
+@media (max-width:980px){
+  .menu{display:none;}
+  .hero{padding:54px 0 62px;}
+  .hero__grid,.pro,.contact,.close__in{grid-template-columns:1fr;gap:40px;}
+  .hero .ph{aspect-ratio:5/4;}
+  .steps{grid-template-columns:1fr;gap:30px;}
+  .area{grid-template-columns:44px 1fr;gap:18px;}
+  .area p,.area ul{grid-column:2;}
+  .band{padding:62px 0;}
+}
+@media (max-width:560px){
+  body{font-size:16px;}
+  .wrap,.top__in,.demo-bar__in{padding-left:20px;padding-right:20px;}
+  .top__in .btn{padding:10px 13px;font-size:.66rem;}
+  .brand__name{font-size:1.12rem;}
+  .foot__grid{grid-template-columns:1fr;gap:34px;}
+}
 </style>
 </head>
 <body>
 
-<div class="demo-bar">Página demonstrativa da MR Soluções — <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20vi%20o%20modelo%20de%20advocacia%20e%20quero%20uma%20p%C3%A1gina%20assim" target="_blank" rel="noopener">quero uma assim para o meu negócio</a></div>
+<!-- ÚNICA MARCA DO MURILO NA PÁGINA -->
+<div class="demo-bar">
+  <div class="demo-bar__in">
+    <span><b>Página demonstrativa</b> — os textos e imagens são exemplos.</span>
+    <a href="https://wa.me/5584986329566?text=Ol%C3%A1%20Murilo%2C%20vi%20a%20p%C3%A1gina%20modelo%20de%20advocacia%20e%20quero%20uma%20assim" target="_blank" rel="noopener" data-wa-loc="demo_topo" data-produto="modelo_advocacia">Criada por Murilo Rodrigues — quero uma assim</a>
+  </div>
+</div>
 
-<header>
-  <div class="wrap nav">
-    <a href="#topo" class="logo">sua marca</a>
-    <nav class="nav-links">
-      <a href="#servicos">Áreas de atuação</a>
-      <a href="#diferenciais">Diferenciais</a>
+<header class="top">
+  <div class="top__in">
+    <a href="#inicio" class="brand" aria-label="Sua marca">
+      <span class="brand__mark" aria-hidden="true">logo</span>
+      <span>
+        <span class="brand__name">SUA MARCA</span>
+        <span class="brand__sub">Advocacia</span>
+      </span>
+    </a>
+    <nav>
+      <ul class="menu">
+        <li><a href="#atuacao">Áreas de atuação</a></li>
+        <li><a href="#atendimento">Atendimento</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
     </nav>
-    <a href="#contato" class="nav-cta">Agendar consulta</a>
+    <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener" class="btn btn--solid btn--sm" data-wa-loc="header">Agendar consulta</a>
   </div>
 </header>
 
-<section id="topo" class="hero">
-  <div class="wrap">
-    <span class="eyebrow reveal">Advocacia especializada · Atendimento reservado</span>
-    <h1 class="reveal">Defesa técnica e discrição em cada caso.</h1>
-    <p class="reveal">Atuação personalizada para clientes que exigem seriedade e resultado. Analisamos seu caso com atenção, explicamos seus direitos com clareza e conduzimos cada etapa com transparência total.</p>
-    <div class="hero-actions reveal">
-      <a class="btn btn-solid" href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener">Falar no WhatsApp</a>
-      <a class="btn btn-ghost" href="#contato">Agendar consulta</a>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap hero__grid">
+    <div class="rv">
+      <span class="eyebrow">Advocacia · Atendimento presencial e on-line</span>
+      <h1>Assessoria jurídica<br>com <em>clareza</em> em cada etapa<br>do seu processo.</h1>
+      <p class="lead">Atuação em direito trabalhista, civil, de família e consultoria preventiva para empresas. Você entende a sua situação antes de tomar qualquer decisão — e acompanha o andamento sem precisar cobrar notícias.</p>
+      <div class="hero__cta">
+        <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener" class="btn btn--solid" data-wa-loc="hero">Agendar consulta</a>
+        <a href="#atuacao" class="btn btn--line">Áreas de atuação</a>
+      </div>
+      <p class="hero__note">O primeiro contato é sigiloso e serve para entender o caso e informar quais caminhos existem — sem compromisso de contratação.</p>
     </div>
-    <div class="hero-trust reveal">
-      <div><div class="n">+12</div><div class="l">anos de atuação</div></div>
-      <div><div class="n">100%</div><div class="l">sigilo garantido</div></div>
-      <div><div class="n">24h</div><div class="l">retorno ao seu contato</div></div>
+    <div class="rv">
+      <div class="ph" data-mark="foto do escritório" role="img" aria-label="Espaço reservado para foto do escritório"></div>
     </div>
   </div>
 </section>
 
-<section id="servicos" class="alt">
+<!-- ÁREAS DE ATUAÇÃO -->
+<section class="band" id="atuacao">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="head rv">
       <span class="eyebrow">Áreas de atuação</span>
-      <h2>Atuação técnica nas áreas que importam para você.</h2>
-      <p>Cada caso é único — e é tratado assim, do primeiro contato à conclusão.</p>
+      <h2>Em que o escritório atua</h2>
+      <p class="lead">Cada área tem um responsável direto. Se o seu caso não estiver entre elas, a orientação é dita na primeira conversa — inclusive quando a recomendação é procurar outro profissional.</p>
     </div>
-    <div class="grid-3">
-      <div class="card reveal"><div class="num">01</div><h3>Direito Trabalhista</h3><p>Rescisões, verbas e ações conduzidas com estratégia clara, para trabalhadores e empresas.</p></div>
-      <div class="card reveal"><div class="num">02</div><h3>Direito Civil</h3><p>Contratos, indenizações, família e sucessões conduzidos com técnica e sensibilidade.</p></div>
-      <div class="card reveal"><div class="num">03</div><h3>Consultoria Preventiva</h3><p>Orientação antes do problema virar processo — economia de tempo, dinheiro e desgaste.</p></div>
+
+    <div class="areas rv">
+      <article class="area">
+        <span class="area__n">I</span>
+        <h3>Direito do trabalho</h3>
+        <div>
+          <p>Para quem foi demitido, teve verbas não pagas ou trabalha em condições irregulares — e também para empresas que precisam se organizar antes de um problema.</p>
+          <ul>
+            <li>Verbas rescisórias e horas extras</li>
+            <li>Reconhecimento de vínculo</li>
+            <li>Acordos e audiências de conciliação</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="area">
+        <span class="area__n">II</span>
+        <h3>Direito de família</h3>
+        <div>
+          <p>Questões que envolvem pessoas próximas e decisões difíceis. A condução aqui é discreta e o foco é o acordo sempre que ele for possível.</p>
+          <ul>
+            <li>Divórcio consensual e litigioso</li>
+            <li>Guarda, visitas e pensão alimentícia</li>
+            <li>Inventário e partilha de bens</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="area">
+        <span class="area__n">III</span>
+        <h3>Direito civil e do consumidor</h3>
+        <div>
+          <p>Conflitos do dia a dia que viram prejuízo quando ninguém responde: contrato descumprido, cobrança indevida, negativação errada.</p>
+          <ul>
+            <li>Contratos, cobranças e indenizações</li>
+            <li>Negativação indevida e problemas de compra</li>
+            <li>Questões locatícias</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="area">
+        <span class="area__n">IV</span>
+        <h3>Consultoria preventiva para empresas</h3>
+        <div>
+          <p>Acompanhamento contínuo para evitar o processo antes que ele exista: revisão de contratos, rotina trabalhista e apoio na tomada de decisão.</p>
+          <ul>
+            <li>Revisão e elaboração de contratos</li>
+            <li>Adequação de rotinas trabalhistas</li>
+            <li>Parecer jurídico sob demanda</li>
+          </ul>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section id="diferenciais">
-  <div class="wrap split">
-    <div class="reveal">
-      <span class="eyebrow">Por que escolher</span>
-      <h2 style="font-size:clamp(26px,4vw,38px);margin:14px 0 32px">Excelência jurídica não é promessa — é método.</h2>
-      <ul class="feature-list">
-        <li><span class="dot">✓</span><div><h3>Atendimento pessoal</h3><p>Você fala direto com o advogado responsável, não com call center.</p></div></li>
-        <li><span class="dot">✓</span><div><h3>Linguagem clara</h3><p>Explicamos seu caso sem juridiquês, para você decidir com segurança.</p></div></li>
-        <li><span class="dot">✓</span><div><h3>Transparência total</h3><p>Você acompanha cada etapa e sabe exatamente o que está acontecendo.</p></div></li>
-        <li><span class="dot">✓</span><div><h3>Ética e sigilo</h3><p>Seu caso tratado com a discrição que ele merece.</p></div></li>
-      </ul>
-    </div>
-    <div class="quote-card reveal">
-      <div class="q">"Fui tratado com respeito e clareza do início ao fim. Recomendo pela seriedade."</div>
-      <div class="who"><strong>Espaço do depoimento real do seu cliente</strong>Depoimento ilustrativo do modelo</div>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
+<!-- ATENDIMENTO -->
+<section class="band band--ink" id="atendimento">
   <div class="wrap">
-    <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
-      <span class="eyebrow">Resultados</span>
-      <h2>Números que falam por si.</h2>
+    <div class="head rv">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Do primeiro contato ao acompanhamento</h2>
     </div>
-    <div class="stats">
-      <div class="stat reveal"><div class="n">+300</div><div class="l">casos conduzidos</div></div>
-      <div class="stat reveal"><div class="n">95%</div><div class="l">de acordos favoráveis</div></div>
-      <div class="stat reveal"><div class="n">4.9</div><div class="l">avaliação dos clientes</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="contato">
-  <div class="wrap contact-grid">
-    <div class="contact-side reveal">
-      <span class="eyebrow">Contato</span>
-      <h2>Vamos analisar o seu caso.</h2>
-      <p>Conte a sua situação e retornamos com uma orientação inicial, com total sigilo.</p>
-      <a class="wa-box" href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener">
-        <span class="ico">✆</span>
-        <span><span class="t">Falar direto no WhatsApp</span><br><span class="s">Resposta rápida · Sem compromisso</span></span>
-      </a>
-    </div>
-    <form id="demo-form">
-      <label for="nome">Nome</label>
-      <input id="nome" type="text" placeholder="Seu nome" required>
-      <label for="contato">E-mail ou telefone</label>
-      <input id="contato" type="text" placeholder="Como podemos retornar" required>
-      <label for="msg">Mensagem</label>
-      <textarea id="msg" placeholder="Descreva brevemente a sua situação" required></textarea>
-      <button type="submit" class="btn btn-solid">Enviar mensagem</button>
-      <p class="form-demo-msg" id="demo-msg">✓ Em uma página real, esta mensagem chegaria agora no seu e-mail. Este é um modelo demonstrativo da MR Soluções.</p>
-      <p class="form-note">Retorno em até 24h úteis · Sigilo absoluto.</p>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="foot">
-      <div>
-        <div class="logo">sua marca</div>
-        <p>Aqui entra a apresentação do seu escritório, com a sua marca e o seu contato.</p>
+    <div class="steps">
+      <div class="step rv">
+        <span class="step__n">I</span>
+        <h3>Consulta inicial</h3>
+        <p>Uma hora para ouvir o caso, ler os documentos que você tiver e explicar, em linguagem comum, o que a lei prevê e quais caminhos existem.</p>
+      </div>
+      <div class="step rv">
+        <span class="step__n">II</span>
+        <h3>Proposta de trabalho</h3>
+        <p>Você recebe por escrito o que será feito, em que prazo e como funcionam os honorários — conforme a tabela da OAB. Só depois de assinado o contrato o trabalho começa.</p>
+      </div>
+      <div class="step rv">
+        <span class="step__n">III</span>
+        <h3>Acompanhamento</h3>
+        <p>Retorno a cada movimentação relevante do processo, no canal que você preferir. Nada de descobrir o andamento do próprio caso por terceiros.</p>
       </div>
     </div>
-    <div class="foot-bottom">Modelo demonstrativo desenvolvido por <a href="https://mr-solutions.netlify.app/" target="_blank" rel="noopener">MR Soluções</a> — quero uma página assim: <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20vi%20o%20modelo%20de%20advocacia%20e%20quero%20uma%20p%C3%A1gina%20assim" target="_blank" rel="noopener">falar no WhatsApp</a></div>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="band band--paper2" id="equipe">
+  <div class="wrap pro">
+    <div class="rv"><div class="ph" data-mark="foto do advogado" role="img" aria-label="Espaço reservado para foto do advogado responsável"></div></div>
+    <div class="rv">
+      <span class="eyebrow">Responsável técnico</span>
+      <h2>Nome do advogado</h2>
+      <p class="lead">Inscrito na Ordem dos Advogados do Brasil, com atuação concentrada em direito do trabalho e de família. Pós-graduação na área e experiência em audiências e acordos judiciais.</p>
+      <p class="lead">O escritório trabalha com um número limitado de casos por vez. Isso não é discurso: é a condição para que cada cliente fale diretamente com quem cuida do processo dele.</p>
+      <p class="pro__reg">Advogado · OAB 000.000 / UF</p>
+    </div>
+  </div>
+</section>
+
+<!-- DÚVIDAS -->
+<section class="band" id="duvidas">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>O que perguntam antes da primeira consulta</h2>
+    </div>
+    <div class="faq rv">
+      <details>
+        <summary>O que eu preciso levar na primeira consulta?</summary>
+        <p>Documento com foto e o que você tiver do caso: contrato, carteira de trabalho, mensagens, comprovantes, notificações. Se não tiver nada em mãos, venha assim mesmo — a conversa já ajuda a saber o que buscar.</p>
+      </details>
+      <details>
+        <summary>Como funcionam os honorários?</summary>
+        <p>Os valores seguem a tabela da OAB e variam conforme a complexidade e a duração do caso. Eles são apresentados por escrito na proposta de trabalho, antes de qualquer contratação. Por determinação do Código de Ética, não divulgamos preços em página pública.</p>
+      </details>
+      <details>
+        <summary>Quanto tempo demora um processo?</summary>
+        <p>Depende da vara, da complexidade e da possibilidade de acordo. Na consulta inicial é apresentada uma estimativa realista com base em casos semelhantes — sem garantia de prazo ou de resultado, o que nenhum advogado pode oferecer.</p>
+      </details>
+      <details>
+        <summary>Atende por vídeo ou só presencialmente?</summary>
+        <p>Os dois. A consulta pode ser feita por videochamada com o mesmo sigilo do atendimento presencial, e documentos podem ser assinados digitalmente.</p>
+      </details>
+      <details>
+        <summary>O que eu conto fica em sigilo?</summary>
+        <p>Sim. O sigilo profissional é dever legal do advogado e vale desde o primeiro contato, mesmo que você decida não contratar o escritório.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="band band--ink" id="contato">
+  <div class="wrap contact">
+    <div class="rv">
+      <span class="eyebrow">Contato</span>
+      <h2>Onde e quando atendemos</h2>
+      <dl class="dl">
+        <dt>Endereço</dt>
+        <dd>Rua, número e sala<br><small>Bairro · Cidade / UF · CEP</small></dd>
+        <dt>Horário</dt>
+        <dd>Segunda a sexta, 08h — 18h<br><small>Atendimento com hora marcada</small></dd>
+        <dt>Contato</dt>
+        <dd>(00) 00000-0000<br><small>contato@seudominio.com.br</small></dd>
+      </dl>
+      <p style="margin-top:32px">
+        <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener" class="btn btn--solid" style="border-color:#fff" data-wa-loc="contato">Falar no WhatsApp</a>
+      </p>
+    </div>
+    <div class="rv"><div class="ph ph--tag" data-mark="foto" data-tag="Fachada / recepção" role="img" aria-label="Espaço reservado para foto da fachada"></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="close">
+  <div class="wrap close__in rv">
+    <div>
+      <h2>Ainda em dúvida se o seu caso tem solução?</h2>
+      <p class="lead" style="margin:14px 0 0">Descreva a situação em poucas linhas. A primeira resposta serve para dizer se há o que fazer e por onde começar — e essa resposta você recebe mesmo que não contrate o escritório.</p>
+    </div>
+    <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener" class="btn btn--solid" data-wa-loc="cta_final">Descrever meu caso</a>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div>
+      <div class="brand" style="margin-bottom:16px">
+        <span class="brand__mark" aria-hidden="true">logo</span>
+        <span>
+          <span class="brand__name">SUA MARCA</span>
+          <span class="brand__sub">Advocacia</span>
+        </span>
+      </div>
+      <p style="max-width:38ch;margin:0">Assessoria jurídica em direito do trabalho, família, civil e consultoria empresarial.</p>
+    </div>
+    <div>
+      <h4>Navegar</h4>
+      <ul>
+        <li><a href="#atuacao">Áreas de atuação</a></li>
+        <li><a href="#atendimento">Como funciona</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener" data-wa-loc="rodape">WhatsApp · (00) 00000-0000</a></li>
+        <li><a href="#contato">Rua, número — Bairro · Cidade / UF</a></li>
+        <li><a href="#contato">Seg a sex · 08h — 18h</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="foot__ethic">Conteúdo de caráter meramente informativo, em conformidade com o Código de Ética e Disciplina da OAB e com o Provimento nº 205/2021. Esta página não configura oferta de serviços nem garantia de resultado.</p>
+  </div>
+  <div class="foot__bottom">
+    <div class="wrap">
+      <span>© <span id="ano"></span> SUA MARCA — todos os direitos reservados.</span>
+      <span>Responsável: nome do advogado · OAB 000.000 / UF</span>
+    </div>
   </div>
 </footer>
 
+<a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener" class="wa" aria-label="Falar no WhatsApp" data-wa-loc="flutuante">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.41 14.13c-.21.58-1.2 1.11-1.68 1.18-.43.06-.97.09-1.56-.1-.36-.11-.82-.26-1.41-.52-2.48-1.07-4.11-3.57-4.23-3.74-.12-.16-1.01-1.34-1.01-2.56 0-1.22.63-1.82.86-2.07.23-.25.49-.31.66-.31h.48c.16.01.36-.05.56.43.2.5.7 1.72.76 1.84.06.12.1.26.02.43-.08.16-.12.27-.25.41-.12.14-.26.32-.37.43-.12.13-.25.26-.11.51.15.25.64 1.06 1.38 1.72.94.84 1.74 1.11 1.99 1.23.25.13.4.11.54-.06.15-.16.63-.72.79-.97.17-.25.33-.21.56-.13.22.09 1.44.69 1.69.81.25.12.41.18.47.28.07.11.07.6-.14 1.18Z"/></svg>
+</a>
+
 <script>
-var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
-document.getElementById('demo-form').addEventListener('submit',function(ev){
-  ev.preventDefault();
-  document.getElementById('demo-msg').style.display='block';
-});
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  (function(){
+    var els = document.querySelectorAll('.rv');
+    if (!('IntersectionObserver' in window)) { els.forEach(function(e){ e.classList.add('on'); }); return; }
+    var io = new IntersectionObserver(function(en){
+      en.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+    }, { threshold:.14, rootMargin:'0px 0px -40px 0px' });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      if (typeof gtag !== 'function') return;
+      gtag('event', 'whatsapp_click', {
+        botao: a.getAttribute('data-wa-loc') || 'outro',
+        produto: a.getAttribute('data-produto') || 'demo_advocacia',
+        event_category: 'conversao'
+      });
+    });
+  });
 </script>
 </body>
 </html>

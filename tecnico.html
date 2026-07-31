@@ -1,246 +1,584 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modelo Eletricista — Modelo demonstrativo | MR Soluções</title>
-<meta name="description" content="Página modelo demonstrativa criada pela MR Soluções para o nicho de serviços de eletricista.">
-<meta name="robots" content="noindex">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>SUA MARCA — Refrigeração e Manutenção</title>
+<meta name="description" content="Modelo de página para serviços técnicos: instalação e manutenção de ar-condicionado e refrigeração, com orçamento pelo WhatsApp, área de atendimento e garantia." />
+
+<!-- =========================================================
+     PÁGINA DEMONSTRATIVA — Murilo Rodrigues
+     Modelo sem marca. Os campos do cliente ficam como espaço
+     reservado, só para mostrar onde cada informação entra.
+
+     CAMPOS A PREENCHER NA VERSÃO DO CLIENTE:
+     1. SUA MARCA .......... nome e logo (topo, rodapé e blocos de foto)
+     2. CNPJ 00.000.000/0001-00 e registro do técnico
+     3. Endereço e área de atendimento (bairros/cidades)
+     4. (00) 00000-0000 .... telefone exibido
+     5. Blocos .ph ......... trocar por fotos reais (mesmo tamanho)
+     6. Faixa .demo-bar .... remover na entrega final
+     ========================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<script>
+  window.GA_ID = 'G-ME1D6SH7L3';
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function(){
+    var s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_ID;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', window.GA_ID, { send_page_view: true, page_title: 'demo_tecnico' });
+  })();
+</script>
+
 <style>
 :root{
-  --ink:#111111;--ink-soft:#3d3d3a;--muted:#77756e;--line:#e7e5df;
-  --paper:#ffffff;--paper-2:#faf9f6;--accent:#8c5a0f;--accent-soft:#faf1de;
-  --radius:6px;--wrap:1120px;
+  --ink:#0F1720;
+  --deep:#123A52;
+  --deep-2:#0C2A3D;
+  --ice:#EDF3F7;
+  --ice-2:#DCE8F0;
+  --amber:#E8901C;
+  --amber-lt:#F6B451;
+  --line:#CFDCE6;
+  --gray:#5E7180;
+  --disp:'Archivo', -apple-system, sans-serif;
+  --sans:'Inter', -apple-system, 'Segoe UI', sans-serif;
+  --wrap:1140px;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;color:var(--ink-soft);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--ink);font-weight:500;line-height:1.12;letter-spacing:-.01em}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
-.btn{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:15px;padding:14px 26px;border-radius:var(--radius);transition:transform .15s ease;cursor:pointer;border:1px solid var(--ink)}
-.btn:hover{transform:translateY(-1px)}
-.btn-solid{background:var(--ink);color:#fff}
-.btn-ghost{background:transparent;color:var(--ink)}
-.demo-bar{background:var(--accent);color:#fff;font-size:13px;padding:9px 0;text-align:center}
-.demo-bar a{color:#fff;text-decoration:underline;font-weight:600}
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{font-family:'Fraunces',serif;font-size:21px;font-weight:600;color:var(--ink);letter-spacing:-.02em}
-.nav-links{display:flex;gap:30px;align-items:center}
-.nav-links a{font-size:14px;color:var(--ink-soft);font-weight:500}
-.nav-links a:hover{color:var(--ink)}
-.nav-cta{font-size:13px;font-weight:500;color:var(--ink);padding:9px 16px;border:1px solid var(--ink);border-radius:var(--radius);white-space:nowrap}
-@media(max-width:840px){.nav-links{display:none}}
-@media(max-width:640px){
-  .demo-bar{font-size:12px;padding:8px 14px;line-height:1.4}
-  .nav{height:60px}
-  .hero{padding:56px 0 52px}
-  section{padding:56px 0}
-  .hero-actions .btn{flex:1;justify-content:center;min-width:170px}
-  .hero-trust{gap:22px;margin-top:40px}
-  .hero-trust .n{font-size:25px}
-  .section-head{margin-bottom:36px}
-  .card{padding:26px 22px}
-  .quote-card{padding:30px 24px}
-  .quote-card .q{font-size:20px}
-  .stat{padding:26px 16px}
-  .stat .n{font-size:36px}
-  form{padding:24px 20px}
-  .wa-box{padding:16px 16px}
-  footer{padding:40px 0 24px}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 26px;}
+
+h1,h2,h3{font-family:var(--disp);margin:0;letter-spacing:-.02em;line-height:1.08;}
+h1{font-size:clamp(2.2rem,4.8vw,3.5rem);font-weight:700;text-transform:uppercase;}
+h2{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:700;text-transform:uppercase;}
+h3{font-size:1.12rem;font-weight:600;line-height:1.3;}
+p{margin:0 0 1em;}
+
+.eyebrow{display:inline-block;font-family:var(--disp);font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:14px;}
+.lead{color:var(--gray);max-width:56ch;font-size:1.02rem;}
+
+/* ---------- faixa da demo (única marca do Murilo) ---------- */
+.demo-bar{background:var(--ink);color:#C9D6E0;font-size:.81rem;}
+.demo-bar__in{max-width:var(--wrap);margin:0 auto;padding:9px 26px;display:flex;align-items:center;justify-content:center;gap:10px 18px;flex-wrap:wrap;text-align:center;}
+.demo-bar b{font-weight:600;color:#fff;}
+.demo-bar span{opacity:.75;}
+.demo-bar a{color:#fff;text-decoration:none;border-bottom:1px solid var(--amber);white-space:nowrap;}
+.demo-bar a:hover{color:var(--amber-lt);}
+
+/* ---------- topo ---------- */
+.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:2px solid var(--ice-2);}
+.top__in{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:13px 26px;max-width:var(--wrap);margin:0 auto;}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.brand__mark{width:40px;height:40px;border:2px dashed var(--deep);border-radius:6px;display:grid;place-items:center;font-family:var(--disp);font-size:.56rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--deep);flex:none;opacity:.8;}
+.brand__name{font-family:var(--disp);font-weight:700;font-size:1.24rem;letter-spacing:-.01em;text-transform:uppercase;line-height:1;}
+.brand__sub{display:block;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin-top:5px;font-weight:500;}
+.menu{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:.88rem;font-weight:500;}
+.menu a{text-decoration:none;color:var(--gray);}
+.menu a:hover{color:var(--deep);}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 24px;border-radius:6px;font-family:var(--disp);font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;transition:all .2s ease;cursor:pointer;}
+.btn--amber{background:var(--amber);color:#fff;}
+.btn--amber:hover{background:#CF7C10;}
+.btn--deep{background:var(--deep);color:#fff;}
+.btn--deep:hover{background:var(--deep-2);}
+.btn--line{background:transparent;color:var(--deep);border-color:var(--ice-2);}
+.btn--line:hover{border-color:var(--deep);}
+.btn--sm{padding:11px 17px;font-size:.72rem;}
+.top .btn{flex:none;}
+
+/* ---------- hero ---------- */
+.hero{background:linear-gradient(170deg,var(--ice) 0%,#fff 72%);padding:70px 0 78px;}
+.hero__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;}
+.hero h1 span{color:var(--deep);}
+.hero__cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
+.hero__tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;}
+.tag{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:.8rem;font-weight:500;color:var(--deep);}
+
+/* assinatura: cartão de ordem de serviço */
+.os{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 22px 50px rgba(18,58,82,.13);}
+.os__top{background:var(--deep);color:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.os__top b{font-family:var(--disp);font-size:.86rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;}
+.os__top span{font-size:.72rem;opacity:.8;letter-spacing:.06em;}
+.os__body{padding:20px;}
+.os__line{display:flex;gap:14px;padding:13px 0;border-bottom:1px dashed var(--ice-2);}
+.os__line:last-child{border-bottom:0;}
+.os__dot{width:22px;height:22px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:.7rem;font-weight:700;color:#fff;background:var(--deep);margin-top:2px;}
+.os__dot--wait{background:var(--ice-2);color:var(--gray);}
+.os__line b{display:block;font-family:var(--disp);font-size:.92rem;font-weight:600;}
+.os__line small{color:var(--gray);font-size:.82rem;}
+.os__foot{background:var(--ice);padding:14px 20px;font-size:.8rem;color:var(--gray);border-top:1px solid var(--line);}
+
+/* bloco de imagem */
+.ph{position:relative;overflow:hidden;border-radius:10px;border:1px solid var(--line);
+  background:linear-gradient(150deg,var(--ice-2) 0%,var(--ice) 60%,#fff 100%);}
+.ph::after{content:attr(data-mark);position:absolute;inset:0;display:grid;place-items:center;font-family:var(--disp);font-size:.7rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(18,58,82,.42);text-align:center;}
+.ph--tag::before{content:attr(data-tag);position:absolute;left:0;bottom:0;z-index:2;background:rgba(15,23,32,.82);color:#fff;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:7px 13px;font-weight:600;}
+
+/* ---------- seções ---------- */
+section{scroll-margin-top:80px;}
+.band{padding:82px 0;}
+.band--ice{background:var(--ice);}
+.band--deep{background:var(--deep);color:#D3E3ED;}
+.band--deep h2,.band--deep h3{color:#fff;}
+.band--deep .lead{color:#9FBACB;}
+.head{max-width:620px;margin-bottom:44px;}
+
+/* ---------- serviços ---------- */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px 24px;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s;}
+.card:hover{box-shadow:0 14px 32px rgba(18,58,82,.1);transform:translateY(-3px);}
+.card h3{margin-bottom:9px;}
+.card p{font-size:.93rem;color:var(--gray);margin:0 0 16px;}
+.card__price{margin-top:auto;font-family:var(--disp);font-weight:700;font-size:1.15rem;color:var(--deep);}
+.card__price small{display:block;font-family:var(--sans);font-size:.72rem;font-weight:500;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px;}
+
+/* ---------- etapas ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:s;}
+.step{position:relative;padding-top:44px;}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);position:absolute;top:0;left:0;font-family:var(--disp);font-size:1.5rem;font-weight:700;color:var(--amber);}
+.step p{font-size:.9rem;margin:7px 0 0;color:#9FBACB;}
+
+/* ---------- garantia ---------- */
+.pill{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.pill__i{background:#fff;border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:8px;padding:22px 24px;}
+.pill__i b{display:block;font-family:var(--disp);font-size:1.02rem;margin-bottom:5px;}
+.pill__i span{font-size:.9rem;color:var(--gray);}
+
+/* ---------- cobertura ---------- */
+.cover{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.cover .ph{aspect-ratio:4/3;}
+.zones{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0 0;padding:0;list-style:none;}
+.zones li{background:#fff;border:1px dashed var(--line);border-radius:6px;padding:7px 13px;font-size:.85rem;color:var(--gray);}
+
+/* ---------- depoimentos ---------- */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.quote{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px 24px;}
+.quote__stars{color:var(--amber);letter-spacing:.2em;font-size:.85rem;margin-bottom:12px;}
+.quote p{font-size:.96rem;margin:0 0 16px;}
+.quote footer{font-size:.82rem;color:var(--gray);border-top:1px solid var(--ice-2);padding-top:13px;}
+
+/* ---------- faq ---------- */
+.faq{max-width:780px;}
+details{border-bottom:1px solid var(--line);}
+summary{list-style:none;cursor:pointer;padding:19px 40px 19px 0;position:relative;font-family:var(--disp);font-weight:600;font-size:1.04rem;}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:'+';position:absolute;right:4px;top:50%;transform:translateY(-50%);color:var(--amber);font-size:1.3rem;font-weight:600;}
+details[open] summary::after{content:'–';}
+details p{font-size:.94rem;color:var(--gray);margin:0 0 20px;max-width:64ch;}
+
+/* ---------- contato ---------- */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.hours{width:100%;border-collapse:collapse;margin-top:14px;}
+.hours td{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:.95rem;}
+.hours td:last-child{text-align:right;color:#fff;font-weight:500;}
+.contact .ph{aspect-ratio:4/3;}
+.plantao{background:rgba(232,144,28,.16);border:1px solid rgba(246,180,81,.45);border-radius:8px;padding:14px 18px;font-size:.9rem;margin-top:22px;}
+.plantao b{color:var(--amber-lt);font-family:var(--disp);}
+
+/* ---------- cta ---------- */
+.close{padding:76px 0;background:var(--amber);color:#25160A;text-align:center;}
+.close h2{color:#25160A;margin-bottom:12px;}
+.close p{max-width:52ch;margin:0 auto 26px;color:#4A2F13;}
+.close .btn{background:var(--ink);color:#fff;}
+.close .btn:hover{background:#000;}
+
+/* ---------- rodapé ---------- */
+.foot{background:var(--ink);color:#93A6B4;padding:56px 0 0;font-size:.9rem;}
+.foot__grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:42px;}
+.foot h4{font-family:var(--disp);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin:0 0 15px;font-weight:600;}
+.foot ul{list-style:none;margin:0;padding:0;}
+.foot li{margin-bottom:9px;}
+.foot a{text-decoration:none;}
+.foot a:hover{color:var(--amber-lt);}
+.foot .brand__name{color:#fff;}
+.foot .brand__mark{border-color:rgba(255,255,255,.35);color:#fff;}
+.foot__bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:46px;padding:20px 0;font-size:.79rem;}
+.foot__bottom .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+
+/* ---------- whatsapp ---------- */
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px rgba(37,211,102,.36);transition:transform .2s;}
+.wa:hover{transform:scale(1.07);}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+.rv.on{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;}
+  .rv{opacity:1;transform:none;}
+  html{scroll-behavior:auto;}
 }
-.hero{padding:90px 0 84px;border-bottom:1px solid var(--line)}
-.hero .eyebrow{margin-bottom:20px;display:block}
-.hero h1{font-size:clamp(38px,6vw,68px);max-width:16ch;margin-bottom:24px}
-.hero p{font-size:18px;max-width:54ch;margin-bottom:34px}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-.hero-trust{display:flex;gap:40px;margin-top:52px;flex-wrap:wrap}
-.hero-trust .n{font-family:'Fraunces',serif;font-size:32px;color:var(--ink);font-weight:600;line-height:1}
-.hero-trust .l{font-size:13px;color:var(--muted);margin-top:6px;max-width:20ch}
-section{padding:84px 0}
-.section-head{max-width:60ch;margin-bottom:52px}
-.section-head h2{font-size:clamp(28px,4vw,42px);margin:14px 0 16px}
-.section-head p{font-size:17px}
-.alt{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media(max-width:840px){.grid-3{grid-template-columns:1fr}}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:32px 28px;transition:border-color .2s ease,transform .2s ease}
-.card:hover{border-color:var(--accent);transform:translateY(-3px)}
-.card .num{font-family:'Fraunces',serif;font-size:14px;color:var(--accent);font-weight:600}
-.card h3{font-size:21px;margin:12px 0 10px}
-.card p{font-size:15px}
-.split{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
-@media(max-width:840px){.split{grid-template-columns:1fr;gap:40px}}
-.feature-list{list-style:none;display:flex;flex-direction:column;gap:24px}
-.feature-list li{display:flex;gap:15px;align-items:flex-start}
-.feature-list .dot{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;margin-top:2px}
-.feature-list h3{font-size:17px;margin-bottom:3px}
-.feature-list p{font-size:14px}
-.quote-card{background:var(--ink);color:#fff;border-radius:16px;padding:44px 38px}
-.quote-card .q{font-family:'Fraunces',serif;font-size:24px;line-height:1.35;color:#fff}
-.quote-card .who{margin-top:26px;font-size:14px;color:#c9c7c0}
-.quote-card .who strong{color:#fff;display:block}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:center}
-@media(max-width:720px){.stats{grid-template-columns:1fr}}
-.stat{padding:34px 18px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
-.stat .n{font-family:'Fraunces',serif;font-size:44px;color:var(--ink);font-weight:600;line-height:1}
-.stat .l{font-size:14px;color:var(--muted);margin-top:9px}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
-@media(max-width:840px){.contact-grid{grid-template-columns:1fr;gap:38px}}
-.contact-side h2{font-size:clamp(28px,4vw,40px);margin-bottom:16px}
-.contact-side p{font-size:17px;margin-bottom:28px}
-.wa-box{display:flex;align-items:center;gap:15px;padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:var(--paper-2)}
-.wa-box .ico{flex:none;width:44px;height:44px;border-radius:12px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:21px}
-.wa-box .t{font-weight:600;color:var(--ink);font-size:15px}
-.wa-box .s{font-size:13px;color:var(--muted)}
-form{display:flex;flex-direction:column;gap:15px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:32px 28px}
-label{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:-7px}
-input,textarea{font-family:inherit;font-size:15px;color:var(--ink);padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);width:100%}
-input:focus,textarea:focus{outline:none;border-color:var(--accent)}
-textarea{resize:vertical;min-height:105px}
-form .btn-solid{width:100%;justify-content:center;margin-top:4px;padding:14px}
-.form-note{font-size:12px;color:var(--muted);text-align:center}
-.form-demo-msg{display:none;background:var(--accent-soft);color:var(--ink);border:1px solid var(--accent);border-radius:var(--radius);padding:12px 14px;font-size:14px;text-align:center}
-footer{background:var(--ink);color:#c9c7c0;padding:50px 0 30px}
-.foot{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
-footer .logo{color:#fff}
-footer p{font-size:14px;max-width:38ch;margin-top:12px}
-.foot-bottom{border-top:1px solid #2a2a28;margin-top:40px;padding-top:20px;font-size:13px;color:#8f8d86}
-.foot-bottom a{color:#fff;text-decoration:underline}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.btn:hover,.card:hover{transform:none}}
+
+@media (max-width:980px){
+  .menu{display:none;}
+  .hero{padding:48px 0 56px;}
+  .hero__grid,.cover,.contact{grid-template-columns:1fr;gap:38px;}
+  .svc,.quotes,.pill{grid-template-columns:1fr;}
+  .steps{grid-template-columns:1fr 1fr;gap:22px;}
+  .band{padding:58px 0;}
+}
+@media (max-width:560px){
+  .wrap,.top__in,.demo-bar__in{padding-left:18px;padding-right:18px;}
+  .top__in .btn{padding:10px 12px;font-size:.66rem;}
+  .brand__name{font-size:1.06rem;}
+  .steps{grid-template-columns:1fr;}
+  .foot__grid{grid-template-columns:1fr;gap:32px;}
+}
 </style>
 </head>
 <body>
 
-<div class="demo-bar">Página demonstrativa da MR Soluções — <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20vi%20o%20modelo%20de%20eletricista%20e%20quero%20uma%20p%C3%A1gina%20assim" target="_blank" rel="noopener">quero uma assim para o meu negócio</a></div>
+<!-- ÚNICA MARCA DO MURILO NA PÁGINA -->
+<div class="demo-bar">
+  <div class="demo-bar__in">
+    <span><b>Página demonstrativa</b> — os textos, valores e imagens são exemplos.</span>
+    <a href="https://wa.me/5584986329566?text=Ol%C3%A1%20Murilo%2C%20vi%20a%20p%C3%A1gina%20modelo%20de%20servi%C3%A7os%20t%C3%A9cnicos%20e%20quero%20uma%20assim" target="_blank" rel="noopener" data-wa-loc="demo_topo" data-produto="modelo_tecnico">Criada por Murilo Rodrigues — quero uma assim</a>
+  </div>
+</div>
 
-<header>
-  <div class="wrap nav">
-    <a href="#topo" class="logo">sua marca</a>
-    <nav class="nav-links">
-      <a href="#servicos">Serviços</a>
-      <a href="#diferenciais">Diferenciais</a>
+<header class="top">
+  <div class="top__in">
+    <a href="#inicio" class="brand" aria-label="Sua marca">
+      <span class="brand__mark" aria-hidden="true">logo</span>
+      <span>
+        <span class="brand__name">SUA MARCA</span>
+        <span class="brand__sub">Refrigeração e manutenção</span>
+      </span>
+    </a>
+    <nav>
+      <ul class="menu">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#chamado">Como funciona</a></li>
+        <li><a href="#cobertura">Onde atendemos</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
     </nav>
-    <a href="#contato" class="nav-cta">Pedir orçamento</a>
+    <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20preciso%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="btn btn--amber btn--sm" data-wa-loc="header">Pedir orçamento</a>
   </div>
 </header>
 
-<section id="topo" class="hero">
-  <div class="wrap">
-    <span class="eyebrow reveal">Eletricista profissional · Atendimento rápido</span>
-    <h1 class="reveal">Sua instalação elétrica segura e nas mãos certas.</h1>
-    <p class="reveal">Instalações, reparos e manutenção elétrica com técnica, material de qualidade e serviço dentro da norma. Atendemos residências e comércios com pontualidade e garantia.</p>
-    <div class="hero-actions reveal">
-      <a class="btn btn-solid" href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20preciso%20de%20um%20or%C3%A7amento%20de%20servi%C3%A7o%20el%C3%A9trico" target="_blank" rel="noopener">Falar no WhatsApp</a>
-      <a class="btn btn-ghost" href="#contato">Pedir orçamento</a>
-    </div>
-    <div class="hero-trust reveal">
-      <div><div class="n">+15</div><div class="l">anos de profissão</div></div>
-      <div><div class="n">100%</div><div class="l">serviço com garantia</div></div>
-      <div><div class="n">Hoje</div><div class="l">atendimento de urgência</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="servicos" class="alt">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Serviços</span>
-      <h2>Serviço elétrico bem feito é segurança para a sua família.</h2>
-      <p>Fiação improvisada é risco de curto e incêndio — resolvemos do jeito certo, dentro da norma.</p>
-    </div>
-    <div class="grid-3">
-      <div class="card reveal"><div class="num">01</div><h3>Instalações Elétricas</h3><p>Instalação completa ou pontual: tomadas, chuveiros, ventiladores, luminárias e padrão de entrada, tudo dentro da norma.</p></div>
-      <div class="card reveal"><div class="num">02</div><h3>Reparos e Urgências</h3><p>Curto-circuito, disjuntor desarmando, tomada quente ou cheiro de queimado: diagnóstico rápido e conserto seguro.</p></div>
-      <div class="card reveal"><div class="num">03</div><h3>Quadros e Adequações</h3><p>Troca de quadro de distribuição, aumento de carga e adequação de fiação antiga para os aparelhos de hoje.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="diferenciais">
-  <div class="wrap split">
-    <div class="reveal">
-      <span class="eyebrow">Por que escolher</span>
-      <h2 style="font-size:clamp(26px,4vw,38px);margin:14px 0 32px">Serviço bem feito não dá dor de cabeça depois.</h2>
-      <ul class="feature-list">
-        <li><span class="dot">✓</span><div><h3>Segurança em primeiro lugar</h3><p>Trabalho dentro da norma NBR 5410, com material certificado pelo Inmetro.</p></div></li>
-        <li><span class="dot">✓</span><div><h3>Diagnóstico honesto</h3><p>Explicamos o problema real e só trocamos o que precisa ser trocado.</p></div></li>
-        <li><span class="dot">✓</span><div><h3>Garantia no serviço</h3><p>Você tem respaldo depois que o trabalho termina.</p></div></li>
-        <li><span class="dot">✓</span><div><h3>Serviço limpo e pontual</h3><p>Chegamos na hora combinada e deixamos tudo organizado ao terminar.</p></div></li>
-      </ul>
-    </div>
-    <div class="quote-card reveal">
-      <div class="q">"Resolveu o curto que ninguém achava, cobrou justo e deixou tudo organizado. Eletricista de confiança."</div>
-      <div class="who"><strong>Espaço do depoimento real do seu cliente</strong>Depoimento ilustrativo do modelo</div>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
-      <span class="eyebrow">Resultados</span>
-      <h2>Confiança que se mede em serviço entregue.</h2>
-    </div>
-    <div class="stats">
-      <div class="stat reveal"><div class="n">+500</div><div class="l">serviços realizados</div></div>
-      <div class="stat reveal"><div class="n">98%</div><div class="l">de clientes recomendam</div></div>
-      <div class="stat reveal"><div class="n">4.9</div><div class="l">avaliação</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="contato">
-  <div class="wrap contact-grid">
-    <div class="contact-side reveal">
-      <span class="eyebrow">Contato</span>
-      <h2>Precisa resolver hoje?</h2>
-      <p>Chame no WhatsApp contando o problema — retornamos com o orçamento rápido.</p>
-      <a class="wa-box" href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20preciso%20de%20um%20or%C3%A7amento%20de%20servi%C3%A7o%20el%C3%A9trico" target="_blank" rel="noopener">
-        <span class="ico">✆</span>
-        <span><span class="t">Falar direto no WhatsApp</span><br><span class="s">Resposta rápida · Sem compromisso</span></span>
-      </a>
-    </div>
-    <form id="demo-form">
-      <label for="nome">Nome</label>
-      <input id="nome" type="text" placeholder="Seu nome" required>
-      <label for="contato">E-mail ou telefone</label>
-      <input id="contato" type="text" placeholder="Como podemos retornar" required>
-      <label for="msg">Mensagem</label>
-      <textarea id="msg" placeholder="Descreva o problema (ex: disjuntor desarmando, instalação de chuveiro...)" required></textarea>
-      <button type="submit" class="btn btn-solid">Enviar mensagem</button>
-      <p class="form-demo-msg" id="demo-msg">✓ Em uma página real, esta mensagem chegaria agora no seu e-mail. Este é um modelo demonstrativo da MR Soluções.</p>
-      <p class="form-note">Orçamento gratuito · Atendimento de urgência.</p>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="foot">
-      <div>
-        <div class="logo">sua marca</div>
-        <p>Aqui entra a apresentação do seu serviço, com a sua marca e o seu contato.</p>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap hero__grid">
+    <div class="rv">
+      <span class="eyebrow">Atendimento no mesmo dia</span>
+      <h1>Ar parado, geladeira <span>esquentando</span>, câmara fora de temperatura?</h1>
+      <p class="lead">Instalação, manutenção e conserto de refrigeração com técnico registrado, peça original e garantia por escrito. Você manda a foto do equipamento no WhatsApp e recebe o orçamento antes de qualquer visita.</p>
+      <div class="hero__cta">
+        <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20preciso%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="btn btn--amber" data-wa-loc="hero">Pedir orçamento agora</a>
+        <a href="#servicos" class="btn btn--line">Ver serviços e preços</a>
+      </div>
+      <div class="hero__tags">
+        <span class="tag">Garantia de 90 dias</span>
+        <span class="tag">Nota fiscal</span>
+        <span class="tag">Atendimento em até 24h</span>
       </div>
     </div>
-    <div class="foot-bottom">Modelo demonstrativo desenvolvido por <a href="https://mr-solutions.netlify.app/" target="_blank" rel="noopener">MR Soluções</a> — quero uma página assim: <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20vi%20o%20modelo%20de%20eletricista%20e%20quero%20uma%20p%C3%A1gina%20assim" target="_blank" rel="noopener">falar no WhatsApp</a></div>
+
+    <!-- assinatura: cartão de ordem de serviço -->
+    <div class="os rv">
+      <div class="os__top">
+        <b>Ordem de serviço</b>
+        <span>Nº 0000 · hoje</span>
+      </div>
+      <div class="os__body">
+        <div class="os__line">
+          <span class="os__dot" aria-hidden="true">✓</span>
+          <span><b>Chamado aberto</b><small>Você descreve o problema pelo WhatsApp</small></span>
+        </div>
+        <div class="os__line">
+          <span class="os__dot" aria-hidden="true">✓</span>
+          <span><b>Orçamento enviado</b><small>Valor fechado antes de o técnico sair</small></span>
+        </div>
+        <div class="os__line">
+          <span class="os__dot" aria-hidden="true">✓</span>
+          <span><b>Visita agendada</b><small>Com horário marcado, não "de manhã"</small></span>
+        </div>
+        <div class="os__line">
+          <span class="os__dot os__dot--wait" aria-hidden="true">4</span>
+          <span><b>Serviço concluído</b><small>Nota fiscal e garantia de 90 dias</small></span>
+        </div>
+      </div>
+      <div class="os__foot">Cada etapa é confirmada no seu WhatsApp — sem precisar ficar ligando para saber se o técnico vem.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="band band--ice" id="servicos">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Serviços</span>
+      <h2>O que fazemos e quanto custa</h2>
+      <p class="lead">Valores de referência para equipamentos residenciais até 12.000 BTUs. O preço final sai depois que você descreve o equipamento — e é fechado antes da visita.</p>
+    </div>
+    <div class="svc">
+      <article class="card rv">
+        <h3>Instalação de split</h3>
+        <p>Furação, suporte, tubulação de até 3 metros, vácuo na linha e teste de funcionamento. Serviço com nota e garantia.</p>
+        <div class="card__price"><small>A partir de</small>R$ 450</div>
+      </article>
+      <article class="card rv">
+        <h3>Limpeza e higienização</h3>
+        <p>Lavagem completa da evaporadora e condensadora com produto próprio. Recomendada a cada 6 meses — resolve mau cheiro e conta de luz alta.</p>
+        <div class="card__price"><small>A partir de</small>R$ 180</div>
+      </article>
+      <article class="card rv">
+        <h3>Carga de gás</h3>
+        <p>Verificação de vazamento, reparo e recarga do fluido correto do equipamento. Sem recarga por cima de vazamento não resolvido.</p>
+        <div class="card__price"><small>A partir de</small>R$ 320</div>
+      </article>
+      <article class="card rv">
+        <h3>Conserto de geladeira e freezer</h3>
+        <p>Diagnóstico de compressor, termostato, degelo e vedação. Se não tiver conserto viável, você é avisado antes de gastar com peça.</p>
+        <div class="card__price"><small>Visita técnica</small>R$ 120</div>
+      </article>
+      <article class="card rv">
+        <h3>Câmara fria e expositor</h3>
+        <p>Manutenção para comércio: padaria, restaurante, mercadinho e açougue. Atendimento com prioridade — equipamento parado é prejuízo por hora.</p>
+        <div class="card__price"><small>Orçamento</small>Sob medida</div>
+      </article>
+      <article class="card rv">
+        <h3>Contrato de manutenção</h3>
+        <p>Visitas programadas para empresas com vários equipamentos, com relatório de cada aparelho e prioridade no atendimento de urgência.</p>
+        <div class="card__price"><small>Mensal a partir de</small>R$ 280</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="band band--deep" id="chamado">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Do WhatsApp ao equipamento funcionando</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv">
+        <h3>Você descreve</h3>
+        <p>Manda o modelo, uma foto e o que está acontecendo. Se não souber o modelo, a foto da etiqueta resolve.</p>
+      </div>
+      <div class="step rv">
+        <h3>Orçamento fechado</h3>
+        <p>Você recebe o valor do serviço e da peça antes de qualquer visita. Sem "depende, só vendo no local".</p>
+      </div>
+      <div class="step rv">
+        <h3>Visita com hora</h3>
+        <p>Agendamento com horário definido e aviso quando o técnico sai para o atendimento.</p>
+      </div>
+      <div class="step rv">
+        <h3>Serviço e garantia</h3>
+        <p>Teste na sua frente, nota fiscal e garantia de 90 dias no serviço executado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="band">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Por que confiar</span>
+      <h2>O que vem junto com o serviço</h2>
+    </div>
+    <div class="pill rv">
+      <div class="pill__i"><b>Peça original</b><span>Componentes com procedência e a nota da peça anexada à sua ordem de serviço.</span></div>
+      <div class="pill__i"><b>Garantia de 90 dias</b><span>Se o mesmo defeito voltar dentro do prazo, o retorno é sem custo nenhum.</span></div>
+      <div class="pill__i"><b>Técnico registrado</b><span>Profissional com registro e equipamento de segurança — inclusive para trabalho em altura.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- COBERTURA -->
+<section class="band band--ice" id="cobertura">
+  <div class="wrap cover">
+    <div class="rv">
+      <span class="eyebrow">Onde atendemos</span>
+      <h2>Área de atendimento</h2>
+      <p class="lead">Atendimento em toda a região, com prioridade para chamados comerciais. Fora da área listada, consulte a taxa de deslocamento pelo WhatsApp.</p>
+      <ul class="zones">
+        <li>Bairro / região 1</li>
+        <li>Bairro / região 2</li>
+        <li>Bairro / região 3</li>
+        <li>Bairro / região 4</li>
+        <li>Bairro / região 5</li>
+        <li>Cidades vizinhas</li>
+      </ul>
+      <p style="margin-top:26px">
+        <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20voc%C3%AAs%20atendem%20na%20minha%20regi%C3%A3o%3F" target="_blank" rel="noopener" class="btn btn--deep" data-wa-loc="cobertura">Consultar minha região</a>
+      </p>
+    </div>
+    <div class="rv"><div class="ph ph--tag" data-mark="foto do atendimento" data-tag="Equipe em serviço" role="img" aria-label="Espaço reservado para foto da equipe em atendimento"></div></div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="band">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Quem já chamou</span>
+      <h2>O que dizem do atendimento</h2>
+    </div>
+    <div class="quotes">
+      <blockquote class="quote rv">
+        <div class="quote__stars" aria-label="5 de 5">★★★★★</div>
+        <p>Freezer da loja parou numa sexta à tarde. Mandei foto às 15h, o técnico chegou às 17h e resolveu no mesmo dia. Não perdi a mercadoria.</p>
+        <footer>Cliente comercial · desde 2023</footer>
+      </blockquote>
+      <blockquote class="quote rv">
+        <div class="quote__stars" aria-label="5 de 5">★★★★★</div>
+        <p>Outro técnico tinha dito que precisava trocar a placa. Aqui olharam e era só o capacitor. Economizei quase mil reais.</p>
+        <footer>Cliente residencial · desde 2024</footer>
+      </blockquote>
+      <blockquote class="quote rv">
+        <div class="quote__stars" aria-label="5 de 5">★★★★★</div>
+        <p>Marcou hora e chegou na hora, o que já é raro. Instalou os dois splits, testou tudo comigo junto e deixou o local limpo.</p>
+        <footer>Cliente residencial · desde 2022</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- DÚVIDAS -->
+<section class="band band--ice" id="duvidas">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>O que perguntam antes de chamar</h2>
+    </div>
+    <div class="faq rv">
+      <details>
+        <summary>A visita é cobrada mesmo se eu não fizer o conserto?</summary>
+        <p>A visita técnica tem valor fixo e cobre o diagnóstico e o deslocamento. Se você aprovar o serviço no mesmo atendimento, esse valor é abatido do total.</p>
+      </details>
+      <details>
+        <summary>Em quanto tempo o técnico chega?</summary>
+        <p>Chamados abertos até as 14h costumam ser atendidos no mesmo dia. Depois desse horário, no próximo dia útil. Estabelecimento comercial com equipamento parado tem prioridade na fila.</p>
+      </details>
+      <details>
+        <summary>Vocês fornecem a peça ou eu preciso comprar?</summary>
+        <p>Fornecemos, com nota. Se preferir comprar por conta própria, sem problema — nesse caso a garantia cobre apenas o serviço executado, não a peça.</p>
+      </details>
+      <details>
+        <summary>De quanto em quanto tempo devo limpar o ar-condicionado?</summary>
+        <p>A cada 6 meses em uso residencial e a cada 3 em ambiente comercial ou com muita poeira. Filtro sujo faz o aparelho gelar menos e puxar mais energia.</p>
+      </details>
+      <details>
+        <summary>Quais formas de pagamento?</summary>
+        <p>Pix, dinheiro e cartão em até 3x sem juros, pago na conclusão do serviço. Contratos de manutenção são faturados mensalmente.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="band band--deep" id="contato">
+  <div class="wrap contact">
+    <div class="rv">
+      <span class="eyebrow">Contato</span>
+      <h2>Horários e atendimento</h2>
+      <p class="lead" style="margin-top:12px">Rua, número — Bairro · Cidade / UF<br>CNPJ 00.000.000/0001-00</p>
+      <table class="hours">
+        <tr><td>Segunda a sexta</td><td>08h — 18h</td></tr>
+        <tr><td>Sábado</td><td>08h — 12h</td></tr>
+        <tr><td>Domingo e feriados</td><td>Somente urgência</td></tr>
+      </table>
+      <p class="plantao"><b>Plantão de urgência:</b> equipamento comercial parado é atendido fora do horário, com taxa adicional informada antes da saída.</p>
+      <p style="margin-top:24px">
+        <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20preciso%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="btn btn--amber" data-wa-loc="contato">Chamar no WhatsApp</a>
+      </p>
+    </div>
+    <div class="rv"><div class="ph ph--tag" data-mark="foto" data-tag="Oficina / veículo" role="img" aria-label="Espaço reservado para foto da oficina ou veículo"></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="close">
+  <div class="wrap rv">
+    <h2>Equipamento parado não espera</h2>
+    <p>Manda a foto e o modelo agora. Você recebe o orçamento hoje e, se aprovar até as 14h, o atendimento sai no mesmo dia.</p>
+    <a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20preciso%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="btn" data-wa-loc="cta_final">Pedir orçamento pelo WhatsApp</a>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div>
+      <div class="brand" style="margin-bottom:16px">
+        <span class="brand__mark" aria-hidden="true">logo</span>
+        <span>
+          <span class="brand__name">SUA MARCA</span>
+          <span class="brand__sub">Refrigeração e manutenção</span>
+        </span>
+      </div>
+      <p style="max-width:38ch;margin:0">Instalação, limpeza e conserto de ar-condicionado, geladeira, freezer e câmara fria, com garantia por escrito.</p>
+    </div>
+    <div>
+      <h4>Navegar</h4>
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#chamado">Como funciona</a></li>
+        <li><a href="#cobertura">Onde atendemos</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20preciso%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener" data-wa-loc="rodape">WhatsApp · (00) 00000-0000</a></li>
+        <li><a href="#contato">Rua, número — Bairro · Cidade / UF</a></li>
+        <li><a href="#contato">Seg a sex 08h—18h · Sáb 08h—12h</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot__bottom">
+    <div class="wrap">
+      <span>© <span id="ano"></span> SUA MARCA — todos os direitos reservados.</span>
+      <span>Técnico responsável: nome · registro 0000</span>
+    </div>
   </div>
 </footer>
 
+<a href="https://wa.me/5584986329566?text=Ol%C3%A1%2C%20preciso%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener" class="wa" aria-label="Falar no WhatsApp" data-wa-loc="flutuante">
+  <svg viewBox="0 0 24 24" width="27" height="27" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.41 14.13c-.21.58-1.2 1.11-1.68 1.18-.43.06-.97.09-1.56-.1-.36-.11-.82-.26-1.41-.52-2.48-1.07-4.11-3.57-4.23-3.74-.12-.16-1.01-1.34-1.01-2.56 0-1.22.63-1.82.86-2.07.23-.25.49-.31.66-.31h.48c.16.01.36-.05.56.43.2.5.7 1.72.76 1.84.06.12.1.26.02.43-.08.16-.12.27-.25.41-.12.14-.26.32-.37.43-.12.13-.25.26-.11.51.15.25.64 1.06 1.38 1.72.94.84 1.74 1.11 1.99 1.23.25.13.4.11.54-.06.15-.16.63-.72.79-.97.17-.25.33-.21.56-.13.22.09 1.44.69 1.69.81.25.12.41.18.47.28.07.11.07.6-.14 1.18Z"/></svg>
+</a>
+
 <script>
-var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
-document.getElementById('demo-form').addEventListener('submit',function(ev){
-  ev.preventDefault();
-  document.getElementById('demo-msg').style.display='block';
-});
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  (function(){
+    var els = document.querySelectorAll('.rv');
+    if (!('IntersectionObserver' in window)) { els.forEach(function(e){ e.classList.add('on'); }); return; }
+    var io = new IntersectionObserver(function(en){
+      en.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+    }, { threshold:.12, rootMargin:'0px 0px -40px 0px' });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      if (typeof gtag !== 'function') return;
+      gtag('event', 'whatsapp_click', {
+        botao: a.getAttribute('data-wa-loc') || 'outro',
+        produto: a.getAttribute('data-produto') || 'demo_tecnico',
+        event_category: 'conversao'
+      });
+    });
+  });
 </script>
 </body>
 </html>
