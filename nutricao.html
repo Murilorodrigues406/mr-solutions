@@ -325,6 +325,35 @@
     .wa-float:hover{transform:scale(1.08);}
     .wa-float svg{width:30px;height:30px;fill:#fff;}
 
+    /* Chamada de meio de página — CTA do dono */
+    .midcta{background:var(--forest);color:#fff;}
+    .midcta .box{
+      display:flex;align-items:center;justify-content:space-between;gap:36px;
+      flex-wrap:wrap;text-align:left;
+    }
+    .midcta .box>div{flex:1 1 340px;}
+    .midcta h2{color:#fff;}
+    .midcta p{color:rgba(255,255,255,.8);max-width:520px;margin-top:6px;}
+    .midcta .btn{background:#25d366;border-color:#25d366;flex:none;font-size:1rem;padding:16px 30px;}
+    .midcta .btn:hover{background:#1eb85a;border-color:#1eb85a;box-shadow:0 14px 28px -12px rgba(37,211,102,.6);}
+    @media (max-width:700px){.midcta .box{justify-content:center;text-align:center;}.midcta p{margin-inline:auto;}}
+
+    /* Faixa discreta do Murilo (contexto do site) */
+    .authorbar{background:var(--sage-deep);padding:26px 0;}
+    .authorbar .box{
+      display:flex;align-items:center;justify-content:center;gap:14px 22px;
+      flex-wrap:wrap;text-align:center;
+    }
+    .authorbar p{color:var(--ink-soft);font-size:.95rem;margin:0;}
+    .authorbar p b{color:var(--forest);font-weight:600;}
+    .authorbar a{
+      display:inline-flex;align-items:center;gap:8px;flex:none;
+      font-weight:600;font-size:.92rem;color:var(--leaf-dark);text-decoration:none;
+      border:1px solid var(--leaf);border-radius:999px;padding:10px 20px;
+      transition:background .2s ease,color .2s ease;
+    }
+    .authorbar a:hover{background:var(--leaf);color:#fff;}
+
     /* Reveal ao rolar */
     .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
     .reveal.in{opacity:1;transform:none;}
@@ -470,6 +499,32 @@
       </div>
     </div>
   </section>
+
+  <!-- CHAMADA DE MEIO — CTA do dono (WhatsApp do cliente) -->
+  <section class="midcta">
+    <div class="container box reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--mango)">Já sabe seu objetivo?</span>
+        <h2>Então o próximo passo é começar</h2>
+        <p>Se você já tem uma meta em mente — emagrecer, ganhar massa, controlar uma condição — não precisa esperar. Manda o seu objetivo no WhatsApp e a gente já marca a sua consulta.</p>
+      </div>
+      <a class="btn" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20j%C3%A1%20sei%20meu%20objetivo%20e%20quero%20agendar%20uma%20consulta" target="_blank" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.1-1.7 1.2-.5 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c0 .2.1.3 0 .5l-.3.5-.4.5c-.2.1-.3.3-.1.6.1.3.7 1.1 1.5 1.8 1 .9 1.8 1.2 2.1 1.3.3.1.4.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.4 0 .1 0 .7-.3 1.4Z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FAIXA DO AUTOR — fala com o dono do negócio que avalia o modelo (WhatsApp do Murilo) -->
+  <div class="authorbar">
+    <div class="container box">
+      <p>Gostou desta página? <b>Eu crio uma assim para o seu consultório</b> — com a sua marca, os seus textos e o seu WhatsApp.</p>
+      <a href="https://wa.me/5584986329566?text=Ol%C3%A1%20Murilo%2C%20gostei%20do%20modelo%20de%20nutri%C3%A7%C3%A3o%20e%20quero%20um%20assim" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.1-1.7 1.2-.5 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c0 .2.1.3 0 .5l-.3.5-.4.5c-.2.1-.3.3-.1.6.1.3.7 1.1 1.5 1.8 1 .9 1.8 1.2 2.1 1.3.3.1.4.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.4 0 .1 0 .7-.3 1.4Z"/></svg>
+        Quero um modelo assim
+      </a>
+    </div>
+  </div>
 
   <!-- DEPOIMENTOS -->
   <section class="dep">
