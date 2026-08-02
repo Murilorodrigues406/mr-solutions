@@ -723,6 +723,70 @@
     }
   </style>
 
+  <style id="cta-modelos">
+    /* ---------- CTA de fechamento da seção de modelos ---------- */
+    .mcta{
+      margin-top:26px;
+      display:grid;grid-template-columns:1.45fr .85fr;gap:34px;align-items:center;
+      padding:38px 42px;border-radius:20px;
+      background:linear-gradient(135deg,#101a14 0%,#1b2a20 100%);
+      color:#fff;position:relative;overflow:hidden;
+      box-shadow:0 18px 40px rgba(16,42,29,.16);
+    }
+    .mcta::after{
+      content:"";position:absolute;right:-30px;top:-30px;
+      width:210px;height:210px;
+      background-image:radial-gradient(rgba(55,214,122,.42) 1.5px,transparent 1.5px);
+      background-size:14px 14px;opacity:.55;pointer-events:none;
+    }
+    .mcta__texto{position:relative;z-index:1;}
+    .mcta__selo{
+      display:inline-block;font-size:.72rem;font-weight:600;line-height:1;
+      letter-spacing:.14em;text-transform:uppercase;color:#8fe3b4;margin-bottom:14px;
+    }
+    .mcta__titulo{
+      font-family:'Poppins',sans-serif;font-weight:600;
+      font-size:clamp(1.35rem,2.2vw,1.85rem);line-height:1.25;margin:0 0 12px;
+    }
+    .mcta__sub{
+      font-size:1rem;line-height:1.6;color:rgba(255,255,255,.78);
+      margin:0 0 18px;max-width:54ch;
+    }
+    .mcta__lista{list-style:none;padding:0;margin:0;display:grid;gap:9px;}
+    .mcta__lista li{
+      font-size:.94rem;line-height:1.5;color:rgba(255,255,255,.9);
+      padding-left:24px;position:relative;
+    }
+    .mcta__lista li::before{
+      content:"";position:absolute;left:0;top:.5em;
+      width:9px;height:9px;border-radius:3px;background:#37d67a;
+    }
+    .mcta__acao{
+      position:relative;z-index:1;
+      display:flex;flex-direction:column;align-items:stretch;gap:12px;
+    }
+    .mcta__btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      background:#2bd36f;color:#08160e;
+      font-weight:600;font-size:1.02rem;line-height:1;
+      padding:17px 26px;border-radius:12px;text-decoration:none;
+      box-shadow:0 14px 28px rgba(43,211,111,.24);
+      transition:transform .18s ease,background .18s ease,box-shadow .18s ease;
+    }
+    .mcta__btn:hover{background:#37d67a;transform:translateY(-2px);box-shadow:0 18px 34px rgba(43,211,111,.32);}
+    .mcta__btn:focus-visible{outline:3px solid #8fe3b4;outline-offset:3px;}
+    .mcta__nota{font-size:.85rem;line-height:1.4;color:rgba(255,255,255,.6);text-align:center;}
+    @media (max-width:900px){
+      .mcta{grid-template-columns:1fr;gap:22px;padding:28px 22px;margin-top:20px;}
+      .mcta__sub{font-size:.95rem;}
+      .mcta::after{width:150px;height:150px;opacity:.4;}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .mcta__btn{transition:none;}
+      .mcta__btn:hover{transform:none;}
+    }
+  </style>
+
 </head>
 <body>
 
@@ -930,6 +994,29 @@
           </div>
           </div>
         </article>
+      </div>
+
+      <!-- CTA de fechamento da seção de modelos -->
+      <div class="mcta reveal">
+        <div class="mcta__texto">
+          <span class="mcta__selo">Próximo passo</span>
+          <h3 class="mcta__titulo">Gostou de um modelo? Eu adapto com a sua marca.</h3>
+          <p class="mcta__sub">Você escolhe o modelo do seu segmento, me manda a sua logo, as suas cores e os seus serviços — eu devolvo a página pronta para publicar, com o seu WhatsApp já funcionando.</p>
+          <ul class="mcta__lista">
+            <li>Você aprova a página antes de ela entrar no ar</li>
+            <li>Textos ajustados para o seu tipo de cliente</li>
+            <li>Publicação e domínio configurados por mim</li>
+          </ul>
+        </div>
+        <div class="mcta__acao">
+          <a href="https://wa.me/5584986329566?text=Ol%C3%A1%20Murilo%2C%20vi%20os%20modelos%20de%20landing%20page%20no%20site%20e%20quero%20adaptar%20um%20para%20a%20minha%20marca" target="_blank" rel="noopener" class="mcta__btn" data-wa-loc="cta_modelos" data-produto="modelos_geral">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/>
+            </svg>
+            Quero minha página
+          </a>
+          <span class="mcta__nota">Resposta no mesmo dia, direto comigo.</span>
+        </div>
       </div>
 
     </div>
