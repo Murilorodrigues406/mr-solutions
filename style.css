@@ -435,3 +435,66 @@ h1,h2,h3,h4{font-family:var(--font-title);line-height:1.18;font-weight:600}
   .cred__sep{display:none}
   .cred__item{flex-direction:column;align-items:center;gap:2px;text-align:center}
 }
+
+/* ============================================================
+   POLIMENTO v2 (ago/2026) — camada aditiva
+   Nada acima foi alterado. Este bloco só refina o que já existe:
+   acessibilidade, microinterações e a seção "Como funciona".
+   ============================================================ */
+
+/* Seleção de texto com a cor da marca */
+::selection{background:rgba(124,132,107,.28)}
+
+/* Títulos com quebra de linha equilibrada (evita palavra órfã) */
+h1,h2,h3,.section__title{text-wrap:balance}
+
+/* Foco visível ao navegar por teclado (acessibilidade) */
+.btn:focus-visible{outline:3px solid var(--salvia);outline-offset:3px}
+a:focus-visible{outline:2px solid var(--salvia);outline-offset:3px;border-radius:6px}
+.nav__link:focus-visible{outline-offset:6px}
+
+/* Botões: leve resposta ao clique */
+.btn:active{transform:translateY(-1px) scale(.98)}
+
+/* Cards de soluções: ícone reage junto com o card */
+.card__icon{transition:background .3s ease,transform .3s ease}
+.card:hover .card__icon{background:rgba(124,132,107,.16);transform:scale(1.06)}
+
+/* Itens do BI406 (showcase) idem */
+.show-item__icon{transition:background .3s ease}
+.show-item:hover .show-item__icon{background:rgba(124,132,107,.16)}
+
+/* "Como funciona": números vazados + barra de progresso no hover */
+.step{overflow:hidden}
+.step__num{
+  font-size:2.9rem;
+  color:transparent;
+  -webkit-text-stroke:1.6px var(--salvia);
+  paint-order:stroke;
+}
+.step::after{
+  content:"";position:absolute;left:0;top:0;width:4px;height:100%;
+  background:var(--salvia);transform:scaleY(0);transform-origin:top;
+  transition:transform .3s ease;
+}
+.step:hover::after{transform:scaleY(1)}
+@supports not (-webkit-text-stroke:1px black){
+  .step__num{color:var(--salvia)}
+}
+
+/* Projetos: título reage ao hover do card */
+.project__title{transition:color .25s ease}
+.project:hover .project__title{color:var(--salvia-dark)}
+
+/* Footer: links com deslize sutil */
+.footer__links a{display:inline-block;transition:color .2s,transform .2s}
+.footer__links a:hover{transform:translateX(3px)}
+
+/* Acessibilidade: respeitar quem prefere menos movimento */
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .wa-float{animation:none}
+  .chart__bars i{transition:none}
+  html{scroll-behavior:auto}
+  .btn,.card,.step,.project,.show-item,.sol-card,.shot,.piv__shot{transition:none}
+}
