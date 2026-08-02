@@ -878,45 +878,6 @@
 
 
   <!-- ============================================================
-       QUEM SOU EU — autoridade
-       FOTO: salve um arquivo chamado "foto-murilo.jpg" (recomendado
-       800x800px, rosto centralizado) na mesma pasta do index.html.
-       Enquanto o arquivo nao existir, aparece o monograma automatico.
-       ============================================================ -->
-  <section class="sobre" id="sobre">
-    <div class="container sobre__inner">
-      <div class="sobre__foto reveal">
-        <img src="foto-murilo.jpg" alt="Murilo Rodrigues" class="sobre__img"
-             loading="lazy" decoding="async"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-        <div class="sobre__mono" style="display:none;" aria-hidden="true">MR</div>
-        <span class="sobre__selo">Natal / RN &middot; atendimento remoto</span>
-      </div>
-
-      <div class="sobre__texto reveal">
-        <span class="eyebrow eyebrow--green">Quem faz</span>
-        <h2 class="section__title">Antes de programar, eu vendi.</h2>
-        <p class="sobre__p">
-          Sou Murilo. Passei dez anos no varejo &mdash; comecei como técnico e cheguei a
-          supervisor de lojas, com meta na mesa todo mês e equipe para acompanhar.
-          Aprendi na prática o que faz um cliente entrar, o que faz ele desistir e
-          o que realmente aparece no fechamento do caixa.
-        </p>
-        <p class="sobre__p">
-          Hoje transformo isso em página de vendas, catálogo digital e painel de
-          indicadores. Não entrego só um site bonito: entrego a página do jeito que
-          eu gostaria de ter tido quando era eu quem precisava bater o número.
-        </p>
-        <ul class="sobre__lista">
-          <li><b>Quem atende é quem desenvolve</b> &mdash; sem atendente, sem repassar para terceiros</li>
-          <li><b>Explicação em português</b> &mdash; nada de termo técnico para te deixar perdido</li>
-          <li><b>Formação em andamento</b> &mdash; Análise e Desenvolvimento de Sistemas e certificação em análise de dados</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
        MODELOS PRONTOS POR NICHO — página de vendas alto padrão
        Para ativar o link de demonstração de um modelo: descomente o
        <a> "Ver demonstração" do card e coloque a URL da demo no ar.
@@ -1063,6 +1024,29 @@
             Quero minha página
           </a>
           <span class="mcta__nota">Resposta no mesmo dia, direto comigo.</span>
+        </div>
+      </div>
+
+      <!-- Contêiner para quem NAO quer modelo pronto -->
+      <div class="pers reveal">
+        <div class="pers__texto">
+          <span class="pers__selo">Projeto do zero</span>
+          <h3 class="pers__titulo">Precisa de algo que não cabe em um modelo?</h3>
+          <p class="pers__sub">Se o seu negócio vende de um jeito próprio, eu desenho a página inteira sob medida — as seções na ordem que faz sentido para o seu cliente, e não dentro de uma fôrma pronta.</p>
+          <ul class="pers__lista">
+            <li><b>Estrutura pensada para o seu funil</b> — o que aparece primeiro é o que decide a sua venda</li>
+            <li><b>Recursos sob medida</b> — catálogo, calculadora, agendamento, formulário com os campos que você precisa</li>
+            <li><b>Escopo e preço definidos na conversa</b> — o valor sai do que a página precisa ter, não de uma tabela fixa</li>
+          </ul>
+        </div>
+        <div class="pers__acao">
+          <a href="https://wa.me/5584986329566?text=Ol%C3%A1%20Murilo%2C%20n%C3%A3o%20quero%20um%20modelo%20pronto%20%E2%80%94%20quero%20uma%20p%C3%A1gina%20personalizada%20para%20o%20meu%20neg%C3%B3cio" target="_blank" rel="noopener" class="pers__btn" data-wa-loc="cta_personalizado" data-produto="pagina_personalizada">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/>
+            </svg>
+            Quero um projeto personalizado
+          </a>
+          <span class="pers__nota">Começa com uma conversa de 15 minutos, sem compromisso.</span>
         </div>
       </div>
 
@@ -1369,23 +1353,9 @@
         </details>
 
         <details class="faq__item">
-          <summary>Tem mensalidade?</summary>
-          <div class="faq__ans">
-            <p>Não. Você paga o desenvolvimento uma vez e a página é sua. A hospedagem que eu uso não tem custo mensal para páginas desse porte. A única despesa recorrente é o domínio próprio (aquele <b>.com.br</b>), que é uma taxa anual paga direto ao Registro.br, hoje em torno de R$ 40 por ano — e fica no seu nome, não no meu.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
           <summary>E se eu não gostar do resultado?</summary>
           <div class="faq__ans">
             <p>A página só vai ao ar com a sua aprovação. Antes de publicar, eu te mando o link para você ver pronta, no celular e no computador. Ajustes de texto, cor, ordem das seções e troca de imagem estão inclusos até você aprovar. Você não corre o risco de pagar e receber algo que não te representa.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>Depois de pronta, eu consigo alterar sozinho?</summary>
-          <div class="faq__ans">
-            <p>Depende do que você contratou. Na <b>loja digital</b>, sim: você tem um painel com login e senha e cadastra, edita e tira produto do ar quando quiser, sem depender de mim para mudar preço. Na <b>landing page</b>, alterações de texto e foto passam por mim — mas são rápidas e eu não cobro por pequenos ajustes de contato, horário ou serviço.</p>
           </div>
         </details>
 
@@ -1407,13 +1377,6 @@
           <summary>Como funciona o pagamento?</summary>
           <div class="faq__ans">
             <p>Combinamos no orçamento, sempre antes de eu começar: uma parte na aprovação da proposta e o restante na entrega, quando a página já está aprovada por você. Aceito Pix e cartão. Nada é cobrado na conversa inicial — orçamento e diagnóstico são gratuitos.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>Você atende fora de Natal?</summary>
-          <div class="faq__ans">
-            <p>Sim. Todo o processo é remoto: a conversa acontece no WhatsApp ou por chamada, o material você me envia por lá mesmo e a entrega é um link. Atendo qualquer cidade do Brasil sem custo adicional.</p>
           </div>
         </details>
 
