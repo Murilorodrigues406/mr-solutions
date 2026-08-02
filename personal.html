@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Trainer — Página modelo | Murilo Rodrigues</title>
+  <meta name="description" content="Página modelo para personal trainers: aula experimental pelo WhatsApp, método claro e planos presencial, online e consultoria." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       PÁGINA MODELO — PERSONAL TRAINER
+       Onde o cliente troca os dados dele:
+       1) "SUA MARCA"            → nome do personal / studio
+       2) "CREF 0000-G/UF"       → número de registro real
+       3) (00) 00000-0000        → telefone real
+       4) wa.me/5500000000000    → link do WhatsApp real (busque por "wa.me")
+       5) Studio / academia      → local real de atendimento
+       6) Blocos "SUA FOTO AQUI" → fotos reais
+       7) "R$ 000/mês"           → preços reais dos planos
+       8) formspree.io/f/SEU_ID  → ID real do formulário Formspree
+       ============================================================ */
+    :root{
+      --ink:#1c2326;
+      --ink-soft:#57646a;
+      --teal:#1f6b7d;
+      --teal-dark:#155261;
+      --teal-soft:#e9f1f3;
+      --paper:#ffffff;
+      --line:rgba(28,35,38,.12);
+      --radius:14px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:'Inter',sans-serif;color:var(--ink);
+      background:var(--paper);line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{max-width:100%;display:block;}
+    .container{max-width:1080px;margin:0 auto;padding:0 22px;}
+    h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.15;}
+    h2{font-size:clamp(1.7rem,3.4vw,2.3rem);margin-bottom:14px;}
+    .sub{color:var(--ink-soft);max-width:620px;}
+    section{padding:74px 0;}
+    .center{text-align:center;}
+    .center .sub{margin:0 auto;}
+
+    /* Faixa da página modelo */
+    .modelbar{
+      background:var(--ink);color:#fff;text-align:center;
+      font-size:.78rem;letter-spacing:.04em;padding:7px 14px;
+    }
+    .modelbar a{color:#bfd8de;text-decoration:none;font-weight:600;}
+
+    /* Header */
+    header.site{
+      position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);
+      backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .brand{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;letter-spacing:.08em;}
+    .brand small{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.62rem;letter-spacing:.14em;color:var(--ink-soft);}
+    .nav ul{display:flex;gap:26px;list-style:none;font-size:.9rem;font-weight:500;}
+    .nav a{color:var(--ink);text-decoration:none;}
+    .nav a:hover{color:var(--teal-dark);}
+    .nav .btn{padding:9px 18px;}
+    @media (max-width:760px){.nav ul{display:none;}}
+
+    /* Botões */
+    .btn{
+      display:inline-block;background:var(--teal);color:#fff;
+      font-weight:600;font-size:.95rem;text-decoration:none;
+      padding:14px 26px;border-radius:999px;border:1px solid var(--teal);
+      transition:background .2s ease,transform .2s ease;
+    }
+    .btn:hover{background:var(--teal-dark);transform:translateY(-1px);}
+    .btn--ghost{background:transparent;color:var(--ink);border-color:var(--line);}
+    .btn--ghost:hover{background:var(--teal-soft);color:var(--ink);}
+
+    /* Hero */
+    .hero{padding:70px 0 80px;}
+    .hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
+    .hero h1{font-size:clamp(2.2rem,4.6vw,3.3rem);margin-bottom:18px;}
+    .hero h1 em{font-style:normal;color:var(--teal-dark);}
+    .hero p{margin-bottom:26px;}
+    .hero .actions{display:flex;gap:14px;flex-wrap:wrap;}
+    .photo{
+      background:var(--teal-soft);border:1px dashed var(--teal);
+      border-radius:var(--radius);display:flex;align-items:center;justify-content:center;
+      color:var(--teal-dark);font-weight:600;font-size:.85rem;letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .photo--hero{min-height:380px;}
+    @media (max-width:820px){
+      .hero .grid{grid-template-columns:1fr;}
+      .photo--hero{min-height:260px;}
+    }
+
+    /* Para quem é */
+    .who{background:var(--teal-soft);}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;}
+    .card{
+      background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+      padding:26px 24px;
+    }
+    .card h3{font-size:1.2rem;margin-bottom:10px;}
+    .card p{color:var(--ink-soft);font-size:.94rem;}
+    @media (max-width:820px){.cards{grid-template-columns:1fr;}}
+
+    /* Método */
+    .steps{counter-reset:passo;}
+    .steps ol{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px;}
+    .steps li{
+      counter-increment:passo;background:#fff;border:1px solid var(--line);
+      border-radius:var(--radius);padding:24px 20px;
+    }
+    .steps li::before{
+      content:counter(passo,decimal-leading-zero);
+      font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;
+      color:var(--teal);display:block;margin-bottom:10px;
+    }
+    .steps b{display:block;margin-bottom:6px;}
+    .steps p{color:var(--ink-soft);font-size:.92rem;}
+    @media (max-width:900px){.steps ol{grid-template-columns:repeat(2,1fr);}}
+    @media (max-width:560px){.steps ol{grid-template-columns:1fr;}}
+
+    /* Planos */
+    .plans{background:var(--teal-soft);}
+    .plan{
+      background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+      padding:28px 26px;display:flex;flex-direction:column;text-align:left;
+    }
+    .plan--hi{border-color:var(--teal);box-shadow:0 10px 26px rgba(31,107,125,.14);}
+    .plan .tag{
+      align-self:flex-start;font-size:.68rem;font-weight:600;letter-spacing:.12em;
+      text-transform:uppercase;color:var(--teal-dark);background:var(--teal-soft);
+      padding:5px 12px;border-radius:999px;margin-bottom:12px;
+    }
+    .plan h3{font-size:1.25rem;margin-bottom:4px;}
+    .plan .price{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;margin:8px 0 16px;}
+    .plan .price small{font-family:'Inter',sans-serif;font-size:.8rem;font-weight:500;color:var(--ink-soft);}
+    .plan ul{list-style:none;color:var(--ink-soft);font-size:.93rem;flex:1;margin-bottom:20px;}
+    .plan li{padding:6px 0 6px 26px;position:relative;}
+    .plan li::before{
+      content:"";position:absolute;left:0;top:13px;width:14px;height:8px;
+      border-left:2px solid var(--teal-dark);border-bottom:2px solid var(--teal-dark);
+      transform:rotate(-45deg);
+    }
+    .plan .btn{text-align:center;}
+
+    /* Depoimentos */
+    .quote p{font-size:.95rem;margin-bottom:14px;}
+    .quote b{font-size:.86rem;color:var(--teal-dark);}
+
+    /* FAQ */
+    .faq{background:var(--teal-soft);}
+    .faq details{
+      border:1px solid var(--line);border-radius:12px;padding:0 20px;margin-top:12px;
+      background:#fff;
+    }
+    .faq summary{
+      cursor:pointer;font-weight:600;padding:16px 0;list-style:none;position:relative;
+    }
+    .faq summary::-webkit-details-marker{display:none;}
+    .faq summary::after{
+      content:"+";position:absolute;right:2px;top:12px;font-size:1.3rem;color:var(--teal-dark);
+      transition:transform .2s ease;
+    }
+    .faq details[open] summary::after{transform:rotate(45deg);}
+    .faq details p{color:var(--ink-soft);padding-bottom:16px;font-size:.95rem;}
+
+    /* Contato */
+    .cta{background:var(--ink);color:#fff;}
+    .cta h2{color:#fff;}
+    .cta .sub{color:rgba(255,255,255,.75);}
+    .cta .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:36px;align-items:start;}
+    .cta form{display:grid;gap:12px;}
+    .cta input,.cta textarea{
+      width:100%;padding:13px 15px;border-radius:10px;border:1px solid rgba(255,255,255,.25);
+      background:rgba(255,255,255,.07);color:#fff;font-family:inherit;font-size:.95rem;
+    }
+    .cta input::placeholder,.cta textarea::placeholder{color:rgba(255,255,255,.5);}
+    .cta textarea{min-height:110px;resize:vertical;}
+    .cta button{cursor:pointer;font-family:inherit;}
+    .wa-big{
+      display:flex;flex-direction:column;gap:14px;background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:28px 26px;
+    }
+    .wa-big b{font-size:1.05rem;}
+    .wa-big span{color:rgba(255,255,255,.7);font-size:.92rem;}
+    @media (max-width:760px){.cta .grid{grid-template-columns:1fr;}}
+
+    /* Rodapé */
+    footer.site{
+      border-top:1px solid var(--line);padding:30px 0;font-size:.86rem;color:var(--ink-soft);
+    }
+    footer.site .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+
+    /* Animação de entrada */
+    .reveal{opacity:0;transform:translateY(14px);animation:up .7s ease forwards;}
+    @keyframes up{to{opacity:1;transform:none;}}
+    @media (prefers-reduced-motion:reduce){
+      .reveal{animation:none;opacity:1;transform:none;}
+      html{scroll-behavior:auto;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="modelbar">Página modelo por <a href="https://murilorodriguess.com.br" target="_blank" rel="noopener">Murilo Rodrigues — murilorodriguess.com.br</a></div>
+
+  <header class="site">
+    <div class="container nav">
+      <div class="brand">SUA MARCA<small>Personal Trainer · CREF 0000-G/UF</small></div>
+      <ul>
+        <li><a href="#metodo">Método</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a class="btn" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20aula%20experimental" target="_blank" rel="noopener">Aula experimental</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container grid">
+      <div class="reveal">
+        <h1>Treine com método e <em>evolua de verdade</em></h1>
+        <p class="sub">Chega de treinar no escuro. Aqui você tem avaliação, treino montado para o seu objetivo e acompanhamento de perto — com a evolução medida em números, não em achismo.</p>
+        <div class="actions">
+          <a class="btn" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20aula%20experimental" target="_blank" rel="noopener">Agendar aula experimental</a>
+          <a class="btn btn--ghost" href="#planos">Ver planos</a>
+        </div>
+      </div>
+      <div class="photo photo--hero reveal" style="animation-delay:.15s">Sua foto aqui</div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM É -->
+  <section class="who">
+    <div class="container center">
+      <h2>Para quem é o acompanhamento</h2>
+      <p class="sub">Cada aluno chega de um ponto diferente. O treino parte de onde você está.</p>
+      <div class="cards" style="text-align:left">
+        <div class="card">
+          <h3>Nunca treinou</h3>
+          <p>Você aprende cada movimento do zero, com carga e ritmo certos para o seu corpo — sem medo de se machucar ou passar vergonha.</p>
+        </div>
+        <div class="card">
+          <h3>Treina mas não evolui</h3>
+          <p>Se o resultado estagnou, o problema costuma ser o método. A avaliação mostra o que ajustar e o treino volta a render.</p>
+        </div>
+        <div class="card">
+          <h3>Rotina apertada</h3>
+          <p>Treinos objetivos que cabem na sua agenda — inclusive em casa ou no formato online — sem depender de duas horas livres por dia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTODO -->
+  <section class="steps" id="metodo">
+    <div class="container center">
+      <h2>O método</h2>
+      <p class="sub">Do primeiro contato à reavaliação, você sabe exatamente o que está fazendo e por quê.</p>
+      <ol>
+        <li><b>Avaliação física</b><p>Medidas, histórico, limitações e objetivo. É daqui que sai o desenho do seu treino — não de ficha pronta.</p></li>
+        <li><b>Treino sob medida</b><p>Programa montado para o seu objetivo, seu nível e a estrutura que você tem disponível.</p></li>
+        <li><b>Acompanhamento</b><p>Execução corrigida de perto, cargas ajustadas na hora certa e treino atualizado conforme você progride.</p></li>
+        <li><b>Reavaliação mensal</b><p>A evolução aparece em números: medidas, cargas e desempenho comparados mês a mês.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PLANOS -->
+  <section class="plans" id="planos">
+    <div class="container center">
+      <h2>Planos</h2>
+      <p class="sub">Escolha o formato que encaixa na sua rotina. Todos começam com avaliação física.</p>
+      <div class="cards">
+        <div class="plan">
+          <span class="tag">No studio ou academia</span>
+          <h3>Presencial</h3>
+          <p class="price">R$ 000<small>/mês</small></p>
+          <ul>
+            <li>Aulas individuais com hora marcada</li>
+            <li>Correção de execução em cada série</li>
+            <li>Avaliação e reavaliação mensal incluídas</li>
+            <li>Studio / academia — Sua Cidade/UF</li>
+          </ul>
+          <a class="btn" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20o%20plano%20presencial" target="_blank" rel="noopener">Quero este plano</a>
+        </div>
+        <div class="plan plan--hi">
+          <span class="tag">Mais procurado</span>
+          <h3>Online</h3>
+          <p class="price">R$ 000<small>/mês</small></p>
+          <ul>
+            <li>Treino no app com vídeos de execução</li>
+            <li>Ajustes semanais conforme seu feedback</li>
+            <li>Suporte direto no WhatsApp</li>
+            <li>Treine na academia, em casa ou viajando</li>
+          </ul>
+          <a class="btn" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20o%20plano%20online" target="_blank" rel="noopener">Quero este plano</a>
+        </div>
+        <div class="plan">
+          <span class="tag">Para quem já treina só</span>
+          <h3>Consultoria</h3>
+          <p class="price">R$ 000<small>/mês</small></p>
+          <ul>
+            <li>Planilha de treino personalizada</li>
+            <li>Revisão mensal do programa</li>
+            <li>Orientações de progressão de carga</li>
+            <li>Tira-dúvidas por mensagem</li>
+          </ul>
+          <a class="btn" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20o%20plano%20de%20consultoria" target="_blank" rel="noopener">Quero este plano</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section>
+    <div class="container center">
+      <h2>Resultados de quem treina aqui</h2>
+      <div class="cards" style="text-align:left">
+        <div class="card quote">
+          <p>"Nunca tinha pisado numa academia. Em seis meses estou agachando com o dobro da carga do início — e sem nenhuma dor."</p>
+          <b>Fernanda L.</b>
+        </div>
+        <div class="card quote">
+          <p>"Treinava sozinho há anos, sempre igual. Com a consultoria destravei a evolução em dois meses de programa novo."</p>
+          <b>Diego R.</b>
+        </div>
+        <div class="card quote">
+          <p>"Faço o plano online por causa das viagens de trabalho. O treino se adapta ao hotel, à academia, ao que tiver — não tem desculpa."</p>
+          <b>Patrícia N.</b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DÚVIDAS -->
+  <section class="faq" id="duvidas">
+    <div class="container">
+      <div class="center">
+        <h2>Dúvidas frequentes</h2>
+        <p class="sub">O que os alunos mais perguntam antes de começar.</p>
+      </div>
+      <div style="max-width:760px;margin:26px auto 0">
+        <details>
+          <summary>Nunca treinei. Posso começar?</summary>
+          <p>Pode — e é o melhor momento para começar com orientação. O treino parte do seu nível atual e evolui no seu ritmo, com a execução ensinada desde o primeiro dia.</p>
+        </details>
+        <details>
+          <summary>Treino online funciona mesmo?</summary>
+          <p>Funciona quando tem acompanhamento de verdade: treino no app com vídeos, ajustes semanais e suporte no WhatsApp. Você treina sozinho, mas nunca sem direção.</p>
+        </details>
+        <details>
+          <summary>Quantas vezes por semana preciso treinar?</summary>
+          <p>Depende do objetivo e da agenda. Há alunos evoluindo bem com 3 sessões semanais — o programa é desenhado para a frequência que você consegue manter.</p>
+        </details>
+        <details>
+          <summary>Tenho dor no joelho / na coluna. Posso treinar?</summary>
+          <p>Na maioria dos casos, sim — com exercícios adaptados e progressão cuidadosa. Se houver acompanhamento médico ou de fisioterapia, o treino é alinhado com essas orientações.</p>
+        </details>
+        <details>
+          <summary>Preciso de academia ou dá para treinar em casa?</summary>
+          <p>Dá para treinar em casa: o programa é montado com o que você tem disponível, de halteres a elásticos — ou até só com o peso do corpo no início.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="cta" id="contato">
+    <div class="container">
+      <div class="center">
+        <h2>Bora começar?</h2>
+        <p class="sub">Agende sua aula experimental ou deixe seus dados que eu retorno o contato.</p>
+      </div>
+      <div class="grid">
+        <div class="wa-big">
+          <b>Fale direto no WhatsApp</b>
+          <span>Conte seu objetivo e sua rotina — já saímos com a aula experimental marcada.</span>
+          <a class="btn" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20aula%20experimental" target="_blank" rel="noopener">Chamar no WhatsApp — (00) 00000-0000</a>
+        </div>
+        <!-- Troque SEU_ID pelo ID real do Formspree -->
+        <form action="https://formspree.io/f/SEU_ID" method="POST">
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="tel" name="whatsapp" placeholder="Seu WhatsApp" required />
+          <textarea name="objetivo" placeholder="Qual é o seu objetivo?" required></textarea>
+          <button class="btn" type="submit">Enviar mensagem</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="container row">
+      <span><b>SUA MARCA</b> · Personal Trainer · CREF 0000-G/UF</span>
+      <span>Studio / academia — Sua Cidade/UF · (00) 00000-0000</span>
+    </div>
+  </footer>
+
+</body>
+</html>
