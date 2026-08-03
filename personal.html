@@ -377,6 +377,48 @@
       .ticker .track{animation:none;}
       html{scroll-behavior:auto;}
     }
+  
+    /* ============ ANTES E DEPOIS (bloco .ba) ============ */
+    .ba{background:var(--paper);}
+    .ba-list{display:grid;gap:24px;margin-top:44px;text-align:left;}
+    .ba-case{
+      background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+      padding:22px;transition:transform .25s ease,box-shadow .25s ease;
+    }
+    .ba-case:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+    .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+    .ba-shot{
+      position:relative;min-height:320px;border-radius:12px;overflow:hidden;
+      background:linear-gradient(150deg,var(--teal-soft),#fff);
+      border:1.5px dashed var(--teal);
+      display:flex;align-items:flex-end;justify-content:center;
+      padding:18px;text-align:center;
+      color:var(--teal-dark);font-weight:600;font-size:.74rem;
+      letter-spacing:.14em;text-transform:uppercase;
+    }
+    .ba-shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+    .ba-tag{
+      position:absolute;top:12px;left:12px;z-index:2;
+      font-family:'Archivo',sans-serif;font-weight:800;
+      font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+      padding:6px 13px;border-radius:999px;background:var(--ink);color:#fff;
+    }
+    .ba-shot--depois .ba-tag{background:var(--fire);}
+    .ba-info{margin-top:18px;}
+    .ba-info h3{font-size:1.1rem;margin-bottom:6px;}
+    .ba-info p{color:var(--ink-soft);font-size:.94rem;}
+    .ba-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px;}
+    .ba-meta span{
+      font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+      color:var(--teal-dark);background:var(--teal-soft);
+      padding:6px 12px;border-radius:999px;
+    }
+    .ba-note{
+      margin-top:26px;font-size:.84rem;color:var(--ink-soft);
+      text-align:center;max-width:640px;margin-left:auto;margin-right:auto;
+    }
+    @media (min-width:900px){.ba-list{grid-template-columns:1fr 1fr;}}
+    @media (max-width:520px){.ba-shot{min-height:240px;}}
   </style>
 </head>
 <body>
@@ -552,6 +594,60 @@
       </a>
     </div>
   </div>
+
+  <!-- ANTES E DEPOIS -->
+  <section class="ba">
+    <div class="container center">
+      <span class="eyebrow">Antes e depois</span>
+      <h2>A evolução que dá para ver</h2>
+      <div class="ba-list">
+
+        <article class="ba-case reveal">
+          <div class="ba-pair">
+            <div class="ba-shot">
+              <span class="ba-tag">Antes</span>
+              Foto do aluno<br>no primeiro dia
+            </div>
+            <div class="ba-shot ba-shot--depois">
+              <span class="ba-tag">Depois</span>
+              Foto do aluno<br>hoje
+            </div>
+          </div>
+          <div class="ba-info">
+            <h3>Fernanda, 34 anos</h3>
+            <p>Nunca tinha treinado. Começamos pela base: postura, mobilidade e força. A carga do agachamento dobrou e as dores nas costas sumiram no caminho.</p>
+            <div class="ba-meta">
+              <span>8 meses</span>
+              <span>Presencial 3x na semana</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="ba-case reveal" style="transition-delay:.1s">
+          <div class="ba-pair">
+            <div class="ba-shot">
+              <span class="ba-tag">Antes</span>
+              Foto do aluno<br>no primeiro dia
+            </div>
+            <div class="ba-shot ba-shot--depois">
+              <span class="ba-tag">Depois</span>
+              Foto do aluno<br>hoje
+            </div>
+          </div>
+          <div class="ba-info">
+            <h3>Diego, 41 anos</h3>
+            <p>Treinava sozinho havia anos, sempre a mesma rotina e sem sair do lugar. Com periodização e progressão de carga, destravou em dois meses de programa novo.</p>
+            <div class="ba-meta">
+              <span>6 meses</span>
+              <span>Consultoria online</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <p class="ba-note">Resultados individuais. O tempo e a evolução mudam conforme rotina, alimentação, sono e histórico de cada aluno.</p>
+    </div>
+  </section>
 
   <!-- DEPOIMENTOS -->
   <section>

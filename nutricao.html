@@ -362,6 +362,50 @@
       .seal svg,.ticker .track{animation:none;}
       html{scroll-behavior:auto;}
     }
+  
+    /* ============ ANTES E DEPOIS DA ROTINA (bloco .ba) ============ */
+    .ba{background:var(--sage);}
+    .ba-list{display:grid;gap:24px;margin-top:44px;text-align:left;}
+    .ba-case{
+      background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+      padding:26px;transition:transform .25s ease,box-shadow .25s ease;
+    }
+    .ba-case:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+    .ba-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+    .ba-head h3{font-size:1.12rem;}
+    .ba-head span{
+      font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+      color:var(--leaf-dark);background:var(--sage-deep);
+      padding:5px 12px;border-radius:999px;
+    }
+    .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+    .ba-col{
+      border-radius:14px;padding:18px 18px 20px;
+      background:#fff;border:1px solid var(--line);
+    }
+    .ba-col--depois{background:var(--sage-deep);border-color:transparent;}
+    .ba-tag{
+      display:inline-block;font-family:'Fraunces',serif;font-size:.78rem;
+      font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--ink-soft);margin-bottom:12px;
+    }
+    .ba-col--depois .ba-tag{color:var(--leaf-dark);}
+    .ba-col ul{list-style:none;display:grid;gap:10px;}
+    .ba-col li{
+      position:relative;padding-left:20px;
+      font-size:.92rem;color:var(--ink-soft);line-height:1.55;
+    }
+    .ba-col li::before{
+      content:"";position:absolute;left:0;top:.5em;
+      width:8px;height:8px;border-radius:50%;background:var(--line);
+    }
+    .ba-col--depois li::before{background:var(--leaf);}
+    .ba-note{
+      margin-top:26px;font-size:.84rem;color:var(--ink-soft);
+      text-align:center;max-width:660px;margin-left:auto;margin-right:auto;
+    }
+    @media (min-width:900px){.ba-list{grid-template-columns:1fr 1fr;}}
+    @media (max-width:520px){.ba-pair{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -525,6 +569,69 @@
       </a>
     </div>
   </div>
+
+  <!-- ANTES E DEPOIS DA ROTINA -->
+  <section class="ba">
+    <div class="container center">
+      <span class="eyebrow">Antes e depois</span>
+      <h2>O que muda de verdade é a rotina</h2>
+      <p class="sub" style="margin-top:14px;">Aqui não tem foto de corpo nem promessa de número na balança. O que aparece é a mudança no dia a dia, que é o que sustenta o resultado.</p>
+      <div class="ba-list">
+
+        <article class="ba-case reveal">
+          <div class="ba-head">
+            <h3>Carla, 38 anos</h3>
+            <span>4 meses</span>
+          </div>
+          <div class="ba-pair">
+            <div class="ba-col">
+              <span class="ba-tag">Antes</span>
+              <ul>
+                <li>Pulava o café da manhã e chegava no almoço faminta</li>
+                <li>Beliscava a tarde inteira sem perceber</li>
+                <li>Começava dieta na segunda e largava na quarta</li>
+              </ul>
+            </div>
+            <div class="ba-col ba-col--depois">
+              <span class="ba-tag">Depois</span>
+              <ul>
+                <li>Quatro refeições nos horários, sem contar caloria</li>
+                <li>Monta o prato sozinha, inclusive comendo fora</li>
+                <li>Segue o plano há quatro meses sem sofrimento</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="ba-case reveal" style="transition-delay:.1s">
+          <div class="ba-head">
+            <h3>Rafael, 29 anos</h3>
+            <span>3 meses</span>
+          </div>
+          <div class="ba-pair">
+            <div class="ba-col">
+              <span class="ba-tag">Antes</span>
+              <ul>
+                <li>Treinava em jejum e comia qualquer coisa depois</li>
+                <li>Sentia queda de energia no meio do treino</li>
+                <li>Vivia de suplemento sem base na alimentacao</li>
+              </ul>
+            </div>
+            <div class="ba-col ba-col--depois">
+              <span class="ba-tag">Depois</span>
+              <ul>
+                <li>Pré e pós-treino definidos, ajustados ao horário dele</li>
+                <li>Come mais comida de verdade e rende mais</li>
+                <li>Suplemento só onde faz falta, com critério</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <p class="ba-note">Relatos de rotina, sem imagens corporais, dados de composição corporal ou exames — em linha com o Código de Ética do CFN. Cada pessoa responde de um jeito.</p>
+    </div>
+  </section>
 
   <!-- DEPOIMENTOS -->
   <section class="dep">
